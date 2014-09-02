@@ -7,6 +7,7 @@ import os, sys
 from sphinxcontrib import paverutils
 
 sys.path.append(os.getcwd())
+sys.path.append('../modules')
 
 ######## CHANGE THIS ##########
 project_name = "webfundamentals"
@@ -59,3 +60,7 @@ def build(options):
     print 'Building into ', options.build.outdir    
     paverutils.run_sphinx(options,'build')
 
+    if updateProgressTables:
+        print 'Creating Chapter Information'
+        populateChapterInfo(project_name, "%s/index.rst" % options.build.sourcedir)
+    
