@@ -9,6 +9,12 @@ from sphinxcontrib import paverutils
 sys.path.append(os.getcwd())
 sys.path.append('../modules')
 
+updateProgressTables = True
+try:
+    from chapternames import populateChapterInfo
+except:
+    updateProgressTables = False
+
 ######## CHANGE THIS ##########
 project_name = "webfundamentals"
 ###############################
