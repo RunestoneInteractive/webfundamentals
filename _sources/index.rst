@@ -33,3 +33,7 @@ HTML Basics
    :maxdepth: 2
 
    HTML/intro.rst
+   HTML/basic.rst
+   HTML/structural.rst
+   HTML/advanced.rst
+   
