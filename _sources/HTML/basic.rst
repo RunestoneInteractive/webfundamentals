@@ -45,12 +45,47 @@ What happens when you put a paragraph inside another paragraph?  What about a he
 Images
 ------
 
+Images are another common element of a document or a web page.  To include an image in a document you must use an ``img`` tag.  Image tags are an example of an **inline** element because they just flow in with the surrounding text.  They do not force a new block to be created in the rendering of the html.  Here are a couple of images:
+
+.. figure:: Figures/LutherBellPic.jpg
+
+   Luther Bell:  ``http://interactivepython.org/runestone/static/webfundamentals/_static/LutherBellPic.jpg``
+
+.. figure:: Figures/norse-logo.png
+
+   Norse Logo:  ``http://interactivepython.org/runestone/static/webfundamentals/_static/norse-logo.jpg``
+
+
+The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a ``src`` attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the ``src`` attribute.
+
 .. activecode:: html_img
    :language: html
     
-   <p>This is a short sentence.</p>   
-   <img src="small_me.jpg">
-   <p>This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? <p>
-   <p>Level this is a short sentence</p>
+   <h1>Embedded Images</h1>
+   <p>Images are inline elements they fit in the flow
+   <img src="http://interactivepython.org/runestone/static/webfundamentals/_static/LutherBellPic.jpg">
+   of a paragraph without causing extra line breaks.</p>
+   
 
+Try modifying the example above so that it includes the norse logo rather than the bell.  
+You can also change the height and width of  an image by using a ``height=`` attribute or a ``width=`` attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.
+
+There are several other attributes of the link tag as well.  You can read about them `here <http://www.w3schools.com/tags/tag_img.asp>`_.
+
+
+Links
+-----
+
+The last basic link to cover in this section is the link tag ``a``.  In fact the last sentence of the previous section used a link to send you to the w3schools website to learn more about the attributes of an ``img`` tag.  Links are what made the web so popular in the first place.  Today we call them links, but in earlier years they were usually referred to as Hyperlinks. You can provide a link to any URL on the web using the ``href`` attribute on the ``a`` tag.   The text that you will click on goes between the opening ``a`` tag and the closing ``a`` tag.
+
+
+.. activecode:: html_link
+   :language: html
+    
+   <h1>Links make the web!</h1>
+   <p>Links are another inline element.  You can read about links and their attributes
+   <a href="http://www.w3schools.com/tags/tag_a.asp">Here</a> on the w3schools website.</p>
+
+
+Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
 

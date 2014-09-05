@@ -36,4 +36,5 @@ HTML Basics
    HTML/basic.rst
    HTML/structural.rst
    HTML/advanced.rst
+   HTML/exercises.rst
    
