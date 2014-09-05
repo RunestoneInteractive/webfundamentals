@@ -49,11 +49,11 @@ Images are another common element of a document or a web page.  To include an im
 
 .. figure:: Figures/LutherBellPic.jpg
 
-   Luther Bell:  ``http://interactivepython.org/runestone/static/webfundamentals/_static/LutherBellPic.jpg``
+   Luther Bell:  ``http://interactivepython.org/runestone/static/webfundamentals/_images/LutherBellPic.jpg``
 
 .. figure:: Figures/norse-logo.png
 
-   Norse Logo:  ``http://interactivepython.org/runestone/static/webfundamentals/_static/norse-logo.jpg``
+   Norse Logo:  ``http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.jpg``
 
 
 The image tag has a new component to it called an attribute.  In general tags can have many attributes in the case of an image we can inlude it by using a ``src`` attribute that contains the URL to the image we want to embed.  We can embed any image on the internet in our own document by referring to it by its URL in the ``src`` attribute.
@@ -63,7 +63,7 @@ The image tag has a new component to it called an attribute.  In general tags ca
     
    <h1>Embedded Images</h1>
    <p>Images are inline elements they fit in the flow
-   <img src="http://interactivepython.org/runestone/static/webfundamentals/_static/LutherBellPic.jpg">
+   <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/LutherBellPic.jpg">
    of a paragraph without causing extra line breaks.</p>
    
 
