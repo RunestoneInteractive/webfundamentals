@@ -89,3 +89,28 @@ The last basic link to cover in this section is the link tag ``a``.  In fact the
 
 Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
 
+
+Simple Text Formatting
+----------------------
+
+Making text bold or italic and other formatting is easy in HTML as well.  The following example illustrates the basic text formatting tags.
+
+.. activecode:: html_fmt
+   :language: html
+   
+   <html>
+   <body>
+
+   <p><b>This text is bold</b></p>
+   <p><strong>This text is strong</strong></p>
+   <p><i>This text is italic</i></p>
+   <p><em>This text is emphasized</em></p>
+   <p><code>This is computer output</code></p>
+   <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+
+   </body>
+   </html>
+
+You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.
+
+

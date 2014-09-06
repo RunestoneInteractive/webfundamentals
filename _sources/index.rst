@@ -34,7 +34,26 @@ HTML Basics
 
    HTML/intro.rst
    HTML/basic.rst
-   HTML/structural.rst
    HTML/advanced.rst
+   HTML/structural.rst
    HTML/exercises.rst
+   
+Publishing in the Cloud
+:::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+   
+   Cloud/cloudintro.rst
+
+Cascading Style Sheets
+::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+   
+   CSS/intro.rst
+   CSS/styleattributes.rst
+   CSS/layoutattributes.rst
+   CSS/advancedmatching.rst
    
