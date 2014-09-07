@@ -132,7 +132,7 @@ There are many attributes you can use with the various table tags.
   * rowspan -- If you have a particular table where you need an column to span multiple rows you can make a cell of your table span more than one row using the rowspan attribute.  Its value is the number of rows.
 
 
-Experiment with a table.  What kinds of tags can you include inside each ``td``?
+Experiment with a table.  What kinds of tags can you include inside each ``td``?  Can you make a table inside another table?
 
 .. Exercise make a two column table with a list in each column
 
@@ -142,8 +142,36 @@ Experiment with a table.  What kinds of tags can you include inside each ``td``?
 Audio
 -----
 
+Embedding audio in your webpage allows you to link to various files containging music or speech.  The audio tag looks like the following::
+
+.. code-block:: html
+
+    <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+The ``controls`` attribute provides start/stop/fast-forward/rewind buttons for the listener.  The ``source`` tags inside the ``audio`` tag allow you to provide several different audio formats.  This is because different browsers support different kinds of audio The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.
+
 Video
 -----
 
+Embedding audio in your webpage allows you to link to various files containging music or speech.  The audio tag looks like the following::
+
+.. code-block:: html
+
+    <video height=312 width= 540 controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video element.
+    </video>
+
+The ``controls`` attribute provides start/stop/fast-forward/rewind buttons for the listener.  The ``source`` tags inside the ``video`` tag allow you to provide several different video formats.  This is because different browsers support different kinds of video The browser will go through the list, in order, until it finds a format it understands, or else, it will replace the controller with the message at the end.
+
+
+
 IFrames
 -------
+
+IFrames allow you to embed a webpage within another webpage.  The activecode examples in this book use an iframe to allow you to experiment with the html, by creating a page within a page.
