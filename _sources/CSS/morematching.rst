@@ -82,4 +82,40 @@ What do you think will happen if you change the second rule so that it sets the 
 Using the class attribute in a rule
 -----------------------------------
 
-Sometimes you want to match some elements that are the same tag but not others.
+Sometimes you want to match some elements that are the same tag but not others.  One example of this is when you want to have a "zebra striped" table, where every other line has a slightly different background color then you are going to want to use a ``class`` attribute.  Classes and CSS may be the single most useful combination for styling your web pages.
+
+Unlike the ``id`` attribute, many different tags can have the same value for a class.  Some examples:
+
+You have paragraphs or headings and you want some normal, some are "warnings", some are "errors", and some are "cautions".   Or perhaps you have a list of things, some things one the list are hight priority, some are low, and some are medium.  By using a class you can apply a consistent style to all of the things that belong to that class (have the same value for their class attribute.)
+
+To select any element that matches a particular class you use the ``.`` before the name of the class.  So ``.high`` will match any tags that have the attribute ``class=high``.
+
+Returning to our HTML table example we have some rows that are "odd" and some that are "even".  Lets make a short table and style the odd and even rows differently.
+
+.. activecode:: css_classes
+   :language: html
+
+   <html>
+      <head>
+         <style>
+         .odd {
+            background-color: #9999ee;
+         }
+         .even {
+            background-color: pink;
+         }
+         </style>
+      </head>
+      <body>
+           <table>
+           <tr class="odd"><td>aapl</td><td>$101.23</td></tr>
+           <tr class="even"><td>goog</td><td>$583.10</td></tr>
+           <tr class="odd"><td>tsla</td><td>$281.10</td></tr>
+           <tr class="even"><td>amzn</td><td>$331.33</td></tr>
+           </table>
+      </body>
+   </html>
+
+
+
+Now for some additional practice lets make the table look really nice.  Add a header and have the background of the header be light gray.  Make the text of the header bold and slightly larger.  Overall change the table so its width is 50% of the page and get rid of the page. `This page <http://www.w3schools.com/css/css_table.asp>`_ gives you a complete rundown on how to style tables.
