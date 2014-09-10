@@ -14,7 +14,7 @@ PaaS providers take care of all of the details of provisioning hardware, and net
 
 One service that makes it very easy to publish your own blog or even a simple web page is a company called Github.  Github is largely a company that helps you manage your software projects, but they have one simple service called "Github Pages" that works extremely well for our purposes.  To make a web page available to the involves the following steps:
 
-1.  Make an account on `Github <https://github.com/join`_
+1.  Make an account on `Github <https://github.com/join>`_
 2.  Setup `Github Pages <https://pages.github.com>`_
 3.  Edit your first webpage
 4.  Commit your webpage
