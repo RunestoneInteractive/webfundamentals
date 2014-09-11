@@ -66,3 +66,17 @@ Lets now look at a complete example:
 There are several things to notice about the example above.  First the ``h1`` selector matches all of the h1 tags in the document.  But it does not match the ``h2`` or the ``p`` tags.  If you want to change the style of the paragraph you need to add another rule.  Lets try it:  Add a rule to the style tag that colors the paragraph text green.  Then make another rule that makes the h2 tag size 16pt and yellow.
 
 One thing to be careful about is to remember the semi-colons after the values.  If you forget a semi-colon, then your rule will not work.
+
+
+Using a separate css file is the most preferred way to organize your CSS.  This allows you to use the same style in multiple web pages, and in a group setting makes it easy for one person to work on the style while another focuses on the content.  CSS stylesheets are included in a web page by using the ``link`` tag in the ``head`` section of your page as follows:
+
+.. code-block:: html
+
+   <link rel="stylesheet" href="mystyle.css" type="text/css">
+
+Cascading
+---------
+
+Since you can add style information about a tag in any or all of the three places, how is the style resolved if different sources provide conflicting information?
+
+Default rules from the browser are combined with rules from an external Style Sheet are combined with the rules contained in any style tags in the page itself.  If there is a conflict then then internal style tag wins.  These rules are then combined with any style information contained in a style attribute.  If the style attribute conflicts with any previous informatin, it wins.
