@@ -180,5 +180,86 @@ Your challenge is to fix the example so that the sentence stays nicely anchored 
    Here is one way to solve this problem.  Add a rule for the ol that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.
 
 
+Next lets look at the relative position and how we can use it to make overlapping elements.
+
+.. take an image of a card and make a stacked deck of three cards.
+
+Lets make a stack of cards using the following image:
+
+.. image:: Figures/ace-of-hearts.gif
+
+.. activecode:: css_pos2
+   :language: html
+
+   <html>
+      <head>
+         <style>
+         img.card {
+             height: 200px;
+         }
+         </style>
+      </head>
+   <body>
+      <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="b" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="c" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+   </body>
+   </html>
+
+If you run the example you will see the three cards lined up next to each other.  As a reminder this is because:
+
+1.  images are inline elements and so do not create a line break.
+2.  The browser lays out inline images top to bottom and left to right.
+
+Now lets use our positioning skills to create a stack.  Modify the example above to add the following css rule:
+
+.. code-block:: css
+
+   img#b {
+       position: relative;
+       top: 20px;
+       left: -100px;
+   }
+
+Great, now we have made the second card appear to be on top of the first.    Notice that although we have moved the second image, the position of the third image does not change.  This is because space is still reserved for the second image in its middle position, we are manually moving it relative to where it would normally be in the flow.  So a relative positioning works within the flow of the document.  Add a rule for the third image to add it to the stack.
+
+.. reveal:: css_stack
+
+   .. code-block:: css
+      img#c {
+          position: relative;
+          top: 40px;
+          left: -200px;
+      }
+
+Now, what about elements that come after relatively positioned elements?  If you add a paragraph after the images do you expect the text to be covered up or flowed beneath all of the cards?
+
+Another important thing to notice is that card 2 appears to be stacked on top of card 1, and card three appears to be stacked on top of cards 1 and 2.  This is becuase elements that come later in the document naturally appear on top of elements that come before them.
+
+If we want to change that and make it look like card 1 is on top of card 2 and card 2 is on top of card 3 we can use the css ``z-index`` property to position the elements.  elements that have a larger z-index will appear to be on top of items with a lower z-index.  By default, all elements have a z-idex of zero.  So to change the order of the stack we will need to modify the rules for images b and c.  Add a z-imaeg property to the ``img#b`` and ``img#c`` rules giving b a z-index of -1 and c a z-index of -2.
+
+
 Floating
 --------
+
+The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Lets begin with a simple example.
+
+.. activecode:: css_float1
+   :language: html
+
+   <html>
+      <head>
+         <style>
+         </style>
+       </head>
+   <body>
+   <p>the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.png" /> the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
+   </body>
+   </html>
+
+
+Notice that the logo appears right in the middle of the text in its normal inline flow.   Now, add a CSS rule for an img tag that sets the float property to left.   Then change the rule to float the image to the right.
+
+Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
+
+Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
