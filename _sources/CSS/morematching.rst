@@ -119,3 +119,44 @@ Returning to our HTML table example we have some rows that are "odd" and some th
 
 
 Now for some additional practice lets make the table look really nice.  Add a header and have the background of the header be light gray.  Make the text of the header bold and slightly larger.  Overall change the table so its width is 50% of the page and get rid of the page. `This page <http://www.w3schools.com/css/css_table.asp>`_ gives you a complete rundown on how to style tables.
+
+
+Matching Children
+-----------------
+
+When using the semantic html elements it is sometimes very desireable to match a particular tag, but only if that tag is in the article section.  CSS allows us to match tags that are descendants of other tags by using a space after the parent tag.  For example:
+
+.. code-block:: css
+
+   article h1 {
+       color:  purple;
+   }
+
+
+Will change the color of the h1 but only if they are descendants of the article tag.
+
+
+.. activecode:: css_descendant
+   :language: html
+
+   <html>
+      <head>
+         <style>
+         article h1 {
+             color: purple;
+         }
+         </style>
+      </head>
+      <body>
+      <h1>This is outside the article</h1>
+      <article>
+          <h1>This is inside the article</h1>
+          <section>
+              <h1>This is in a section of an article</h1>
+          </section>
+      </article>
+      </body>
+   </html>
+
+
+In the example above, both of the h1's inside the article were changed because they are both descendants of the article.  If we only wanted to change the h1 that is a direct child of the article we can replace the space with a ``>`` giving us ``article>h1`` which indicates that only the immediate child should have its style changed.
