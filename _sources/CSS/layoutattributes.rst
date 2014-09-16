@@ -339,3 +339,10 @@ Full Page Layout
             </footer>
         </body>
     </html>
+
+
+This looks pretty good.  It almost matches the picture in the aside area. This is a pretty typical layout for a good quality page, and you can use this as a template for your own homepage.  However it is missing the article area, and there is an ugly black band between the nav and the tops of the aside and section.  See if you can do the following:
+
+1.  Remove the black band.  Hint:  A good way to find out why things look the way they do is to use the "Inspect Element" feature of your browser.  If you right click on an area that interests you, you will be able to see all of the css rules including the default style rules that affect a particular element.
+
+2.  Add an article area as shown in the picture.  Give it a purple background.  As you try to to make this area match the picture think about the effects of the various things you may try.
