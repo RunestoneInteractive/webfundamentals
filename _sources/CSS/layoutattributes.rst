@@ -226,7 +226,7 @@ Great, now we have made the second card appear to be on top of the first.    Not
 .. reveal:: css_stack
 
    .. code-block:: css
-   
+
       img#c {
           position: relative;
           top: 40px;
@@ -286,7 +286,11 @@ Full Page Layout
             }
             nav {
                 margin-top: 20px;
+                margin-bottom: 0px;
                 background-color: green;
+            }
+            nav li {
+               display: inline;
             }
             section {
                 float: left;
@@ -314,25 +318,24 @@ Full Page Layout
         </head>
         <body>
             <header>
-                notgoing anywhere today
+                A header that stays stuck to the top.
             </header>
             <nav>
-                Nav Bar
+                <ul>
+                <li>About</li>
+                <li>Papers</li>
+                <li>Donate</li>
+                </ul>
             </nav>
             <section>
-                hello world
-                hello world
-                helllo
-                hello
-                hello
+                This would be a good place for a table of contents
             </section>
             <aside>
-                this is an aside
-                this is more
+                This is the main content area
                 <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/img_sem_elements.gif" />
             </aside>
             <footer>
-                page by me
+                Copyright Area, Contact Us.
             </footer>
         </body>
     </html>
