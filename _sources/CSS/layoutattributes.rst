@@ -240,6 +240,11 @@ Another important thing to notice is that card 2 appears to be stacked on top of
 If we want to change that and make it look like card 1 is on top of card 2 and card 2 is on top of card 3 we can use the css ``z-index`` property to position the elements.  elements that have a larger z-index will appear to be on top of items with a lower z-index.  By default, all elements have a z-idex of zero.  So to change the order of the stack we will need to modify the rules for images b and c.  Add a z-imaeg property to the ``img#b`` and ``img#c`` rules giving b a z-index of -1 and c a z-index of -2.
 
 
+.. admonition:: Advanced Topic: Transformation
+
+   CSS Provides the ability for us to really get fancy and transform any element by rotating or scaling.  We can make our stack of cards look much more like a hand of cards
+
+
 Floating
 --------
 
