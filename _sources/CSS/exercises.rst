@@ -21,7 +21,7 @@ CSS Exercises
       </body>
    </html>
 
-2. Given the table in the html code in the question style the table so that the odd rows have a light gray background  In addition and a header row to the table and style that row so it has white text and a black background color.
+2. Given the table in the html code in the question style the table so that the odd rows have a light gray background  In addition and a header row to the table and style that row so it has white text and a black background color.  Change the font so that they are all 14 point sans serif of some kind.
 
 .. actex:: ex_css_2
    :language: html
