@@ -226,6 +226,7 @@ Great, now we have made the second card appear to be on top of the first.    Not
 .. reveal:: css_stack
 
    .. code-block:: css
+   
       img#c {
           position: relative;
           top: 40px;
@@ -263,3 +264,75 @@ Notice that the logo appears right in the middle of the text in its normal inlin
 Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
 
 Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
+
+Full Page Layout
+----------------
+
+
+.. activecode:: css_layout1
+   :language: html
+
+    <html>
+        <head>
+            <title>Home</title>
+            <style>
+            header {
+                position: fixed;
+                background-color: #bbbbbb;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 20px;
+            }
+            nav {
+                margin-top: 20px;
+                background-color: green;
+            }
+            section {
+                float: left;
+                width: 20%;
+                height: 500px;
+                background-color: blue;
+                color: white;
+            }
+            aside {
+                float: left;
+                width: 80%;
+                height: 500px;
+                background-color: red;
+            }
+            footer {
+                clear: both;
+                background-color: yellow;
+            }
+            body {
+                background-color: black;
+                margin: 0px;
+            }
+            </style>
+
+        </head>
+        <body>
+            <header>
+                notgoing anywhere today
+            </header>
+            <nav>
+                Nav Bar
+            </nav>
+            <section>
+                hello world
+                hello world
+                helllo
+                hello
+                hello
+            </section>
+            <aside>
+                this is an aside
+                this is more
+                <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/img_sem_elements.gif" />
+            </aside>
+            <footer>
+                page by me
+            </footer>
+        </body>
+    </html>
