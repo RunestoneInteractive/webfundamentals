@@ -179,13 +179,18 @@ A relatively positioned element is measured relative to its normal position in t
 
 An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is the ``html`` tag for the entire document.  Absolutely positioned elements are positioned outside the normal flow of the document.
 
+Fixed
+^^^^^
+
+Lets look at an example of how to use fixed positioning to create an element that stays put on the screen.
+
 .. activecode:: css_pos1
    :language: html
 
    <html>
       <head>
          <style>
-         p#sticky {
+         #sticky {
             position: fixed;
             top: 0px;
             left: 5px
@@ -193,7 +198,9 @@ An absolute position element is positioned relative to the first parent element 
          </style>
        </head>
    <body>
-      <p id="sticky">There are 10 kinds of people in the world.</p>
+      <nav id="sticky">
+          <p>There are 10 kinds of people in the world.</p>
+      </nav>
       <ol>
       <li>Those that know how to count in binary.</li>
       <li>Those that do not know how to count in binary</li>
@@ -230,8 +237,10 @@ Your challenge is to fix the example so that the sentence stays nicely anchored 
 
 .. reveal:: css_pos_sol1
 
-   Here is one way to solve this problem.  Add a rule for the ol that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.
+   Here is one way to solve this problem.  Add a rule for the ``ol`` that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.  Now you should also add some styling to the nav to give it a background color and make it fill the entire width of the window.
 
+Relative
+^^^^^^^^
 
 Next lets look at the relative position and how we can use it to make overlapping elements.
 
