@@ -295,6 +295,11 @@ Great, now we have made the second card appear to be on top of the first.    Not
           left: -200px;
       }
 
+.. admonition:: Coordinates
+
+   You have no doubt noticed that we are using top and left values to position our box.  This box is positioned within the window where the coordinate 0,0 is in the top left corner.  The X or first coordinate gets larger as you move to the right across the windo, and the second, or Y coordinate grows larger is you move down the screen.  This takes a little adjustment as it is different from what  you learned in math class.
+
+   
 Now, what about elements that come after relatively positioned elements?  If you add a paragraph after the images do you expect the text to be covered up or flowed beneath all of the cards?
 
 Another important thing to notice is that card 2 appears to be stacked on top of card 1, and card three appears to be stacked on top of cards 1 and 2.  This is becuase elements that come later in the document naturally appear on top of elements that come before them.
