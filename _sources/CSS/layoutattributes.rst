@@ -104,7 +104,7 @@ Give them a try in the example above and see what happens.
 
 .. admonition:: Greeking
 
-   You may be wondering about the use of greek words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of greek words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.
+   You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.
 
 
 Display
