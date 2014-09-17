@@ -51,10 +51,17 @@ CSS Exercises
    :language: html
    :nocodelens:
 
-5. Using the image of the playing card, use transformations and animations to make the playing card spin around endlessly.
+5. Using the nav element, make a navbar for at the top of a sample webpage.  Add at least three links to the navbar using an unordered list that is displayed as inline rather than block.  Make the navbar have a light blue background color, but change the background of the title to a darker blue when the mouse hovers over it.  (see the `:hover selector <http://www.w3schools.com/cssref/sel_hover.asp>`_)
 
 .. actex:: ex_css_5
    :language: html
    :nocodelens:
 
-6.  Using the template developed in the layout chapter, develop a homepage for yourself, published on github pages, that employs a two column layout with a fixed navbar (always on screen), and a footer.  The navbar should link to at least two additional pages used to describe your hobbies or favorite teams.  The CSS for this website should be contained in its own CSS file, and all three pages should use this CSS file.
+
+6. Using the image of the playing card, use transformations and animations to make the playing card spin around endlessly.
+
+.. actex:: ex_css_6
+   :language: html
+   :nocodelens:
+
+7.  Using the template developed in the layout chapter, develop a homepage for yourself, published on github pages, that employs a two column layout with a fixed navbar (always on screen), and a footer.  The navbar should link to at least two additional pages used to describe your hobbies or favorite teams.  The CSS for this website should be contained in its own CSS file, and all three pages should use this CSS file.
