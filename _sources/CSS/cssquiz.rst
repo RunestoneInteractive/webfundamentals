@@ -1,6 +1,9 @@
 Quiz One
 --------
 
+For each multiple choice question, record your answer by pressing the Check Me Button.
+You may have as many attempts as you like, but I will only score the first attempt.  If
+you do not press the Check Me button your answer will not be recorded.
 
 .. mchoicema:: q1_1
    :answer_a: &lt;h1&gt;
@@ -108,6 +111,8 @@ In the following question, select all of the correct answers for each question.
 
    Which of the following are properties of the CSS Box Model
 
+For the following questions, I will use your final result.  You can press the Run button as many
+times as you like without penalty.  You should also Save your final version.
 
 Fill in the additional HTML needed to make an ordered list of 3 items.  The items should be numbered A, B, and C.
 
