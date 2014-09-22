@@ -57,6 +57,56 @@ The size of content area itself can also be controlled using the following prope
 
 Each of these properties can be specified in terms of pixels (px), points (pt), or as a percentage.  In addition the auto keyword can be used, which is the default and allows the browser to figure out the proper height and width.
 
+
+When you use height and width with a **container** element, such as one of the semantic elements, it is very useful to know about the overflow property.  What if you set your height so small that the content does not fit?  The `overflow <http://www.w3schools.com/cssref/pr_pos_overflow.asp>`_ property tells you how to handle that.
+
+Here is an example activecode for you to experiment with:
+
+.. activecode:: css_overflow
+   :language: html
+
+   <html>
+      <head>
+         <style>
+         section {
+              width: 250px;
+              background-color: green;
+              padding: 25px;
+              border: 10px solid blue;
+              margin: 25px;
+              height: 100px;
+              }
+         </style>
+       </head>
+   <body>
+
+      <section>
+      <p>Ea dolore do irure aliquip id qui dolor do in aliquip irure anim id. Adipisicing qui
+       incididunt consectetur veniam cupidatat dolor. Aliquip irure labore elit ipsum officia non
+       culpa consequat et voluptate. Officia nisi nostrud exercitation quis amet ipsum incididunt.
+       Et incididunt eu laborum velit dolore laborum. Esse id mollit fugiat nostrud non ex occaecat
+       culpa. Adipisicing quis excepteur voluptate commodo minim aliqua excepteur occaecat
+       eu ipsum nisi duis amet. Duis proident fugiat velit elit esse cillum minim laborum elit.
+      </p>
+
+      </section>
+   </body>
+   </html>
+
+The possible values for the overflow property are:
+
+* visible
+* hidden
+* scroll
+* auto
+
+Give them a try in the example above and see what happens.
+
+.. admonition:: Greeking
+
+   You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.
+
+
 Display
 -------
 
@@ -86,7 +136,7 @@ With CSS you can take control of how each element is layed out on the page.  You
 
 Now change the rule and instead of ``display: none`` change it to ``visibility: hidden``  Notice that visibility hidden reserves space on the page for the element but does not show it.  Whereas the ``display: none`` rule removed any trace of the element.  Now change the rule to ``visibility: show`` to display all of the elements.
 
-The display property can also be used to change block elements into inline elements.  Consider teh following example.
+The display property can also be used to change block elements into inline elements.  Consider the following example.
 
 .. activecode:: css_disp2
    :language: html
@@ -108,6 +158,9 @@ The display property can also be used to change block elements into inline eleme
    </html>
 
 
+This technique is often used in the navigation bar to create a "menu" of links.  See exercise 5 in the exercises section for some practice with this.
+
+
 Positioning
 -----------
 
@@ -126,13 +179,18 @@ A relatively positioned element is measured relative to its normal position in t
 
 An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is the ``html`` tag for the entire document.  Absolutely positioned elements are positioned outside the normal flow of the document.
 
+Fixed
+^^^^^
+
+Lets look at an example of how to use fixed positioning to create an element that stays put on the screen.
+
 .. activecode:: css_pos1
    :language: html
 
    <html>
       <head>
          <style>
-         p#sticky {
+         #sticky {
             position: fixed;
             top: 0px;
             left: 5px
@@ -140,7 +198,9 @@ An absolute position element is positioned relative to the first parent element 
          </style>
        </head>
    <body>
-      <p id="sticky">There are 10 kinds of people in the world.</p>
+      <nav id="sticky">
+          <p>There are 10 kinds of people in the world.</p>
+      </nav>
       <ol>
       <li>Those that know how to count in binary.</li>
       <li>Those that do not know how to count in binary</li>
@@ -177,8 +237,10 @@ Your challenge is to fix the example so that the sentence stays nicely anchored 
 
 .. reveal:: css_pos_sol1
 
-   Here is one way to solve this problem.  Add a rule for the ol that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.
+   Here is one way to solve this problem.  Add a rule for the ``ol`` that specifies a top-margin.  Make the top margin large enough so that the list starts below the first paragraph.  You may need to experiment a little bit with some different values before you find one that works well.  Now you should also add some styling to the nav to give it a background color and make it fill the entire width of the window.
 
+Relative
+^^^^^^^^
 
 Next lets look at the relative position and how we can use it to make overlapping elements.
 
@@ -233,6 +295,11 @@ Great, now we have made the second card appear to be on top of the first.    Not
           left: -200px;
       }
 
+.. admonition:: Coordinates
+
+   You have no doubt noticed that we are using top and left values to position our box.  This box is positioned within the window where the coordinate 0,0 is in the top left corner.  The X or first coordinate gets larger as you move to the right across the windo, and the second, or Y coordinate grows larger is you move down the screen.  This takes a little adjustment as it is different from what  you learned in math class.
+
+   
 Now, what about elements that come after relatively positioned elements?  If you add a paragraph after the images do you expect the text to be covered up or flowed beneath all of the cards?
 
 Another important thing to notice is that card 2 appears to be stacked on top of card 1, and card three appears to be stacked on top of cards 1 and 2.  This is becuase elements that come later in the document naturally appear on top of elements that come before them.
