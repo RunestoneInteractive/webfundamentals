@@ -79,26 +79,26 @@ CSS Exercises
       <body>
          <h1>Exercise 8</h1>
          <ul>
-            <li>Choirs</li>
+            <li>Choirs
                <ul>
                   <li>Nordic</li>
                   <li>Collegiate</li>
                   <li>Cathedral</li>
                   <li>Norsemen</li>
                   <li>Aurora</li>
-               </ul>
-            <li>Soccer</li>
+               </ul></li>
+            <li>Soccer
                <ul>
                   <li>Arsenal</li>
                   <li>Everton</li>
                   <li>Chelsea</li>
-               </ul>
-            <li>Buildings</li>
+               </ul></li>
+            <li>Buildings
                <ul>
                   <li>Olin</li>
                   <li>Preus</li>
                   <li>Larson</li>
-               </ul>
+               </ul></li>
          </ul>
       </body>
    </html>
