@@ -171,13 +171,13 @@ There are several different ways to affect the positioning of html elements eith
 * relative
 * absolute
 
-Static is the default positioning value for the css position property.  The static value simply tells the browser to position this element in the "normal flow" of the document.
+**Static** is the default positioning value for the css position property.  The static value simply tells the browser to position this element in the "normal flow" of the document.
 
-Fixed positioning is measured against the frame of the browser window.  Elements with a fixed position value do not move even when the contents of the browser window are scrolled.  The navigation bar at the top of this page uses the fixed position value so it is always visible.  Because fixed elements are outside the flow of the document they can sometimes cause unexpected results that you have to deal with carefully.
+**Fixed** positioning is measured against the frame of the browser window.  Elements with a fixed position value do not move even when the contents of the browser window are scrolled.  The navigation bar at the top of this page uses the fixed position value so it is always visible.  Because fixed elements are outside the flow of the document they can sometimes cause unexpected results that you have to deal with carefully.
 
-A relatively positioned element is measured relative to its normal position in the flow.  Using a relative position value lets you create elements that overlap each other.
+A **relatively** positioned element is measured relative to its normal position in the flow.  Using a relative position value lets you create elements that overlap each other.
 
-An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is the ``html`` tag for the entire document.  Absolutely positioned elements are positioned outside the normal flow of the document.
+An **absolute** element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is the ``html`` tag for the entire document.  Absolutely positioned elements are positioned outside the normal flow of the document.
 
 Fixed
 ^^^^^
@@ -309,7 +309,47 @@ If we want to change that and make it look like card 1 is on top of card 2 and c
 
 .. admonition:: Advanced Topic: Transformation
 
-   CSS Provides the ability for us to really get fancy and transform any element by rotating or scaling.  We can make our stack of cards look much more like a hand of cards
+   CSS Provides the ability for us to really get fancy and transform any element by rotating or scaling.  We can make our stack of cards look much more like a hand of cards by exploring the `transform <http://www.w3schools.com/cssref/css3_pr_transform.asp>`_ property.  In fact the transform property is still so new that it goes by different names in different browsers.  For Chrome, Safari you will want to use the ``-webkit-transform`` property while in Firefox you can use ``transform``.  If you are Explorer you will need to use ``-ms-transform``.  In fact to write your page to work  anywhere you would specify all three!
+   
+Absolute
+--------
+
+Absolutely positioned elements are absolute, but relative to their container!
+
+.. activecode:: css_pos3
+   :language: html
+
+   <html>
+      <head>
+         <style>
+             main {
+                 position: relative;
+             }
+             img.card {
+                 height: 200px;
+             }
+             img#a {
+                 position: absolute;
+                 top: 10px;
+                 left: 50px;
+             }
+             img#b {
+                 position: absolute;
+                 top: 10px;
+                 left: 50px;
+             }
+         </style>
+      </head>
+   <body>
+   <main>
+      <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      
+   <main>
+   </body>
+   </html>
+
+OK, what happened to the second card?  How can you make a stack that looks like the stack from our relatively positioned element?  What happens if you add an h1 in front of the main tag?
 
 
 Floating
@@ -336,6 +376,8 @@ Notice that the logo appears right in the middle of the text in its normal inlin
 Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
 
 Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
+
+
 
 Full Page Layout
 ----------------
