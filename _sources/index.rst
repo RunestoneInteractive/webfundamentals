@@ -67,4 +67,9 @@ Javascript
    :maxdepth: 2
    
    Javascript/intro.rst
+   Javascript/objects.rst
+   Javascript/forms.rst
+   Javascript/events.rst
+   Javascript/helpObjects.rst
+   
    
