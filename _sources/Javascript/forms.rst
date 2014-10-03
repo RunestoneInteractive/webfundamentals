@@ -1,14 +1,7 @@
 HTML Elements for Interaction
 =============================
 
-
-Common attributes
------------------
-
-* type
-* name
-* id
-* value
+Building interactive web pages requires a variety of elements that allow your application to interact with the user.  The HTML5 standard provides us with many different elements from which we can construct an application.
 
 
 Button
@@ -23,6 +16,18 @@ Button
    <div style="display: block;">
    <button>Click Me</button>
    </div>
+
+
+The Input Tag
+-------------
+
+Many of the elements used in constructing a user interface use the ``input`` tag.  All of the ``input`` elements have a common set of attributes, the most important is the ``type`` attribute as that is what determines how the input element will look.
+
+* type
+* name
+* id
+* value
+
 
 Text Input
 ----------
@@ -40,6 +45,18 @@ Text Input
 
 Password
 --------
+
+.. code-block:: html
+
+   <input type="password" value="secret" size="40">
+
+.. raw:: html
+
+   <div style="display: block;">
+   <input type="password" size="40" value="change me">
+   </div>
+
+
 
 Checkbox
 --------

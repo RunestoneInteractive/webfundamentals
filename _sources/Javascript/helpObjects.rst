@@ -1,3 +1,9 @@
 Helper Objects
 ==============
 
+Array
+-----
+
+
+String
+------
