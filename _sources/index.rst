@@ -70,6 +70,7 @@ Javascript
    Javascript/objects.rst
    Javascript/forms.rst
    Javascript/events.rst
+   Javascript/context.rst
    Javascript/helpObjects.rst
    Javascript/exercises.rst
       

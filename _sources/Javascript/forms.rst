@@ -128,3 +128,25 @@ Date Stuff
 * datetime-local
 * week
 * time
+
+
+Drop Down Menus
+---------------
+
+.. code-block:: html
+
+   <select id="priority">
+       <option>High</option>
+       <option>Medium</option>
+       <option>low</option>
+   </select>
+   
+.. raw:: html
+
+    <div style="display: block;">
+        <select id="priority">
+            <option>High</option>
+            <option>Medium</option>
+            <option>low</option>
+        </select>
+    </div>
