@@ -74,3 +74,11 @@ Javascript
    Javascript/helpObjects.rst
    Javascript/exercises.rst
       
+Advanced Javascript
+:::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+
+   AdvancedJavascript/prototype.rst
+
