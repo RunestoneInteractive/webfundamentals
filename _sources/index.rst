@@ -71,6 +71,8 @@ Javascript
    Javascript/forms.rst
    Javascript/events.rst
    Javascript/context.rst
+   Javascript/iteration.rst
+   Javascript/selection.rst
    Javascript/helpObjects.rst
    Javascript/exercises.rst
       
