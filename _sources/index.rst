@@ -72,7 +72,7 @@ Javascript
    Javascript/events.rst
    Javascript/context.rst
    Javascript/iteration.rst
-   Javascript/selection.rst
+   Javascript/Selection.rst
    Javascript/helpObjects.rst
    Javascript/exercises.rst
       
