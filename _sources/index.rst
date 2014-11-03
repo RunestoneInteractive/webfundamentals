@@ -83,4 +83,14 @@ Advanced Javascript
    :maxdepth: 2
 
    AdvancedJavascript/prototype.rst
+   AdvancedJavascript/mashup.rst
+   
+Server Side Programming
+:::::::::::::::::::::::
+
+.. toctree:: 
+   :maxdepth: 2
+   
+   CGI/basiccgi.rst
+
 
