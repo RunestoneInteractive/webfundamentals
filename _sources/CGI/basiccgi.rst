@@ -8,13 +8,14 @@ In fact that will be our starting point.  All the other web development work sin
 Lets look at a hello world style example.
 
 .. activecode:: cgi1
+   :language: cgi
 
    #!/usr/bin/python
 
    print "Content-type: text/html\n"
    print "<html>"
    print "<body>"
-   print "<h1>Hello %s</h1>" % "Brad"
+   print "<h1>Hello %s</h1>" % "World"
    print "</body>"
    print "</html>"
 
