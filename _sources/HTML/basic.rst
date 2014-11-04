@@ -35,7 +35,7 @@ Paragraphs are another funamental element of documents.  Paragraphs are also ano
    :language: html
 
    <p>This is a short sentence.</p>
-   <p>This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? <p>
+   <p>This is a paragraph.  What happens when we have a really really really long line that takes up more than one line of the browser? </p>
    <p>Level this is a short sentence</p>
 
 
@@ -70,7 +70,7 @@ The image tag has a new component to it called an attribute.  In general tags ca
 Try modifying the example above so that it includes the norse logo rather than the bell.
 You can also change the height and width of  an image by using a ``height=`` attribute or a ``width=`` attribute.  Try changing the size of the image in the example above.  Notice what it does to the flow.  Try changing just one of height or width and then try changing both at the same time.  You can stretch your image in all kinds of crazy ways.
 
-There are several other attributes of the link tag as well.  You can read about them `here <http://www.w3schools.com/tags/tag_img.asp>`_.
+There are several other attributes of the image tag as well.  You can read about them `here <http://www.w3schools.com/tags/tag_img.asp>`_.
 
 
 Links

@@ -2,7 +2,7 @@ CSS Exercises
 =============
 
 
-1. Add a CSS rule and appropriate html to style every other line of the unordered list with a light blue background color.  Speicify the background color using the rgb method.
+1. Add a CSS rule and appropriate html to style every other line of the unordered list with a light blue background color.  Specify the background color using the rgb method.
 
 .. actex:: ex_css_1
    :language: html
