@@ -22,7 +22,14 @@ Lets start with a basic page with a form.
      </body>
    </html>
    
-   
+There are two important attributes on the form tag:
+
+* method: this tells the browser which http method to use when submitting the form back to the server.  The options are ``get`` or ``post``.
+
+* action: This tells the browser the URL to use when submitting the form.
+
+The input type ``submit`` renders as a button in the form.  The purpose of this input type is to cause the form to be submitted back to the web server.
+
 .. code-block:: python
 
    #!/usr/bin/env python
@@ -42,4 +49,4 @@ Lets start with a basic page with a form.
    print "</pre>"
    print "</body>"
    print "</html>"
-      
+

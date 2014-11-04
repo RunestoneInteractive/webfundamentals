@@ -92,5 +92,5 @@ Server Side Programming
    :maxdepth: 2
    
    CGI/basiccgi.rst
-
+   CGI/forms.rst
 
