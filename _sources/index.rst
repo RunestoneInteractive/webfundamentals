@@ -14,6 +14,10 @@ Fundamentals of Web Programming
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
+-------------------------------
+Part 1: Client Side Programming
+-------------------------------
+   
 The World Wide Web
 ::::::::::::::::::
 
@@ -23,7 +27,6 @@ The World Wide Web
    WWW/intro.rst
    WWW/history.rst
    WWW/technology.rst
-
 
 
 HTML Basics
@@ -84,9 +87,14 @@ Advanced Javascript
 
    AdvancedJavascript/prototype.rst
    AdvancedJavascript/mashup.rst
+
+
+-------------------------------
+Part 2: Server Side Programming
+-------------------------------
    
-Server Side Programming
-:::::::::::::::::::::::
+Common Gateway Interface
+::::::::::::::::::::::::
 
 .. toctree:: 
    :maxdepth: 2
