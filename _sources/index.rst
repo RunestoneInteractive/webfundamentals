@@ -101,4 +101,16 @@ Common Gateway Interface
    
    CGI/basiccgi.rst
    CGI/forms.rst
+   CGI/cookies.rst
+
+
+Modern Web Frameworks
+:::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+   
+   Frameworks/frameworkintro.rst
+   Frameworks/templates.rst   
+   Frameworks/database.rst
 
