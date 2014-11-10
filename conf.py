@@ -33,7 +33,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Fundamentals of Web Programming' # e.g. How To Think Like a Computer Scientist
-copyright = u'2014, Brad Miller' # e.g. "2013, Brad Miller and David Ranum"
+copyright = None # e.g. "2013, Brad Miller and David Ranum"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -121,7 +121,7 @@ html_show_sourcelink = False
 html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = True
+html_show_copyright = False
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'

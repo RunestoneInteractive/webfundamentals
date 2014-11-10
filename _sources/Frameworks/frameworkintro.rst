@@ -81,7 +81,9 @@ But First...
        app.run()
 
 
-Now, this is not anywhere close to our previous example (yet), but this short program gives us plenty to go on.  The first thing we want to do is to run this and give it a test.  It is really easy to do.  If you save the code above to a file ``helloflask.py``  all you need to do is run ``python3 helloflask.py``.  This command starts up a web server and will respond to requests on port 5000 by default.  In your browser try the following:  ``http://localhost:5000/``
+Now, this is not anywhere close to our previous example (yet), but this short program gives us plenty to go on.  The first thing we want to do is to run this and give it a test.  It is really easy to do.  If you save the code above to a file ``helloflask.py``  all you need to do is run ``python3 helloflask.py``.  This command starts up a web server and will respond to requests on port 5000 by default.  In your browser try the following:  ``http://localhost:5000/`` You should see Hello World!  Now try ``http://localhost:5000/user/Me``, in this case you should see ``Hello Me``.  
 
-You should see Hello World!  Now try ``http://localhost:5000/user/Me``, in this case you should see ``Hello Me``.  This is an example of URL Routing, and is a fundamental aspect of any web development framework.
+The two pages you just viewed are an example of URL Routing, and is a fundamental aspect of any web development framework.  The URL / maps to the function ``hello_world`` and the the URL /user/<your name here> maps to the hello_user function.
+
+
 
