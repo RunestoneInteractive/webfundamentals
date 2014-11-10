@@ -152,7 +152,7 @@ The display property can also be used to change block elements into inline eleme
       <li>Those that know how to count in binary.</li>
       <li>Those that do not know how to count in binary</li>
       </ol>
-      When you have stopped laughing, add a CSS rule that changes the display
+      <p>When you have stopped laughing, add a CSS rule that changes the display
       property for the ``li`` element and sets its value to ``inline``. </p>
    </body>
    </html>
