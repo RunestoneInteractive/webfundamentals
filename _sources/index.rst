@@ -111,6 +111,9 @@ Modern Web Frameworks
    :maxdepth: 2
    
    Frameworks/frameworkintro.rst
+   Frameworks/decorators.rst
+   Frameworks/deploying.rst
+   Frameworks/wsgi.rst
    Frameworks/templates.rst   
    Frameworks/database.rst
 
