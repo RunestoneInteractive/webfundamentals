@@ -27,30 +27,30 @@ We have two main semantic areas in our page, the navigation menu main contents. 
    <nav>
    <ul >
     <li><a href='/'>Home</a></li>
-    <li><a href='/services/'>Syllabus</a>
+    <li><a href='#'>Syllabus</a>
      <ul>
-      <li><a href='/services/strategy/'>Text Book</a></li>
-      <li><a href='/services/optimize/'>Office Hours</a></li>
-      <li><a href='/services/guidance/'>Grading Policy</a></li>
-      <li><a href='/services/training/'>Learning Goals</a></li>
+      <li><a href='#'>Text Book</a></li>
+      <li><a href='#'>Office Hours</a></li>
+      <li><a href='#'>Grading Policy</a></li>
+      <li><a href='#'>Learning Goals</a></li>
      </ul>
     </li>
-    <li><a href='/events/'>Resources</a></li>
-    <li><a href='/pubs/'>Publications</a>
+    <li><a href='#'>Resources</a></li>
+    <li><a href='#'>Publications</a>
      <ul>
-      <li><a href='/pubs/articles/'>Articles</a></li>
-      <li><a href='/pubs/tuts/'>Tutorials</a>
+      <li><a href='#'>Articles</a></li>
+      <li><a href='#'>Tutorials</a>
        <ul>
-        <li><a href='/pubs/tuts/html/'>HTML</a></li>
-        <li><a href='/pubs/tuts/css/'>CSS</a></li>
-        <li><a href='/pubs/tuts/svg/'>SVG</a></li>
-        <li><a href='/pubs/tuts/xml/'>XML</a></li>
+        <li><a href='#'>HTML</a></li>
+        <li><a href='#'>CSS</a></li>
+        <li><a href='#'>SVG</a></li>
+        <li><a href='#'>XML</a></li>
        </ul>
       </li>
-      <li><a href='/pubs/wpapers/'>Assignments</a></li>
+      <li><a href='#'>Assignments</a></li>
      </ul>
     </li>
-    <li><a href='/contact/'>Contact</a></li>
+    <li><a href='#'>Contact</a></li>
    </ul>
    </nav>
 
@@ -115,30 +115,30 @@ We give the nav its own background color for now, just to make it easy to differ
    <nav>
    <ul>
     <li><a href='/'>Home</a></li>
-    <li><a href='/services/'>Syllabus</a>
+    <li><a href='#'>Syllabus</a>
      <ul>
-      <li><a href='/services/strategy/'>Text Book</a></li>
-      <li><a href='/services/optimize/'>Office Hours</a></li>
-      <li><a href='/services/guidance/'>Grading Policy</a></li>
-      <li><a href='/services/training/'>Learning Goals</a></li>
+      <li><a href='#'>Text Book</a></li>
+      <li><a href='#'>Office Hours</a></li>
+      <li><a href='#'>Grading Policy</a></li>
+      <li><a href='#'>Learning Goals</a></li>
      </ul>
     </li>
-    <li><a href='/events/'>Resources</a></li>
-    <li><a href='/pubs/'>Publications</a>
+    <li><a href='#'>Resources</a></li>
+    <li><a href='#'>Publications</a>
      <ul>
-      <li><a href='/pubs/articles/'>Articles</a></li>
-      <li><a href='/pubs/tuts/'>Tutorials</a>
+      <li><a href='#'>Articles</a></li>
+      <li><a href='#'>Tutorials</a>
        <ul>
-        <li><a href='/pubs/tuts/html/'>HTML</a></li>
-        <li><a href='/pubs/tuts/css/'>CSS</a></li>
-        <li><a href='/pubs/tuts/svg/'>SVG</a></li>
-        <li><a href='/pubs/tuts/xml/'>XML</a></li>
+        <li><a href='#'>HTML</a></li>
+        <li><a href='#'>CSS</a></li>
+        <li><a href='#'>SVG</a></li>
+        <li><a href='#'>XML</a></li>
        </ul>
       </li>
-      <li><a href='/pubs/wpapers/'>Assignments</a></li>
+      <li><a href='#'>Assignments</a></li>
      </ul>
     </li>
-    <li><a href='/contact/'>Contact</a></li>
+    <li><a href='#'>Contact</a></li>
    </ul>
    </nav>
 
@@ -250,30 +250,30 @@ Notice that we add two position properties.  The ``nav li`` items are positioned
    <nav>
    <ul >
     <li><a href='/'>Home</a></li>
-    <li><a href='/services/'>Syllabus</a>
+    <li><a href='#'>Syllabus</a>
      <ul>
-      <li><a href='/services/strategy/'>Text Book</a></li>
-      <li><a href='/services/optimize/'>Office Hours</a></li>
-      <li><a href='/services/guidance/'>Grading Policy</a></li>
-      <li><a href='/services/training/'>Learning Goals</a></li>
+      <li><a href='#'>Text Book</a></li>
+      <li><a href='#'>Office Hours</a></li>
+      <li><a href='#'>Grading Policy</a></li>
+      <li><a href='#'>Learning Goals</a></li>
      </ul>
     </li>
-    <li><a href='/events/'>Resources</a></li>
-    <li><a href='/pubs/'>Publications</a>
+    <li><a href='#'>Resources</a></li>
+    <li><a href='#'>Publications</a>
      <ul>
-      <li><a href='/pubs/articles/'>Articles</a></li>
-      <li><a href='/pubs/tuts/'>Tutorials</a>
+      <li><a href='#'>Articles</a></li>
+      <li><a href='#'>Tutorials</a>
        <ul>
-        <li><a href='/pubs/tuts/html/'>HTML</a></li>
-        <li><a href='/pubs/tuts/css/'>CSS</a></li>
-        <li><a href='/pubs/tuts/svg/'>SVG</a></li>
-        <li><a href='/pubs/tuts/xml/'>XML</a></li>
+        <li><a href='#'>HTML</a></li>
+        <li><a href='#'>CSS</a></li>
+        <li><a href='#'>SVG</a></li>
+        <li><a href='#'>XML</a></li>
        </ul>
       </li>
-      <li><a href='/pubs/wpapers/'>Assignments</a></li>
+      <li><a href='#'>Assignments</a></li>
      </ul>
     </li>
-    <li><a href='/contact/'>Contact</a></li>
+    <li><a href='#'>Contact</a></li>
    </ul>
    </nav>
 
@@ -374,30 +374,30 @@ In this step we add single rule to deal with a small problem.  The problem is th
    <nav>
    <ul class='level1'>
     <li><a href='/'>Home</a></li>
-    <li class='submenuu'><a href='/services/'>Syllabus</a>
+    <li class='submenuu'><a href='#'>Syllabus</a>
      <ul class='level2'>
-      <li><a href='/services/strategy/'>Text Book</a></li>
-      <li><a href='/services/optimize/'>Office Hours</a></li>
-      <li><a href='/services/guidance/'>Grading Policy</a></li>
-      <li><a href='/services/training/'>Learning Goals</a></li>
+      <li><a href='#'>Text Book</a></li>
+      <li><a href='#'>Office Hours</a></li>
+      <li><a href='#'>Grading Policy</a></li>
+      <li><a href='#'>Learning Goals</a></li>
      </ul>
     </li>
-    <li><a href='/events/'>Resources</a></li>
-    <li class='submenuu'><a href='/pubs/'>Publications</a>
+    <li><a href='#'>Resources</a></li>
+    <li class='submenuu'><a href='#'>Publications</a>
      <ul class='level2'>
-      <li><a href='/pubs/articles/'>Articles</a></li>
-      <li class='submenuu'><a href='/pubs/tuts/'>Tutorials</a>
+      <li><a href='#'>Articles</a></li>
+      <li class='submenuu'><a href='#'>Tutorials</a>
        <ul class='level3'>
-        <li><a href='/pubs/tuts/html/'>HTML</a></li>
-        <li><a href='/pubs/tuts/css/'>CSS</a></li>
-        <li><a href='/pubs/tuts/svg/'>SVG</a></li>
-        <li><a href='/pubs/tuts/xml/'>XML</a></li>
+        <li><a href='#'>HTML</a></li>
+        <li><a href='#'>CSS</a></li>
+        <li><a href='#'>SVG</a></li>
+        <li><a href='#'>XML</a></li>
        </ul>
       </li>
-      <li><a href='/pubs/wpapers/'>Assignments</a></li>
+      <li><a href='#'>Assignments</a></li>
      </ul>
     </li>
-    <li><a href='/contact/'>Contact</a></li>
+    <li><a href='#'>Contact</a></li>
    </ul>
    </nav>
 
@@ -536,30 +536,30 @@ The change we need to make is to
    <nav>
    <ul class='level1'>
     <li><a href='/'>Home</a></li>
-    <li class='submenuu'><a href='/services/'>Syllabus</a>
+    <li class='submenuu'><a href='#'>Syllabus</a>
      <ul class='level2'>
-      <li><a href='/services/strategy/'>Text Book</a></li>
-      <li><a href='/services/optimize/'>Office Hours</a></li>
-      <li><a href='/services/guidance/'>Grading Policy</a></li>
-      <li><a href='/services/training/'>Learning Goals</a></li>
+      <li><a href='#'>Text Book</a></li>
+      <li><a href='#'>Office Hours</a></li>
+      <li><a href='#'>Grading Policy</a></li>
+      <li><a href='#'>Learning Goals</a></li>
      </ul>
     </li>
-    <li><a href='/events/'>Resources</a></li>
-    <li class='submenuu'><a href='/pubs/'>Publications</a>
+    <li><a href='#'>Resources</a></li>
+    <li class='submenuu'><a href='#'>Publications</a>
      <ul class='level2'>
-      <li><a href='/pubs/articles/'>Articles</a></li>
-      <li class='submenuu'><a href='/pubs/tuts/'>Tutorials</a>
+      <li><a href='#'>Articles</a></li>
+      <li class='submenuu'><a href='#'>Tutorials</a>
        <ul class='level3'>
-        <li><a href='/pubs/tuts/html/'>HTML</a></li>
-        <li><a href='/pubs/tuts/css/'>CSS</a></li>
-        <li><a href='/pubs/tuts/svg/'>SVG</a></li>
-        <li><a href='/pubs/tuts/xml/'>XML</a></li>
+        <li><a href='#'>HTML</a></li>
+        <li><a href='#'>CSS</a></li>
+        <li><a href='#'>SVG</a></li>
+        <li><a href='#'>XML</a></li>
        </ul>
       </li>
-      <li><a href='/pubs/wpapers/'>Assignments</a></li>
+      <li><a href='#'>Assignments</a></li>
      </ul>
     </li>
-    <li><a href='/contact/'>Contact</a></li>
+    <li><a href='#'>Contact</a></li>
    </ul>
    </nav>
 
