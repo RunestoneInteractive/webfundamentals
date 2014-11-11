@@ -436,7 +436,7 @@ The last rule makes a submenu visible!  ``display: block;``  But we want to dist
    }
 
    nav li.submenu {
-       background: url(submenu.gif) 95% 50% no-repeat;
+       background: url(http://...submenu.gif) 95% 50% no-repeat;
    }
 
    nav li.submenu:hover {
@@ -514,7 +514,7 @@ The change we need to make is to
    }
 
    nav li.submenu {
-       background: url(submenu.gif) 95% 50% no-repeat;
+       background: url(http://interactivepython.org/runestone/static/webfundamentals/_static/submenu.gif) 95% 50% no-repeat;
    }
 
    nav li.submenu:hover {
