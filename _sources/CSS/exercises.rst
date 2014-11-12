@@ -67,41 +67,9 @@ CSS Exercises
 7.  Using the template developed in the layout chapter, develop a homepage for yourself, published on github pages, that employs a two column layout with a fixed navbar (always on screen), and a footer.  The navbar should link to at least two additional pages used to describe your hobbies or favorite teams.  The CSS for this website should be contained in its own CSS file, and all three pages should use this CSS file.
 
 
-8. Starting with the following code, use CSS rules for positioning, display, and hovering to create a dynamic dropdown menu system.  That is, when you hover over one of the list elements in the top level menu it will dynamically show the list elements under it.
+8. Modify the final version of the menu project so that the menu is a horizontal menu with the first level of submenus dropping down below the selected item.
 
-.. actex:: ex_css_8
-   :language: html
-   :nocodelens:
 
-   <html>
-      <head>
-      </head>
-      <body>
-         <h1>Exercise 8</h1>
-         <ul>
-            <li>Choirs
-               <ul>
-                  <li>Nordic</li>
-                  <li>Collegiate</li>
-                  <li>Cathedral</li>
-                  <li>Norsemen</li>
-                  <li>Aurora</li>
-               </ul></li>
-            <li>Soccer
-               <ul>
-                  <li>Arsenal</li>
-                  <li>Everton</li>
-                  <li>Chelsea</li>
-               </ul></li>
-            <li>Buildings
-               <ul>
-                  <li>Olin</li>
-                  <li>Preus</li>
-                  <li>Larson</li>
-               </ul></li>
-         </ul>
-      </body>
-   </html>
    
    
    
