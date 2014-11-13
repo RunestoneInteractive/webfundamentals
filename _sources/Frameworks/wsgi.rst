@@ -92,5 +92,62 @@ This example illustrates an instance of a class as a callable, that implements t
 
 The WSGIRequestHandler class implements an  ``__call__`` method that relies on a subclass that implements a get method to build the actual page.  Different applications can implement many subclasses of the WSGIRequestHandler class to handle the various requests.
 
-The ``__init__`` method creates two instance variables to handle common
+The ``__init__`` method creates two instance variables to handle response headers, as well as incoming environment variables such as cookies and arguments from a submitted form.
+
+the main program in this script imports a make_server function which assembles a web server to handle WSGI requests, on a host, port.  It also needs a callable application object.  In this case an instance of the Hello class.  We will shortly look at how add dispatch functionality to the example to show how to make a WSGI server that can map URLs to classes so thate it can respond to a variety of requests.
+
+There are two big things that we want to add to our WSGI application:
+
+1.  URL mapping
+2.  Error Handling
+
+
+In the decorators module we looked at how Flask uses decorators to associate a function with a particular URL pattern.  In this section we will not use a decorator but will just create a list of URL to callable mappings directly and see how that works with the rest of our implementation.
+
+.. code-block:: python
+
+   urls = [
+       (r'^$', Index),
+       (r'hello/?$', Hello),
+       (r'goodbye/?)$', Goodbye)
+   ]
+   
+
+This list of tuples maps three differnt patterns to 3 different callables that provide a simple response.  All of them are very similar to the Hello class shown above.
+
+Given that list we need an WSGI compliant callable that can examine the incoming request and forward the call to the appropriate class.
+
+.. code-block:: python
+
+   def router(environ, start_response):
+       path = environ.get('PATH_INFO', '').lstrip('/')
+       for regex, callback in urls:
+           match = re.search(regex, path)
+           if match is not None:
+               environ['myapp.url_args'] = match.groups()
+               return callback()(environ, start_response)
+       return not_found(environ, start_response)
+
+   def not_found(environ, start_response):
+       """Called if no URL matches."""
+       start_response('404 NOT FOUND', [('Content-Type', 'text/plain')])
+       return ['Not Found']
+
+Now the main program looks like this:
+
+.. code-block:: python
+
+   if __name__ == '__main__':
+       from wsgiref.simple_server import make_server
+       srv = make_server('localhost', 8080, router)
+       srv.serve_forever()
+
+The router callable is passed in to the server as the main application object.  The keys to the router function are as follows:
+
+1.  Extract the path from the incoming PATH_INFO environment variable
+2.  Match that path against the regular expressions provided in the urls list.
+3.  Forward the request to the callable that should handle it using the following:  ``return callback()(environ,start_response)``
+
+That last line looks a bit crazy, so lets break it down.  Remember that WSGI compliant callables must accept an environment and a start_response function,  and they must return an iterable.  So the return statement must first evaluate its argument:  ``callback()(environ,start_response)``.  This is evaluated from left to right.  The reference ``callback`` is set in the for loop and will be set to the callable that matches the current regular expression.  In our class This will be a class.  So ``callback()`` creates an instance of the class that matches the regular expression.  As soon as the instnace is created its ``__call__`` method is invoked by the ``(environ,start_resonse)`` operator.  Which in turn will invoke the ``get`` method on the class which returns an iterable.  That iterable is returned by the return statement in the router function.
+
 
