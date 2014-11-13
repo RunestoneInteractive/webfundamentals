@@ -160,11 +160,36 @@ The display property can also be used to change block elements into inline eleme
 
 This technique is often used in the navigation bar to create a "menu" of links.  See exercise 5 in the exercises section for some practice with this.
 
+Floating
+--------
+
+The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Lets begin with a simple example.
+
+.. activecode:: css_float1
+   :language: html
+
+   <html>
+      <head>
+         <style>
+         </style>
+       </head>
+   <body>
+   <p>the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.png" /> the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
+   </body>
+   </html>
+
+
+Notice that the logo appears right in the middle of the text in its normal inline flow.   Now, add a CSS rule for an img tag that sets the float property to left.   Then change the rule to float the image to the right.
+
+Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
+
+Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
+
 
 Positioning
 -----------
 
-There are several different ways to affect the positioning of html elements either inside or outside of the normal flow of the layout.
+There are several different ways to affect the positioning of html elements either inside or outside of the normal flow of the layout.  
 
 * static
 * fixed
@@ -314,7 +339,7 @@ If we want to change that and make it look like card 1 is on top of card 2 and c
 Absolute
 --------
 
-Absolutely positioned elements are absolute, but relative to their container!
+Absolutely positioned elements are absolute, but relative to their container!  The official rule is that absolute items are positioned using the the upper left corner of the first non-static container as the origin.  If there is no non-static container, then the html tag will be used and the origin will be the upper left corner of the page.
 
 .. activecode:: css_pos3
    :language: html
@@ -343,7 +368,7 @@ Absolutely positioned elements are absolute, but relative to their container!
    <body>
    <main>
       <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
-      <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="b" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
       
    <main>
    </body>
@@ -352,30 +377,7 @@ Absolutely positioned elements are absolute, but relative to their container!
 OK, what happened to the second card?  How can you make a stack that looks like the stack from our relatively positioned element?  What happens if you add an h1 in front of the main tag?
 
 
-Floating
---------
 
-The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Lets begin with a simple example.
-
-.. activecode:: css_float1
-   :language: html
-
-   <html>
-      <head>
-         <style>
-         </style>
-       </head>
-   <body>
-   <p>the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.png" /> the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
-   </body>
-   </html>
-
-
-Notice that the logo appears right in the middle of the text in its normal inline flow.   Now, add a CSS rule for an img tag that sets the float property to left.   Then change the rule to float the image to the right.
-
-Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
-
-Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
 
 
 
