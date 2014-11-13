@@ -458,8 +458,8 @@ The change we need to make is to
    <title>SubMenus</title>
    <style type='text/css'>
    body {
-       background: #EEE; 
-       color: #000;
+       background: #EEEEEE; 
+       color: #000000;
    }
 
    h1 {
@@ -510,7 +510,7 @@ The change we need to make is to
    }
    
    nav li:hover {
-       background: #EBB;
+       background: #6F99F2;
    }
 
    nav li.submenu {
