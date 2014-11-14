@@ -57,7 +57,7 @@ Our app object in Flask is an instance of the Flask class.  Lets look at a reall
 .. code-block:: python
 
    from cgi import parse_qs
-   class WSGIRequestHandler(object):
+   class WSGIRequestHandler:
 
        def __init__(self):
            self.request = {}
@@ -150,4 +150,46 @@ The router callable is passed in to the server as the main application object.  
 
 That last line looks a bit crazy, so lets break it down.  Remember that WSGI compliant callables must accept an environment and a start_response function,  and they must return an iterable.  So the return statement must first evaluate its argument:  ``callback()(environ,start_response)``.  This is evaluated from left to right.  The reference ``callback`` is set in the for loop and will be set to the callable that matches the current regular expression.  In our class This will be a class.  So ``callback()`` creates an instance of the class that matches the regular expression.  As soon as the instnace is created its ``__call__`` method is invoked by the ``(environ,start_resonse)`` operator.  Which in turn will invoke the ``get`` method on the class which returns an iterable.  That iterable is returned by the return statement in the router function.
 
+OK, so now that we can call the right function, lets look at how to handle errors the WSGI way.  Error handling is a nice example of how you can use middleware.  Or you can think of it in Shrek terms:  Applications are like Ogres, they have layers.  To implement a middleware layer we simply implement another WSGI compliant class, that takes an inner WSGI object as a parameter for its constructor.  Each outer layer has access to the results of the layer below it, and can modify the results of the layer below it before returning it to the layer above.
+
+.. code-block:: python
+
+   class ExceptionMiddleware:
+       """The middleware we use."""
+
+       def __init__(self, app):
+           self.app = app
+
+       def __call__(self, environ, start_response):
+           """Call the application can catch exceptions."""
+           appiter = None
+           # just call the application and send the output back
+           # unchanged but catch exceptions
+           try:
+               appiter = self.app(environ, start_response)
+               for item in appiter:
+                   yield item
+           # if an exception occours we get the exception information
+           # and prepare a traceback we can render
+           except:
+               e_type, e_value, tb = exc_info()
+               traceback = ['Traceback (most recent call last):']
+               traceback += format_tb(tb)
+               traceback.append('%s: %s' % (e_type.__name__, e_value))
+               # we might have not a stated response by now. try
+               # to start one with the status code 500 or ignore an
+               # raised exception if the application already started one.
+               try:
+                   start_response('500 INTERNAL SERVER ERROR', [
+                                  ('Content-Type', 'text/plain')])
+               except:
+                   pass
+               yield '\n'.join(traceback)
+
+           # wsgi applications might have a close function. If it exists
+           # it *must* be called.
+           if hasattr(appiter, 'close'):
+               appiter.close()
+
+You will notice that this is a very similar class to the base class for WSGI applications except that it handles the call to the lower layer inside a try/except block.  If any of the lower layers fail they will be caught by the try except at this layer and the traceback will be rendered on the browser page, along with the 500 internal server error message.  There are many uses for middleware including session management, form authentication, You can find a list of open source WSGI middleware handling user login/logouts, and more you can find a list `here <http://wsgi.readthedocs.org/en/latest/libraries.html>`_. Although for our continued use of Flask these are not necessary, as we will be using some extensions that are specific to flask, which may very well be implemented using the middleware pattern.
 
