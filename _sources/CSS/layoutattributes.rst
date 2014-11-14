@@ -370,7 +370,7 @@ Absolutely positioned elements are absolute, but relative to their container!  T
       <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
       <img id="b" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
       
-   <main>
+   </main>
    </body>
    </html>
 
