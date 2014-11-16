@@ -47,5 +47,6 @@ The values inside the double curlies are not limited to being string objects, al
    </html>
 
 
-Assuming we have a student object called joe we can render the template above with the line:  ``t.render(s=joe)``
+Assuming we have a student object called joe we can render the template above with the line:  ``t.render(s=joe)``  This would also work if joe was a dictionary and had keys firstname, lastname, and gpa.  The dot notation works for either attributes or items in a dictionary  (``__getattr__`` or ``__getitem__``) for those of you who like magic method speak.
+
 
