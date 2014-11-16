@@ -50,3 +50,34 @@ The values inside the double curlies are not limited to being string objects, al
 Assuming we have a student object called joe we can render the template above with the line:  ``t.render(s=joe)``  This would also work if joe was a dictionary and had keys firstname, lastname, and gpa.  The dot notation works for either attributes or items in a dictionary  (``__getattr__`` or ``__getitem__``) for those of you who like magic method speak.
 
 
+Loops in Templates
+------------------
+
+Lets suppose you want to make a table in a template.  The ideal would be to pass render a list of things, and have the template turn the list into a table.  (or an unordered list or whatever)  This is easy to do.
+
+.. code-block:: html
+
+   <html>
+       <body>
+           <h1>The first {{ plist|length }} prime numbers</h1>
+           <table>
+               {% for i in plist: %}
+                   <tr><td>{{ i }}</td></tr>
+               {% endfor %}
+           </table>
+       </body>
+   </html>
+   
+
+This introduces several interesting new features of templates. 
+
+1.  The ``{% ... %}`` notation is used to include a non-rendering bit of code in the template.  In this example we introduce a for loop.  Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.
+
+2.  Jinja2 includes a huge number of filters that you can use on a variable.  The filter ``plist|length`` will render as the number of elements in the plist list.
+
+
+Conditionals in Templates
+-------------------------
+
+
+
