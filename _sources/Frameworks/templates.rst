@@ -79,5 +79,125 @@ This introduces several interesting new features of templates.
 Conditionals in Templates
 -------------------------
 
+In addition to loops you can also have a conditional in a template for example:
+
+.. code-block:: html
+
+   <html>
+       <body>
+           {% if name %}
+           <h1>Hello {{ name }} </h1>
+           {% else %}
+           <h1>Hello World</h1>
+           {% endif %}
+       </body>
+   </html>
 
 
+Template Inheritance
+--------------------
+
+The real power of templates comes when you use template inheritance.  The following scenario is very common:
+
+1.  base.html  - This file contains the layout that will be used throughout the site, along with all of the links to css files and includes of javascript.  The base.html file will define a set of blocks that have default content, but can be overridden by other templates.
+1.  index.html --  The landing page, that inherits from base.html and customizes some blocks for the main page.
+1.  other child pages, will also inherit from base.html annd make their own customizations.
+
+For example lets suppose you have a base.html file that looks like this:
+
+.. code-block:: html
+
+   <html>
+   <head>
+       {% block head %}
+       <link rel="stylesheet" href="static/style.css" />
+       <title>{% block title %}{% endblock %} - My Webpage</title>
+       {% endblock %}
+   </head>
+   <body>
+       <main>{% block content %}{% endblock %}</main>
+       <footer>
+           {% block footer %}
+           Creative Commons 2014 by <a href="http://domain.invalid/">you</a>.
+           {% endblock %}
+       </footer>
+   </body>
+
+
+Running this through the Jinja2 renderer gives us this:
+
+.. code-block:: html
+
+   <html>
+   <head>
+
+      <link rel="stylesheet" href="static/style.css" />
+      <title> - My Webpage</title>
+
+   </head>
+   <body>
+      <main></main>
+      <footer>
+
+          Creative Commons 2014 by <a href="http://domain.invalid/">you</a>.
+
+      </footer>
+   </body>
+
+
+Now lets create a child template
+
+.. code-block:: html
+
+   .. code-block:: html
+
+      {% block content %}
+      <h1>Tempates are awesome for 10 reasons</h1>
+      <ol>
+          {% for i in reasons: %}
+          <li>Reason {{ i }}</li>
+          {% endfor %}
+      </ol>
+      {% endblock %}
+   
+
+
+And render it with ``render(reasons=[1,2,3,4,5])``
+
+.. code-block:: html
+
+   <html>
+   <head>
+
+      <link rel="stylesheet" href="static/style.css" />
+      <title>
+   Great Title
+    - My Webpage</title>
+
+   </head>
+   <body>
+      <main>
+   <h1>Tempates are awesome for 5 reasons</h1>
+   <ol>
+
+       <li>Reason 1</li>
+
+       <li>Reason 2</li>
+
+       <li>Reason 3</li>
+
+       <li>Reason 4</li>
+
+       <li>Reason 5</li>
+
+   </ol>
+   </main>
+      <footer>
+
+          Creative Commons 2014 by <a href="http://domain.invalid/">you</a>.
+
+      </footer>
+   </body>
+
+
+Notice that the header and footer are intact, however the child has the title "Great Title"  and the content of the child has been inserted into the content block.
