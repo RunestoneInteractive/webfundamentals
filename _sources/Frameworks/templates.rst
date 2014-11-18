@@ -145,7 +145,7 @@ Running this through the Jinja2 renderer gives us this:
    </body>
 
 
-Now lets create a child template
+Now lets create a child template that contains a title and some real content.
 
 .. code-block:: html
 
@@ -201,3 +201,15 @@ And render it with ``render(reasons=[1,2,3,4,5])``
 
 
 Notice that the header and footer are intact, however the child has the title "Great Title"  and the content of the child has been inserted into the content block.
+
+
+Templates in Flask
+------------------
+
+To use Jinja templates in flask is easy.
+
+1.  You need to make a templates subdirectory in your main project directory.
+2.  Add ``from flask import render_template`` to your Python.
+3.  Then from one of your controller functions, rather than returning a big string, you simple invoke the ``render_template`` function:  ``return render_template('todo.html',todolist=todolist))
+
+Remember that in flask our controller functions return an iterable.  The render_template function returns such an interable.  Its just a string, so you can call the render_template function and print the results if you like.
