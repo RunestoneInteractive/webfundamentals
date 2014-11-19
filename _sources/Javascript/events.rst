@@ -14,7 +14,6 @@ Consider the following page:
         <title>Colors</title>
       </head>
       <body>
-        <script src="color.js" type="text/javascript"></script>
         <label for="redi">Red:</label>
         <input type="text" id="redi" min="0" value="255" /> <br>
         <label for="greeni">Green:</label>
@@ -49,7 +48,6 @@ However this is kind of unsatisfying, it would be nice if we could just type a n
         <title>Colors</title>
       </head>
       <body>
-        <script src="color.js" type="text/javascript"></script>
         <label for="redi">Red:</label>
         <input type="text" id="redi" onchange="changeColor()" value="255" /> <br>
         <label for="greeni">Green:</label>
@@ -87,7 +85,6 @@ Now, to explore a few additional events, lets use a nicer user interface element
         <title>Colors</title>
       </head>
       <body>
-        <script src="color.js" type="text/javascript"></script>
         <label for="redi">Red:</label>
         <input type="range" min=0 max=255 id="redi" onchange="changeColor()" value="255" /> <br>
         <label for="greeni">Green:</label>
@@ -125,7 +122,6 @@ We don't *need* the values to change continuously, so lets update the values whe
         <title>Colors</title>
       </head>
       <body>
-        <script src="color.js" type="text/javascript"></script>
         <label for="redi">Red:</label>
         <input type="range" min=0 max=255 id="redi" onmousemove="changeColor()"
               onmouseup="showValues()" value="125" /> <span id="redv"></span><br>
@@ -189,6 +185,30 @@ Finally, when the page loads we want to set the background color and have each s
 When the page is fully loaded the ``window.onload`` event happens.  Since we want both of our functions to be called, we create a function (without a name!) to be called, and this function calls both of our functions.  This is a little bit different than how we attach functions to HTML elements, but don't worry about it too much for now.  Just give the example a try to see that it really works just how we want it to.
 
 
+.. activecode:: js_event_6
+   :language: html
+   
+   <html>
+   <body>
+   <button onclick="stop();">Stop</button>
+   <script>
+     changeColor = function() {
+         red = Math.floor(Math.random()*255);
+         green = Math.floor(Math.random()*255);
+         blue = Math.floor(Math.random()*255);
+         colorStr = "rgb(" + red + "," + green + "," + blue + ")";
+         document.body.style.backgroundColor = colorStr;
+         //window.setInterval(changeColor, 1000);
+     }
+     stop = function() {
+         window.clearInterval(intId);
+     }
+     intId = window.setInterval(changeColor, 1000);
+   </script>
+   </body>
+   </html>
+   
+
 Events Used in this Section
 ---------------------------
 
@@ -200,3 +220,6 @@ Events Used in this Section
 * onmousedown
 * onmousemove
 * window.onload
+* window.setInterval
+* window.clearInterval
+
