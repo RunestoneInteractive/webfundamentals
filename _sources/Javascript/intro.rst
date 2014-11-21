@@ -65,3 +65,34 @@ Lets defer the question of what happened to the button for just a bit.  In the m
 #. Change the wording inside the ``<h1>`` tag in the Javascript.
 #. What happens if you add ``<button>Click Me</button>`` after the closing ``</h1>``?
 
+
+Lets look at a little different example that accomplishes the same thing, but illustrates how CSS, Javascript, and HTML all work together.
+In this example rather than setting the color of the background directly, we will make the body have the class attribute "myclass" when the button is clicked.
+
+Now, 
+
+.. activecode:: js_second
+   :language: html
+   
+   <html>
+      <head>
+         <style>
+         .myclass {
+            background-color: lightblue;
+         }
+         </style>
+      </head>
+      <body>
+         <h1>Hello World!!</h1>
+         
+         <button onclick="changeThisPageFunc();">Click Me!</button>
+         <script type="text/javascript">
+            changeThisPageFunc = function() {
+               alert("body has class = "+document.body.className);
+               document.body.classList.add("myclass")
+               alert("body has class = "+document.body.className);
+               document.body.innerHTML = "<h1>I am a little blue today</h1>";
+            }
+         </script>
+      </body>
+   </html>
