@@ -89,7 +89,7 @@ Now,
          <script type="text/javascript">
             changeThisPageFunc = function() {
                alert("body has class = "+document.body.className);
-               document.body.classList.add("myclass")
+               document.body.className = "myclass";
                alert("body has class = "+document.body.className);
                document.body.innerHTML = "<h1>I am a little blue today</h1>";
             }

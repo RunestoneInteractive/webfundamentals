@@ -44,6 +44,27 @@ Now, you may also be wondering about the ``.`` between the various attributes in
 
 The innerHTML attribute allows us to change the html of any element in our document.  Of course as you noticed before changing the HTML value of the body wipes out all of the old tags and replaces it with whatever is in quotes.  Lets look at another example that illustrates another very important javascript function and will allow us to change only a small portion of the webpage.
 
+Our goal is to change the ``h1`` without changing the rest of the page.  Lets try an approach that might seem clear to you now, that **will not work.**
+
+.. activecode:: js_hello3
+   :language: html
+   
+   <html>
+      <body>
+         <h1>Hello World!!</h1>
+         <button onclick="changeThisPageFunc();">Click Me!</button>
+         <script type="text/javascript">
+            changeThisPageFunc = function() {
+               // this will not work
+               document.body.h1.style.backgroundColor = "lightblue";
+            }
+         </script>
+      </body>
+   </html>
+
+The reason this will not work is that the body may contain many ``h1`` tags.  So we need a way to identify, and "get a handle on" the exact h1 that we want to change.
+
+Lets look at the right way to do this.  IN the following example we have a semantic tag called ``main`` we want to change the contents of main without modifying the rest of the document.
 
 .. activecode:: js_selector
    :language: html
@@ -80,7 +101,10 @@ So, we need to find the main in our document and give it a name so we can do thi
 
 Now, the right hand side of the assignment statement contains a **method**. This is a fancy word for us telling an object to go do something for us.  In fact a method is just a fancy name for a function that is attached to an object, and so it is an abstraction too.  Now, here is the good news about this method.  Everything you learned about selectors in the previous chapter on CSS can be used to tell this method what you want it to find!   ``'main'`` is a parameter to the querySelector method, and could contain any selector we learned about in the previous chapter.
 
+In fact ``document.head`` and ``document.body`` are the only tags that we can access directly.  All other tags must be accessed using ``querySelector``
+
 Lets take a breather here and try a few things:
 
+1.  Go back and modify the first example so that You can change the color of the h1.
 1.  Change the HTML so that main has an id of ``"a"``.  Also add a second ``main`` tag that contains an h1.  The initial view of your page should not change.  What happens when you click the button?
 2.   Now change the parameter to the querySelector method so that it finds main by its ID rather than by its tag?  What happens if you remove the id attribute from the first main and move it to the second?
