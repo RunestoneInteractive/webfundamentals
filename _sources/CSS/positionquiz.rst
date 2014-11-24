@@ -6,9 +6,9 @@ Today's quiz has only one question, you may use your textbook to refer to as wel
 
 Starting with the HTML I give you, you must recreate the image below.
 
-.. image:: Figures/quiz2.png
+.. image:: Figures/quiz2b.png
 
-Hint:  For Safari and Chrome the following property is important for this question:  ``-webkit-transform``  Also I will tell you that the Hellos are tilted by 45 degrees.  The rest of the positioning you can get by trial and error, there is no need for advanced math to figure this out.
+Dimensions:  The green box is 400px wide and 300px high and is centered with a top margin of 50px.  The pink boxes are 150px high and 150px wide.  The are positioned 20px from the edges of the green box.  The text in the pink boxes is centered and is 20px from the top of the pink box.
 
 .. actex:: q2_1
    :language: html
@@ -18,9 +18,14 @@ Hint:  For Safari and Chrome the following property is important for this questi
        <style>
        </style>
      </head>
-     <body>
-        <h1 id="a">Hello Hello Hello Hello</h1>
-        <h1 id="b">Hello Hello Hello Hello</h1>
-        <h1 id="c">Hello Hello Hello Hello</h1>
-     </body>
+        <body>
+            <main>
+            <nav>
+                <h2>Happy Thanksgiving</h2>
+            </nav>
+            <aside>
+                <h2>Let it Snow</h2>
+            </aside>
+            </main>
+        </body>  
    </html>
