@@ -75,6 +75,8 @@ Typing return or clicking with the mouse is still not as godd as we could do.  T
 * onkeypress  -- fires after onkeydown but not for control, shift, alt
 * onkeyup -- fires when they key goes up
 
+You may notice some slightly unreliable behavior here.  The problem is that there is a slight timing issue between when the key event happens and when the update to the text input boxes value happens.  It may be that the value is updated before you read it, or it may not be updated until after you read it.  There are ways to work around this, but that would add more difficulty to the example than we want to go into right now.
+
 Now, to explore a few additional events, lets use a nicer user interface element to adjust the color of our background.  Lets use a slider.  We can get a slider by changing the input type to ``range``.
 
 .. activecode:: js_event_3
