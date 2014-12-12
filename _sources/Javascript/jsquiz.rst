@@ -3,7 +3,7 @@ Javascript Quiz
 
 For the following question, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete this and you may test it as many times as you need to.
 
-1.  Given the following HTML Add a button with a callback function that changes the ``h1`` from "Hello World" to "So Long CS130"  When you change the message you should also arrange it so the color of the text turns blue.  Your final page should still have a button.
+1.  Given the following HTML Add a button with a callback function that changes the ``h1`` from "Hello World" to "So Long CS130"  When you change the message you should also arrange it so the color of the text turns blue.  The rest of your page should remain unchanged.
 
 .. actex:: jsquiz_1
    :language: html
@@ -11,6 +11,7 @@ For the following question, you may use the textbook or your notes.  You may not
    <html>
    <body>
    <h1 id="hello">Hello World</h1>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
    </body>
    </html>
 
