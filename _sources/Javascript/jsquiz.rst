@@ -3,7 +3,7 @@ Javascript Quiz
 
 For the following question, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete this and you may test it as many times as you need to.
 
-1.  Given the following HTML Add a button with a callback function that changes the ``h1`` from "Hello World" to "So Long CS130"  When you change the message you should also arrange it so the color of the text turns blue.  
+1.  Given the following HTML Add a button with a callback function that changes the ``h1`` from "Hello World" to "So Long CS130"  When you change the message you should also arrange it so the color of the text turns blue.  Your final page should still have a button.
 
 .. actex:: jsquiz_1
    :language: html
@@ -22,7 +22,7 @@ For the following question, you may use the textbook or your notes.  You may not
 Answer the following multiple choice questions.  Make sure to click the check me button to record your answer.  Only your first answer counts.
 
 .. mchoicemf:: q3_2
-   :answer_a: Fall Break
+   :answer_a: Winter Break
    :answer_b: Hello World
    :answer_c: None of the Above
    :correct: a
@@ -39,7 +39,7 @@ Answer the following multiple choice questions.  Make sure to click the check me
            if ( x > 3) {
               alert("hello world")
            } else {
-              alert("Fall Break")
+              alert("Winter Break")
            }
 
 
@@ -52,26 +52,24 @@ Answer the following multiple choice questions.  Make sure to click the check me
    :correct: b
    :feedback_a: Not far enough
    :feedback_b: Good Job
-   :feedback_c: Not quite, i must be less than 2
-   :feedback_d: Too far, look at the stopping condition carefully.
+   :feedback_c: Not quite, check the order of the ids
+   :feedback_d: No, check the ids carefully
 
 
-   Given the following Javascript snippet, what will the final alert box say?
+   Given the following Javascript snippet, what will the alert box say?
 
        .. code-block:: html
     
            <html>
            <ul>
-              <li>dragon</li>
-              <li>wizard</li>
-              <li>castle</li>
-              <li>dungeon</li>
+              <li id="d">dragon</li>
+              <li id="c">wizard</li>
+              <li id="b">castle</li>
+              <li id="a">dungeon</li>
            </ul>
            <script type="text/javascript">
-               all = document.querySelectorAll('li')
-               for (i=0; i < 2; i++) {
-                  alert(all[i].innerText)
-               }
+               myLi = document.querySelector('#c')
+               alert(myLi.innerText)
            </script>
            </html>
    
@@ -87,4 +85,4 @@ Answer the following multiple choice questions.  Make sure to click the check me
    :feedback_d: Nope, this has nothing to do with CSS yet.
 
 
-   Referring to the code in the previous question, what kind of thing is ``all[1]`` referring to?
+   Referring to the code in the previous question, what kind of thing is ``myLi`` referring to?

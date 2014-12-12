@@ -60,4 +60,34 @@ In the case of a many to many relationship we are *almost never* done at this po
 
    An LDS with an evolved many to many relationship
 
+OK, we've barely scratched the surface of data modeling, and yet this example is illustrative of a huge fraction of the kinds of relationships that you will see in the real world.  If you don't know any more than this, you can already model a lot of applications.
+
+The Physical Database
+---------------------
+
+Having looked at the logical structure of our course application let us know think about its physical representation, that is how it is represented in the computer or on the disk of the computer.  For purposes of this chapter we will consider the physical representation in a relational database such as Postgresql, Mysql, or Sqlite3.  
+
+Each of the entities in our logical data structure becomes a **table** in the relational database.  That is each instance of an entity is a row in the table and each of the attributes are a column.  For example some instances of our course entity would look like this:
+
+=========  =========================  =============  =======
+Course_id  title                      description    credits
+=========  =========================  =============  =======
+CS150      Intro to Computer Science  A great class   4
+CS130      Web Programming            description     2
+BIO101     Something about Biology    it bleeds       4
+CHEM1      Chemistry                  it smells       4
+=========  =========================  =============  =======
+
+You should be able to draw a similar table for a student.  But what about the enrollment table?  The enrollment table is a bit different because it is the target of two one to many relationships.  In a one to many relationship the identifier from the "one" side of the relationship must be added to the table on the many side.  If we have student 1234 who has taken CS150, and CHEM1, and student 4567 who has taken CS130 and CHEM1 our enrollment table would look like this:
+
+=========  ==========  ====== ========== ============ ========
+Course_id  Student_id  Grade  Professor  Classroom    Semester
+=========  ==========  ====== ========== ============ ========
+CS150      1234        B+     Miller     Olin 202     Fall14
+CHEM1      1234        B      Rinco      Valders 117  Spr14
+CS130      4567        A      Miller     Olin 112     Fall14
+CHEM1      4567        B      Rinco      Valders 117  Spr13
+=========  ==========  ====== ========== ============ ========
+
+
 
