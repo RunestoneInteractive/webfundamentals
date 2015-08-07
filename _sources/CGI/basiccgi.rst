@@ -8,7 +8,7 @@ In fact that will be our starting point.  All the other web development work sin
 Lets look at a hello world style example.
 
 .. activecode:: cgi1
-   :language: cgi
+   :language: python
 
    #!/usr/bin/python
 
