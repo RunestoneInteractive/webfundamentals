@@ -22,7 +22,7 @@ For the following question, you may use the textbook or your notes.  You may not
 
 Answer the following multiple choice questions.  Make sure to click the check me button to record your answer.  Only your first answer counts.
 
-.. mchoicemf:: q3_2
+.. mchoice:: q3_2
    :answer_a: Winter Break
    :answer_b: Hello World
    :answer_c: None of the Above
@@ -45,7 +45,7 @@ Answer the following multiple choice questions.  Make sure to click the check me
 
 
 
-.. mchoicemf:: q3_3
+.. mchoice:: q3_3
    :answer_a: dragon
    :answer_b: wizard
    :answer_c: castle
@@ -74,7 +74,7 @@ Answer the following multiple choice questions.  Make sure to click the check me
            </script>
            </html>
    
-.. mchoicemf:: q3_4
+.. mchoice:: q3_4
    :answer_a: a string
    :answer_b: the string wizard
    :answer_c: an HTML li element in the tree

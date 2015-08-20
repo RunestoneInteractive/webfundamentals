@@ -5,7 +5,8 @@ For each multiple choice question, record your answer by pressing the Check Me B
 You may have as many attempts as you like, but I will only score the first attempt.  If
 you do not press the Check Me button your answer will not be recorded.
 
-.. mchoicema:: q1_1
+.. mchoice:: q1_1
+   :multiple_answers:
    :answer_a: &lt;h1&gt;
    :answer_b: &lt;p&gt;
    :answer_c: &lt;img&gt;
@@ -18,7 +19,7 @@ you do not press the Check Me button your answer will not be recorded.
 
    Which of the following are HTML block elements.  Select all that apply.
 
-.. mchoicemf:: q1_2
+.. mchoice:: q1_2
    :answer_a: File Transfer Protocol
    :answer_b: HyperText Markup Language
    :answer_c: Secure Sockets Layer
@@ -34,7 +35,8 @@ you do not press the Check Me button your answer will not be recorded.
 
 In the following question, select all of the correct answers for each question.
 
-.. mchoicema:: q1_3
+.. mchoice:: q1_3
+   :multiple_answers:
    :answer_a: &lt;h1 class="low"&gt;Hello World&lt;/h1&gt;
    :answer_b: &lt;p class="high"&gt;some text&lt;/p&gt;
    :answer_c: &lt;p&gt;some text&lt;/p&gt;
@@ -49,7 +51,8 @@ In the following question, select all of the correct answers for each question.
 
    Which of the following will match the CSS selector ``.high``
 
-.. mchoicema:: q1_4
+.. mchoice:: q1_4
+   :multiple_answers:
    :answer_a: &lt;h1 class="low"&gt;Hello World&lt;/h1&gt;
    :answer_b: &lt;p class="high"&gt;some text&lt;/p&gt;
    :answer_c: &lt;p&gt;some text&lt;/p&gt;
@@ -65,7 +68,8 @@ In the following question, select all of the correct answers for each question.
    Which of the following will match the CSS selector ``p.high``
 
 
-.. mchoicema:: q1_5
+.. mchoice:: q1_5
+   :multiple_answers:
    :answer_a: &lt;h1 class="low"&gt;Hello World&lt;/h1&gt;
    :answer_b: &lt;p class="high"&gt;some text&lt;/p&gt;
    :answer_c: &lt;p&gt;some text&lt;/p&gt;
@@ -80,7 +84,8 @@ In the following question, select all of the correct answers for each question.
 
    Which of the following will match the CSS selector ``p``
 
-.. mchoicema:: q1_6
+.. mchoice:: q1_6
+   :multiple_answers:
    :answer_a: &lt;h1 class="low"&gt;Hello World&lt;/h1&gt;
    :answer_b: &lt;p class="high"&gt;some text&lt;/p&gt;
    :answer_c: &lt;p&gt;some text&lt;/p&gt;
@@ -96,7 +101,8 @@ In the following question, select all of the correct answers for each question.
    Which of the following will match the CSS selector ``#high``
 
 
-.. mchoicema:: q1_7
+.. mchoice:: q1_7
+   :multiple_answers:
    :answer_a: height
    :answer_b: padding
    :answer_c: border

@@ -23,7 +23,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Fundamentals of Web Programming' # e.g. How To Think Like a Computer Scientist
-copyright = None # e.g. "2013, Brad Miller and David Ranum"
+copyright = "2015 Brad Miller" # e.g. "2013, Brad Miller and David Ranum"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
