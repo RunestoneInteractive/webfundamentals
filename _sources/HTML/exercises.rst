@@ -38,3 +38,39 @@ Exercises
 .. actex:: ex_html_5
    :language: html
    :nocodelens:
+
+6. Make a webpage that links to four of your favorite websites.
+
+.. actex:: ex_html_6
+   :language: html
+   :nocodelens:
+
+7. Make a webpage with a link at the bottom that when clicked will jump you all the way to the top of the page.
+
+.. actex:: ex_html_7
+   :language: html
+   :nocodelens:
+
+8. Make a webpage with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.
+
+.. actex:: ex_html_8
+   :language: html
+   :nocodelens:
+
+9. Make a webpage with an image that has a border of size 2, a width of 200, and a height of 200.
+
+.. actex:: ex_html_9
+   :language: html
+   :nocodelens:
+
+10.  Make a webpage with five different images. Skip two lines between each image. Each image should have a title.
+
+.. actex:: ex_html_10
+   :language: html
+   :nocodelens:
+
+11.  Make a webpage with an image that when clicked will link to a search engine of your choice
+
+.. actex:: ex_html_11
+   :language: html
+   :nocodelens:

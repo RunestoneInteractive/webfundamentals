@@ -89,6 +89,10 @@ The last basic link to cover in this section is the link tag ``a``.  In fact the
 
 Try clicking on the link in the example above.  What happens?  How do you get back?   Don't worry, you can always just reload this page.
 
+Links can also be used to navigate within the same page.  to do this you use one ``a`` tag to create
+an anchor point on the page using the name attribute like this:  ``<a name="target">I am a target</a>``  You can create
+a link that will jump to the target anywhere else on the page using ``<a href="#target">Go to Target</a>``
+
 
 Simple Text Formatting
 ----------------------
@@ -107,8 +111,44 @@ Making text bold or italic and other formatting is easy in HTML as well.  The fo
    <p><em>This text is emphasized</em></p>
    <p><code>This is computer output</code></p>
    <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
-
+   <p>This <br /> forces <br /> a <br /> line break </p>
    </body>
    </html>
 
 You can mix and match these styles in all kinds of ways.  Try making a superscript inside a superscript.  Try making the subscript bold or italic.
+
+
+**Check your Understanding**
+
+.. clickablearea:: blockelem
+   :question: Click on the beginning tag for all block elements in the example.
+   :iscode:
+   :feedback: Block elements start on a new line and take up the full width available.
+
+   &lt;html&gt;
+   :click-incorrect:&lt;body&gt;:endclick:
+
+   :click-correct:&lt;h1&gt;:endclick:Welcome to my Page&lt;/h1&gt;
+   :click-correct:&lt;p&gt;:endclick:Hello World!   This is :click-incorrect:&lt;b&gt;:endclick:me&lt;/b&gt; :click-incorrect:&lt;img src="me.jpg"&gt;:endclick: &lt;/p&gt;
+   :click-correct:&lt;p&gt;:endclick:This is my second paragraph
+   :click-incorrect:&lt;a href="home.html"&gt;:endclick:Click here for my homepage&lt;/a&gt;
+   :click-incorrect:&lt;/p&gt;:endclick:
+   &lt;/body&gt;
+   &lt;/html&gt;
+
+
+.. clickablearea:: inlineelem
+   :question: Click on the beginning tag for all inline elements in the example.
+   :iscode:
+   :feedback: Inline elements do not start on a new line and only take as much width as needed.
+
+    &lt;html&gt;
+    &lt;body&gt;
+    :click-incorrect:&lt;h1&gt;:endclick:Welcome to my Page&lt;/h1&gt;
+    &lt;p&gt;Hello World!  This is :click-correct:&lt;b&gt;:endclick:me&lt;/b&gt; :click-correct:&lt;img src="me.jpg"&gt;:endclick: &lt;/p&gt;
+
+    :click-incorrect:&lt;p&gt;:endclick:This is my second paragraph
+    :click-correct:&lt;a href="home.html"&gt;:endclick:Click here for my homepage&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
