@@ -142,7 +142,7 @@ Experiment with a table.  What kinds of tags can you include inside each ``td``?
 Audio
 -----
 
-Embedding audio in your webpage allows you to link to various files containging music or speech.  The audio tag looks like the following::
+Embedding audio in your webpage allows you to link to various files containging music or speech.  The audio tag looks like the following:
 
 .. code-block:: html
 
@@ -157,7 +157,7 @@ The ``controls`` attribute provides start/stop/fast-forward/rewind buttons for t
 Video
 -----
 
-Embedding audio in your webpage allows you to link to various files containging music or speech.  The audio tag looks like the following::
+Embedding audio in your webpage allows you to link to various files containging music or speech.  The audio tag looks like the following:
 
 .. code-block:: html
 
