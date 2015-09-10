@@ -48,6 +48,7 @@ HTML Basics
    HTML/advanced.rst
    HTML/structural.rst
    HTML/exercises.rst
+   HTML/htmlquiz.rst
 
 Publishing in the Cloud
 :::::::::::::::::::::::
