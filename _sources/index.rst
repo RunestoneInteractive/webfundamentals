@@ -67,6 +67,7 @@ Cascading Style Sheets
    CSS/intro.rst
    CSS/styleattributes.rst
    CSS/morematching.rst
+   CSS/cssquiz.html
    CSS/layoutattributes.rst
    CSS/advancedmatching.rst
    CSS/exercises.rst
