@@ -88,6 +88,21 @@ Hover
 * Add link with a :hover pseudo-class to the example above.
 * Add an ``h2`` with the title more info.  Underneath the h2 add  a ``main`` container with a paragraph.  The details element should be initially hidden and only appear when you hover the cursor over the h2.  Hint:  the ``~`` character allows you to write a selector that matches a sibling.
 
+
+The details tag is a semantic tag that has some very nice properties similar to our experiment above.
+
+.. activecode:: html_details
+   :language: html
+
+   <p>The details tag contains a summary tag and the details.  The summary is displayed with a triangle next to it.  The details are initially hidden but then displayed when the triangle is clicked on.</p>
+
+   <details>
+       <summary>Show me More</summary>
+       <p>This text will only show when the triangle is clicked on</p>
+   </details>
+
+
+
 Animation
 ---------
 
@@ -158,4 +173,6 @@ Experiment with the following:
 
 * Add an image to the picture and make it spin infinitely.
 * try creating a scale animation
+* Use ``animation-fill-mode: forwards;`` to keep the element at the ending position.
+
 
