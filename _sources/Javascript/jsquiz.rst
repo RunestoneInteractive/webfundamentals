@@ -9,29 +9,22 @@ For the following question, you may use the textbook or your notes.  You may not
       :prefix: Q-
       :start: 1
 
-   Answer the following multiple choice questions.  Make sure to click the check me button to record your answer.  Only your first answer counts.
+   Answer the following multiple choice questions.
 
-   .. mchoice:: q3_2
-      :answer_a: Winter Break
-      :answer_b: Hello World
-      :answer_c: None of the Above
-      :correct: a
-      :feedback_a: Yes
-      :feedback_b: 2 is not greater than 3
-      :feedback_c: No, one of the two things is going to happen
+   .. mchoice:: q3_5
+      :multiple_answers:
+      :answer_a: document.body.h1
+      :answer_b: document.h1
+      :answer_c: document.body
+      :answer_d_ document.body.style
+      :correct: c,d
+      :feedback_a: What if there are more than one h1?
+      :feedback_b: No, at a minimum the h1 would be inside the body
+      :feedback_c: Yes
+      :feedback_c: Correct
 
 
-      Given the following Javascript snippet, what will the alert box say?
-
-          .. code-block:: javascript
-
-              x = 2
-              if ( x > 3) {
-                 alert("hello world")
-              } else {
-                 alert("Winter Break")
-              }
-
+      Which of the following are legal?
 
 
    .. mchoice:: q3_3
