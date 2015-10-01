@@ -84,6 +84,7 @@ Javascript
    Javascript/intro.rst
    Javascript/objects.rst
    Javascript/forms.rst
+   Javascript/jsquiz.rst
    Javascript/events.rst
    Javascript/context.rst
    Javascript/iteration.rst
