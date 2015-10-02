@@ -2,6 +2,20 @@ Javascript Exercises
 ====================
 
 
+#. Make a simple web page that contains an h2 with the word "Hello" and a text input box.  When the user types a word or phrase into the input box, replace the old h2 with the word entered.  Using animation, make the word spin.
+
+  .. actex:: ex_js_4
+     :language: html
+
+     <html>
+     <style>
+     </style>
+     <body>
+     <h2>Hello</h2>
+     </body>
+     </html>
+
+
 #. Make a simple web page that contains a button and a paragraph with the id of ``count`` Whenever this button is pressed increment the count by 1 and update the paragraph text.  Also update the font size so that as the number gets larger, so does the font.
 
   .. actex:: ex_js_1
