@@ -3,25 +3,24 @@ Javascript Quiz
 
 For the following question, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete this and you may test it as many times as you need to.
 
+.. qnum::
+   :prefix: Q-
+   :start: 1
+
+
 .. timed:: js1timed
-
-   .. qnum::
-      :prefix: Q-
-      :start: 1
-
-   Answer the following multiple choice questions.
 
    .. mchoice:: q3_5
       :multiple_answers:
       :answer_a: document.body.h1
       :answer_b: document.h1
       :answer_c: document.body
-      :answer_d_ document.body.style
+      :answer_d: document.body.style
       :correct: c,d
       :feedback_a: What if there are more than one h1?
       :feedback_b: No, at a minimum the h1 would be inside the body
       :feedback_c: Yes
-      :feedback_c: Correct
+      :feedback_d: Correct
 
 
       Which of the following are legal?
