@@ -80,6 +80,8 @@ Javascript Exercises
        :language: html
 
        <html>
+       <body>
        <button onclick="makePage();">Click Here</button>
+       </body>
 
        </html>
