@@ -69,3 +69,17 @@ Javascript Exercises
 
     </html>
 
+
+6.  Starting with the code given, create a page that looks like the following image:  The rest of the page must be created
+    using javascript.  You must use ``document.createElement`` and the ``appendChild`` functions.
+
+    .. image:: Figures/cePage.png
+       :width: 350px
+
+    .. actex:: ex_js_6
+       :language: html
+
+       <html>
+       <button onclick="makePage();">Click Here</button>
+
+       </html>
