@@ -92,6 +92,11 @@ Javascript
    Javascript/helpObjects.rst
    Javascript/exercises.rst
       
+
+-------------------------------
+Part 2: Server Side Programming
+-------------------------------
+
 Advanced Javascript
 :::::::::::::::::::
 
@@ -102,10 +107,6 @@ Advanced Javascript
    AdvancedJavascript/mashup.rst
 
 
--------------------------------
-Part 2: Server Side Programming
--------------------------------
-   
 Common Gateway Interface
 ::::::::::::::::::::::::
 
