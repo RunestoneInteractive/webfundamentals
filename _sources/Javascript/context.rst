@@ -44,6 +44,70 @@ Although its not a very useful application, it illustrates how we can create HTM
    Figure 2, DOM tree after click
 
 
+Which Button?
+-------------
+
+Consider the following code.  We have two buttons, we would like the attach the same function to
+both buttons, but when we click we would also like our function to know which button was clicked.
+
+
+.. activecode:: button_context_1
+   :language: html
+
+   <html>
+      <body>
+          <button onclick="hello()">Button1</button>
+          <button onclick="hello()">Button2</button>
+          <script type="text/javascript">
+             hello = function() {
+                 alert("Hello, who am I?");
+             }
+          </script>
+      </body>
+   </html>
+
+How can we modify the example so that it knows which button was clicked?  We can use a parameter.
+
+What is ``this``?
+~~~~~~~~~~~~~~~~~
+
+The parameter we can use in our example above is ``this``, which is a much used variable name in Javascript,
+but also quite confusing.  You can think of ``this`` as a self-reference.  This answers the "who am I?" question
+for an object.  From HTML we can pass this as a parameter to an onclick function, and because the onclick
+is part of the tag ``this`` refers to the tag.   Important Note:  In most cases we have said that the
+name of a variable does not matter;  ``this`` is the exception to that rule!
+
+Modify the example above so that in each case you are calling ``hello(this)``.  Now in your javascript change
+the alert to ``alert("Hello I am " + me.innerHTML)``
+
+For comparison, lets create the same page as above but in Javascript.
+
+.. activecode:: button_context_2
+   :language: html
+
+   <html>
+      <body>
+          <script type="text/javascript">
+             var b1 = document.createElement("button");
+             b1.innerHTML = "Button1";
+             var b2 = document.createElement("button");
+             b2.innerHTML = "Button2";
+
+             hello = function() {
+                 alert("Hello, who am I?");
+             }
+
+             document.body.appendChild(b1);
+             document.body.appendChild(b2);
+             b1.onclick = hello;
+             b2.onclick = hello;
+          </script>
+      </body>
+   </html>
+
+When we are creating elements in Javascript our task is a bit easier.  Because the ``this`` variable
+is automatically set for us inside the function based on the object it is attached to.
+
 Attaching Events
 ----------------
 
