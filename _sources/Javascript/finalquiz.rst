@@ -1,7 +1,8 @@
 Javascript Final Quiz
 =====================
 
-For the following question, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete this and you may test it as many times as you need to.
+For the following questions, you may use the textbook or your notes.  You may not google other references.  You have 30 minutes to complete both parts of the quiz.  Make sure that you complete the
+multiple choice questions first, and click "Finish Exam" before you go on to do the coding question.
 
 .. qnum::
    :prefix: Q-
@@ -72,7 +73,7 @@ For the following question, you may use the textbook or your notes.  You may not
       :feedback_a: No Feedback
       :feedback_b: No Feedback
 
-      An external JavaScript file must contain the &lt;script&gt; tag.
+      An external JavaScript file must contain the ``<script>`` tag.
 
    .. mchoice:: q4_6
       :answer_a: msg("Hello World");
@@ -153,3 +154,27 @@ For the following question, you may use the textbook or your notes.  You may not
          </tr>
          </table>
          </body>
+
+
+
+.. reveal:: js2reveal
+
+   Write a function that *each time* it is clicked will do the following:
+
+   1. Turn the background of the page light blue.
+   2. Add another H1 to the page that says "So Long 130"
+   3. Changes the font color for the H1 to red
+
+   By each time, I mean that if the button is clicked 10 times there should be 10 H1's on the page.
+
+   .. actex:: q4_11
+      :language: html
+
+      <html>
+      <body>
+          <button onclick="finalquiz();">Click Me</button>
+          <script type="text/javascript">
+
+          </script>
+      </body>
+      </html>
