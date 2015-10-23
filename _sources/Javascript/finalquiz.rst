@@ -157,24 +157,26 @@ multiple choice questions first, and click "Finish Exam" before you go on to do 
 
 
 
-.. reveal:: js2reveal
+Programming Question
+--------------------
 
-   Write a function that *each time* it is clicked will do the following:
+    Write a function that *each time* it is clicked will do the following:
 
-   1. Turn the background of the page light blue.
-   2. Add another H1 to the page that says "So Long 130"
-   3. Changes the font color for the H1 to red
+    1. Turn the background of the page light blue.
+    2. Add another H1 to the page that says "So Long 130"
+    3. Changes the font color for the H1 to red
 
-   By each time, I mean that if the button is clicked 10 times there should be 10 H1's on the page.
+    By each time, I mean that if the button is clicked 10 times there should be 10 H1's on the page.
 
-   .. actex:: q4_11
-      :language: html
 
-      <html>
-      <body>
-          <button onclick="finalquiz();">Click Me</button>
-          <script type="text/javascript">
+.. activecode:: q4_11
+   :language: html
 
-          </script>
-      </body>
-      </html>
+   <html>
+   <body>
+       <button onclick="finalquiz();">Click Me</button>
+       <script type="text/javascript">
+
+       </script>
+   </body>
+   </html>
