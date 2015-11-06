@@ -91,7 +91,8 @@ Javascript
    Javascript/Selection.rst
    Javascript/helpObjects.rst
    Javascript/exercises.rst
-      
+   Javascript/finalquiz.rst
+
 
 -------------------------------
 Part 2: Server Side Programming
