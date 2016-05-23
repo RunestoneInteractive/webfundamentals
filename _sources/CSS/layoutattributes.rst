@@ -185,6 +185,11 @@ Next lets add a second copy of the norse logo to the page by copying and pasting
 
 Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
 
+The float property can also be applied to block elements.  This will cause the block elements to behave more like inline elements.
+
+The clear property is used to undo the effects of the float.
+
+
 
 Positioning
 -----------
