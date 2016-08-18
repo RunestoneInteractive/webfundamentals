@@ -9,11 +9,11 @@ There are many ways that we can change the style of what we see in the browser. 
 
 But before we talk about these, we need to think about colors.  There are three different ways to specify the color.
 
-* by name, like blue, red, green.  You can see a complete list of `color names <http://www.w3schools.com/cssref/css_colornames.asp>`_ on the w3schools website.
+* by name, like blue, red, green.  You can see a complete list of `color names <http://www.w3schools.com/cssref/css_colors.asp>`_ on the w3schools website.
 * using an RGB value like ``rgb(255,0,0)``
 * using a HEX value like ``#ff0000``
 
-Using either the RGB or the HEX value gives you total control to specify any of of 16 million different colors.  There is a bit of interesting computer science behind the RGB and HEX values.  The rgb function lets you specify a value between 0 and 255 for each component of red, green, and blue.  By mixing together a certain amount of red, green, and blue you can create $$255 \cdot 255 \cdot 255$$ different colors, which is slightly more than 16.5 million.  Now where does the number 255 come from?  It is one less than $$2^8$$!  Computer scientists like powers of two because when you get deeply into the inner workings of the computer you see that everything is in binary (ones or zeros) which we call bits.  With eight bits we can specify 256 different values or 0 -- 255.  We call eight bits one byte.
+Using either the RGB or the HEX value gives you total control to specify any of of 16 million different colors.  There is a bit of interesting computer science behind the RGB and HEX values.  The rgb function lets you specify a value between 0 and 255 for each component of red, green, and blue.  By mixing together a certain amount of red, green, and blue you can create :math:`255 \cdot 255 \cdot 255` different colors, which is slightly more than 16.5 million.  Now where does the number 255 come from?  It is one less than :math:`2^8`.  Computer scientists like powers of two because when you get deeply into the inner workings of the computer you see that everything is in binary (ones or zeros) which we call bits.  With eight bits we can specify 256 different values or 0 -- 255.  We call eight bits one byte.
 
 Now the HEX specification of the number is directly related to the binary as follows:
 
