@@ -16,121 +16,19 @@ Fundamentals of Web Programming
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
-.. toctree::
-
-   preface.rst
    
-   
--------------------------------
-Part 1: Client Side Programming
--------------------------------
-
-   
-The World Wide Web
-::::::::::::::::::
-
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 3
 
-   WWW/intro.rst
-   WWW/history.rst
-   WWW/technology.rst
-
-
-HTML Basics
-:::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   HTML/intro.rst
-   HTML/basic.rst
-   HTML/advanced.rst
-   HTML/structural.rst
-   HTML/exercises.rst
-   HTML/htmlquiz.rst
-
-Publishing in the Cloud
-:::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   Cloud/cloudintro.rst
-
-Cascading Style Sheets
-::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   CSS/intro.rst
-   CSS/styleattributes.rst
-   CSS/morematching.rst
-   CSS/cssquiz.html
-   CSS/layoutattributes.rst
-   CSS/positionquiz.rst
-   CSS/csstricks.rst
-   CSS/advancedmatching.rst
-   CSS/exercises.rst
-
-
-Javascript
-::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   Javascript/intro.rst
-   Javascript/objects.rst
-   Javascript/forms.rst
-   Javascript/jsquiz.rst
-   Javascript/events.rst
-   Javascript/context.rst
-   Javascript/iteration.rst
-   Javascript/Selection.rst
-   Javascript/helpObjects.rst
-   Javascript/exercises.rst
-   Javascript/finalquiz.rst
-
-
--------------------------------
-Part 2: Server Side Programming
--------------------------------
-
-Advanced Javascript
-:::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   AdvancedJavascript/prototype.rst
-   AdvancedJavascript/mashup.rst
-
-
-Common Gateway Interface
-::::::::::::::::::::::::
-
-.. toctree:: 
-   :maxdepth: 2
-   
-   CGI/basiccgi.rst
-   CGI/forms.rst
-   CGI/cookies.rst
-
-
-Modern Web Frameworks
-:::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-   
-   Frameworks/frameworkintro.rst
-   Frameworks/decorators.rst
-   Frameworks/deploying.rst
-   Frameworks/wsgi.rst
-   Frameworks/templates.rst   
-   Frameworks/database.rst
+    preface.rst
+    WWW/toctree.rst
+    HTML/toctree.rst
+    Cloud/toctree.rst
+    CSS/toctree.rst
+    Javascript/toctree.rst
+    AdvancedJavascript/toctree.rst
+    CGI/toctree.rst
+    Frameworks/toctree.rst
 
 .. raw:: html
 
