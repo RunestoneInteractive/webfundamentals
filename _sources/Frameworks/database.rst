@@ -1,5 +1,5 @@
-Persistent Data and Datbases
-============================
+Persistent Data and Databases
+=============================
 
 In the three legged stool of web applications, we have covered both the view and the controller.  We have even built simple apps with very simple models.  But now it is time to look at a real model, and how a database management system is used in a web application.   We will divide this chapter into three modules:
 
