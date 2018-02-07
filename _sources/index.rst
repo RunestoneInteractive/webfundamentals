@@ -25,6 +25,7 @@ Fundamentals of Web Programming
     HTML/toctree.rst
     Cloud/toctree.rst
     CSS/toctree.rst
+    Dynamic/toctree.rst
     Javascript/toctree.rst
     AdvancedJavascript/toctree.rst
     CGI/toctree.rst
