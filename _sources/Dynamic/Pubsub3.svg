@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="8.08 151.5 640.42 612.588" width="640.42" height="612.588">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="20" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.7.1 
+    <dc:date>2018-03-07 20:08:23 +0000</dc:date>
+  </metadata>
+  <g id="Canvas_1" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>Canvas 1</title>
+    <rect fill="white" x="8.08" y="151.5" width="640.42" height="612.588"/>
+    <g id="Canvas_1: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_16">
+        <ellipse cx="141" cy="330.5" rx="81.0001294300536" ry="49.5000790961439" fill="white"/>
+        <ellipse cx="141" cy="330.5" rx="81.0001294300536" ry="49.5000790961439" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(81.2 318.72)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="black" x="25.72" y="19">Subject</tspan>
+        </text>
+      </g>
+      <g id="Graphic_15">
+        <ellipse cx="539" cy="208" rx="83.0001326258574" ry="47.0000751013891" fill="white"/>
+        <ellipse cx="539" cy="208" rx="83.0001326258574" ry="47.0000751013891" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(477.6 196.22)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="black" x="14.91" y="19">Observer1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <ellipse cx="556" cy="442" rx="83.0001326258574" ry="47.0000751013892" fill="white"/>
+        <ellipse cx="556" cy="442" rx="83.0001326258574" ry="47.0000751013892" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(494.6 430.22)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="black" x="14.91" y="19">Observer2</tspan>
+        </text>
+      </g>
+      <g id="Line_13">
+        <line x1="466.05707" y1="230.45103" x2="222.82407" y2="305.31546" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_12">
+        <line x1="480.9921" y1="421.84727" x2="224.73093" y2="352.9964" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_11">
+        <rect x="251.432" y="252" width="216.256" height="29.088" fill="white"/>
+        <text transform="translate(256.432 257.32)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="14210855e-21" y="15">Subscribe - Here&apos;s callback1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <rect x="240.6335" y="371.77625" width="216.256" height="29.088" fill="white" fill-opacity=".5"/>
+        <text transform="translate(245.6335 377.09625)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="14210855e-21" y="15">Subscribe - Here&apos;s callback2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_9">
+        <ellipse cx="151" cy="612.5" rx="81.0001294300536" ry="49.5000790961438" fill="white"/>
+        <ellipse cx="151" cy="612.5" rx="81.0001294300536" ry="49.5000790961438" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(91.2 600.72)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="black" x="25.72" y="19">Subject</tspan>
+        </text>
+      </g>
+      <g id="Line_8">
+        <line x1="66" y1="719.5" x2="109.45808" y2="664.79395" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_7">
+        <line x1="218.6243" y1="585.235" x2="330.3182" y2="540.20195" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_6">
+        <line x1="218.8877" y1="639.52" x2="342.8018" y2="688.839" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_5">
+        <text transform="translate(22.08 731.32)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Event trigger</tspan>
+        </text>
+      </g>
+      <g id="Graphic_4">
+        <text transform="translate(310.632 515.32)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Call callback1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <text transform="translate(327.632 699.32)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Call callback2</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
