@@ -45,7 +45,7 @@ If the browser displays an error instead of the ``print()`` output, this might p
 .. code-block:: shell
 
    Error code 403.
-   Message: CGI script is not executable ('/cgi-bin/todolist.cgi').
+   Message: CGI script is not executable ('/cgi-bin/hello.py').
    Error code explanation: 403 = Request forbidden -- authorization will not help.
 
 Move into the ``cgi-bin`` directory and type (for UNIX systems):
