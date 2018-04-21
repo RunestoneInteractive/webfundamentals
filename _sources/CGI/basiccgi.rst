@@ -22,7 +22,7 @@ Lets look at a hello world style example.
 
 This should be pretty self explanatory.  When you run this program it generates the text that looks just like the text you might find in a file named hello.html.
 
-Now the next question is to ask how does this happen?  How can I get this hello program to generate code and serve my own browser?  The first thing you need to do is create a folder called ``www``.  In the ``www`` folder make a second folder called ``cgi-bin`` and place create a ``hello.py`` file in that folder.
+Now the next question is to ask how does this happen?  How can I get this hello program to generate code and serve my own browser?  The first thing you need to do is create a folder called ``www``.  In the ``www`` folder make a second folder called ``cgi-bin`` and place a ``hello.py`` file in that folder.
 
 From the command line make sure that you are in the ``www`` folder and run the following command:
 
