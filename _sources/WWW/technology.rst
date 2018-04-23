@@ -17,7 +17,7 @@ All locators are also identifiers, so all URLs are URI's. Think about it this wa
 
 This is a common URL with three parts:
 
-* ``http``  This part identifies the protocol that will be used for communication.  It seems a bit redundant when we are always thinking about the web, but in fact there are severl common protocols that are used in URL's including ``https`` for secure http communication, ``mailto`` to indicate that we are going to use a mail protocol, ``ftp`` the file transfer protocol.
+* ``http``  This part identifies the protocol that will be used for communication.  It seems a bit redundant when we are always thinking about the web, but in fact there are several common protocols that are used in URL's including ``https`` for secure http communication, ``mailto`` to indicate that we are going to use a mail protocol, ``ftp`` the file transfer protocol.
 
 * ``interactivepython.org`` This is the name of a host on the web.  Host names must be unique, there is only one interactivepython.org on the entire internet.  If you dig more deeply you can find out that this name translates to a numeric address.  If you have ever tried to configure your home router, or looked at the settings on your computer or phone you have undoubtedly come across these numeric addresses before.  In the case of interactivepython.org the numeric address is 108.168.242.153.  This numerica address is also unique in all of the internet, and  identifies a specific server running in a server room in Dallas TX.
 
