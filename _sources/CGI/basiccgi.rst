@@ -32,10 +32,39 @@ From the command line make sure that you are in the ``www`` folder and run the f
    
 Then in your browser open the url: ``http://localhost:8000/cgi-bin/hello.py``
 
-
 When the web server sees a URL that is in the cgi-bin folder it knows that instead of just returning the contents of the file, it should execute the program and direct the output from that program back to the browser.  Cool right?!
 
 The program can be as complicated as you want, as long as the output of the program comprises html that constitutes a complete web page.
+
+---
+
+**Note:**
+
+If the browser displays an error instead of the ``print()`` output, this might probably be either of the following:
+
+.. code-block:: shell
+
+   Error code 403.
+   Message: CGI script is not executable ('/cgi-bin/hello.py').
+   Error code explanation: 403 = Request forbidden -- authorization will not help.
+
+Move into the ``cgi-bin`` directory and type (for UNIX systems):
+
+.. code-block:: shell
+
+   chmod a+x hello.py
+   
+This will make the ``hello.py`` script executable and allow the server to run it.
+
+Or, you might get another error:
+
+.. code-block:: shell
+   
+   OSError: [Errno 8] Exec format error
+
+This probably means that your default python executable is pointing to a different version of python than the program requires. Try to update the first line of the script to ``#!/usr/bin/python3`` to point it to python 3.
+
+---
 
 Exercise:  Write a program that calculates the first 25 fibonacci numbers and displays the output in a table.
 
