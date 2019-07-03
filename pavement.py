@@ -4,6 +4,7 @@ from socket import gethostname
 import paver.setuputils
 paver.setuputils.install_distutils_tasks()
 from os import environ
+from runestone import get_master_url
 
 ######## CHANGE THIS ##########
 project_name = "webfundamentals"
@@ -15,12 +16,7 @@ project_name = "webfundamentals"
 
 master_url = None
 if master_url is None:
-    if gethostname() in ['runestone-deploy', 'rsbuilder']:
-        master_url = 'https://runestone.academy'
-    elif environ['RUNESTONE_HOST']:
-        master_url = 'http://{}'.format(environ['RUNESTONE_HOST'])
-    else:
-        master_url = 'http://127.0.0.1:8000'
+    master_url = get_master_url()
 
 dynamic_pages = True
 master_app = 'runestone'
