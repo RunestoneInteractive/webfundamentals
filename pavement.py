@@ -15,14 +15,21 @@ project_name = "webfundamentals"
 
 master_url = None
 if master_url is None:
-    if gethostname() in ['web407.webfaction.com', 'rsbuilder']:
-        master_url = 'http://interactivepython.org'
+    if gethostname() in ['runestone-deploy', 'rsbuilder']:
+        master_url = 'https://runestone.academy'
+    elif environ['RUNESTONE_HOST']:
+        master_url = 'http://{}'.format(environ['RUNESTONE_HOST'])
     else:
         master_url = 'http://127.0.0.1:8000'
 
+dynamic_pages = True
 master_app = 'runestone'
 serving_dir = './build/webfundamentals'
-dest = '../../static'
+
+if dynamic_pages:
+    dest = './published'
+else:
+    dest = '../../static'
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -40,9 +47,13 @@ options(
             'loglevel':10,
             'course_url':master_url,
             'use_services': 'true',
+            'dynamic_pages': dynamic_pages,
             'python3': 'true',
             'dburl': 'postgresql://bmiller@localhost/runestone',
             'basecourse': 'webfundamentals',
+            'downloads_enabled': 'false',
+            'enable_chatcodes': 'false',
+            'allow_pairs': 'false'
         }
     )
 )

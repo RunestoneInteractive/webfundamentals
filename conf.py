@@ -6,7 +6,7 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 from runestone import runestone_static_dirs, runestone_extensions
-
+import pkg_resources
 
 # -- General configuration -----------------------------------------------------
 
@@ -14,6 +14,7 @@ from runestone import runestone_static_dirs, runestone_extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
 
+templates_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates')]
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -73,7 +74,7 @@ html_theme_options = {
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["_templates/plugin_layouts"]
+html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates/plugin_layouts')]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -90,7 +91,7 @@ html_short_title ='Fundamentals of Web Programming'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 
-html_static_path = ['_static']  + runestone_static_dirs()
+html_static_path = runestone_static_dirs()
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
