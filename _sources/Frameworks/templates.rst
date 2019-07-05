@@ -1,7 +1,10 @@
 Template Engines
 ================
 
-There are many benefits to using templates.  
+.. Writing about templates is a challenge because we are running the result of rst through a template system
+.. One hack is to paste a zero width space between https://codepen.io/chriscoyier/pen/iLKwm
+
+There are many benefits to using templates.
 
 * Separation of the view from the controller and model code.
 * Increased productivity.
@@ -13,7 +16,7 @@ At the simplest level templates are not much different than a Python formatted s
 .. code-block:: python
 
    from jinja2 import Template
-   template = Template('Hello {{ name }}!')
+   template = Template('Hello {​{ name }}!')
    template.render(name='John Doe')
 
 A slightly more complicated example goes like this:
@@ -24,14 +27,14 @@ A slightly more complicated example goes like this:
    env = Environment(loader=FileSystemLoader('/path/to/templates))
    t = env.get_template('foo.html')
    t.render(name='Luther')
-   
+
 This example shows how we can set up an environment that can be shared among many functions.  This environment takes care of the details behind locating and reading our templates from a file when we want to use them.  The foo.html file could look like this:
 
 .. code-block:: html
 
    <html>
        <body>
-       <h1>Hello {{ name }}</h1>
+       <h1>Hello {​{ name }}</h1>
        </body>
    </html>
 
@@ -41,8 +44,8 @@ The values inside the double curlies are not limited to being string objects, al
 
    <html>
        <body>
-           <h1>Hello {{ s.firstname }} {{ s.lastname }}</h1>
-           <p>Your gpa is {{ s.gpa }}.</p>
+           <h1>Hello {​{ s.firstname }} {​{ s.lastname }}</h1>
+           <p>Your gpa is {​{ s.gpa }}.</p>
        </body>
    </html>
 
@@ -59,17 +62,17 @@ Lets suppose you want to make a table in a template.  The ideal would be to pass
 
    <html>
        <body>
-           <h1>The first {{ plist|length }} prime numbers</h1>
+           <h1>The first {​{ plist|length }} prime numbers</h1>
            <table>
                {% for i in plist: %}
-                   <tr><td>{{ i }}</td></tr>
+                   <tr><td>{​{ i }}</td></tr>
                {% endfor %}
            </table>
        </body>
    </html>
-   
 
-This introduces several interesting new features of templates. 
+
+This introduces several interesting new features of templates.
 
 1.  The ``{% ... %}`` notation is used to include a non-rendering bit of code in the template.  In this example we introduce a for loop.  Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.
 
@@ -86,7 +89,7 @@ In addition to loops you can also have a conditional in a template for example:
    <html>
        <body>
            {% if name %}
-           <h1>Hello {{ name }} </h1>
+           <h1>Hello {​{ name }} </h1>
            {% else %}
            <h1>Hello World</h1>
            {% endif %}
@@ -155,11 +158,11 @@ Now lets create a child template that contains a title and some real content.
       <h1>Tempates are awesome for 10 reasons</h1>
       <ol>
           {% for i in reasons: %}
-          <li>Reason {{ i }}</li>
+          <li>Reason {​{ i }}</li>
           {% endfor %}
       </ol>
       {% endblock %}
-   
+
 
 
 And render it with ``render(reasons=[1,2,3,4,5])``
