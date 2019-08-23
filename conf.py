@@ -73,6 +73,14 @@ html_theme_options = {
     'source_link_position': "nav",
 }
 
+rst_prolog = (
+# For fill-in-the-blank questions, provide a convenient means to indicate a blank.
+"""
+
+.. |blank| replace:: :blank:`x`
+"""
+)
+
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates/plugin_layouts')]
 

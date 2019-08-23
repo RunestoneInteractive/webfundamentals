@@ -1,13 +1,15 @@
 Our Second Prototype
 ====================
 
-In this section I'll include the code for the three javascript files that make up our model, view and controller.
+In this section I'll include the code for the three javascript files that make up our model, view and controller, and we will implement the publish subscribe pattern described in the previous section.
+
+In this code the shopping view subscribes to the model so that when the model changes the view is "automatically updated"  Specifically the View provides the redrawList method to the view as the method to call when new items are added to or removed from the shopping list.
 
 Model Code
 ----------
 
 .. code-block:: javascript
-    
+
     'use strict';
     class Item {
         constructor(name, quantity, priority, store, section, price) {
@@ -25,7 +27,7 @@ Model Code
         get purchased() {
             return this._purchased;
         }
-        
+
         set purchased(nv) {
             this._purchased = nv;
             alert(`${this.name} was purchased`)
@@ -36,7 +38,7 @@ Model Code
     }
 
     class Subject {
-    
+
         constructor() {
             this.handlers = []
         }
@@ -44,7 +46,7 @@ Model Code
         subscribe(fn) {
                 this.handlers.push(fn);
             }
-        
+
         unsubscribe(fn) {
             this.handlers = this.handlers.filter(
                 function(item) {
@@ -54,7 +56,7 @@ Model Code
                 }
             );
         }
-        
+
         publish(msg, someobj) {
             var scope = someobj || window;
             for (let fn of this.handlers) {
@@ -105,7 +107,7 @@ View Code
             cb.classList.add("form-control")
             cb.onclick = function() { item.purchased = true; }
             row.appendChild(cb)
-            
+
             for (let val of ['name', 'quantity', 'store', 'section', 'price']) {
                 let td = document.createElement("td")
                 td.innerHTML = item[val]
@@ -152,3 +154,19 @@ Controller Code
         populateSelect('store', stores)
         populateSelect('category', sections)
     })
+
+
+Lets trace through precisely what happens when an item is added to the shopping list.
+
+1. User fills out the form with information about the item to be added.
+2. User clicks on the Add Item button.  Clicking causes the ``clickedon`` function in the controller to be invoked.
+
+   a. The ``clickedon`` function creates a new ``Item``
+   b. Then ``clickedon`` calls ``shoppingModel.addItem`` which adds the newly created item to the model
+
+      i. The ``addItem`` method of the model appends the new item to the list of items.
+      ii. Then ``addItem`` calls the ``publish`` method which invokes all of the functions that have registered to know about changes to the model.
+
+         - In this case the only function that is registered for changes is the ``redrawList`` method of the view, which erases and rebuilds the list
+
+This is really kind of beautiful.  The **controller** calls a method which adds a new item to the **model**.  The model then automatically invokes methods that the **view** has told it about in order to update what the user sees.  The beauty is that it is all loosely coupled through the publish / subscribe pattern.  This makes it nice and extendable in case other parts of the view need to be updated in response to other changes in the model.

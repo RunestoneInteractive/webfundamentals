@@ -16,18 +16,23 @@ Fundamentals of Web Programming
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
-   
+
 .. toctree::
-    :maxdepth: 3
 
     preface.rst
+
+.. toctree::
+    :maxdepth: 3
+    :numbered:
+
     WWW/toctree.rst
     HTML/toctree.rst
     Cloud/toctree.rst
     CSS/toctree.rst
-    Dynamic/toctree.rst
     Javascript/toctree.rst
+    Dynamic/toctree.rst
     AdvancedJavascript/toctree.rst
+    web_apis/toctree.rst
     CGI/toctree.rst
     Frameworks/toctree.rst
 
