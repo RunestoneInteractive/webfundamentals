@@ -1,162 +1,57 @@
 Prototype 3 Storing the List in the Browser
 ===========================================
 
-Now we have a really well architected application.  But it is still lacking one big feature.  Persistence. Each time we bring up our web page, or even refresh the page, our list dissappears!  That is bad and nobdy is going to buy our app if they have to start over from the beginning each time.  What we need is a way to store the data.  Our first step on the journey to persistence is to make use of the ``localStorage`` of the browser.  Before we dive into a new prototype we need to learn about two new concepts.
+With this new information about localStorage and how to serialize javascript objects we are now ready to update our application.  The wonderful thing about this next step is that we are adding some major new functionality to our app, but its not going to require a reorganization of our existing code. Lets look at list of steps:
 
-* localStorage
-* JavaScript Object Notation (JSON)
+1. Write a new class called LocalStorageSaver with the following capabilities.
 
+   a. Write a saveAll method to serialize our shopping list and save the serialized list to localStorage.
+   b. Make this class a client of the model.  So that whenever the model changes we save it.
 
-Using JavaScript Object Notation (JSON)
----------------------------------------
+.. mchoice:: localstore_client
 
-When you exchange messages between the browser and the server those messages are plain text messages.  However if you have an object in memory, such as a number or a Javascript object or a Python dictionary, those objects are stored in memory in a non-text format (binary).  In order for the browser and the server to share information the in-memory objects must be **serialized**.  Serialization means that an object is converted into a string.
+   What is the best way to arrange for our new LocalStorageSaver class to be a client of the model?
 
-JSON is an important standard for serializing objects.  Most programming languages have a library or module that supports serializing an object to JSON as well as the reverse process -- **deserialization** -- of converting a JSON string back to a native object.  JSON is nice because it is easy for humans to read, and for many programming languages JSON strings are easy to convert into native formats.  If you know a bit of Python you will see that many things look just like dictionaries.  The same is true for JavaScript, but in JavaScript we don't call them dictionaries we just call them objects.
+   - Make LocalStorageSaver a subclass of ShoppingList
 
-Here is an activecode example.  The primary methods of the JSON object are ``stringify`` and ``parse``.  The stringify method takes an object as a parameter and returns a JSON string.
+     - No, although this could work it would tightly couple the model to a particular method of persistent storage.
 
-.. activecode:: json_javascript
-    :language: javascript
+   - Make the LocalStorage object a property of our model.
 
-    x = JSON.stringify([1,2,3.1415, 4])
-    write("x is a")
-    writeln(typeof x)
-    writeln(x)
+     - No, although we could make this work as well, its not the best solution for our architecture.
 
-    y = JSON.parse(x)
-    write("y is a ")
-    writeln(typeof y)
-    writeln(y)
-    y.push(5)
-    writeln(y)
+   - Have the LocalStorageSaver object subscribe to the model
 
-Notice that there is nothing to import, the JSON object is always available for you to use.
+     + Corrrect!
 
-Python is very similar, but the names of the methods are different.  In python you call the ``dumps`` method to serialize an object, and you call ``loads`` to deserialize the string to an object.
+The benefit of keeping the LocalStorageSaver class independent is that it now makes it easy for us to save our model without modifying any of the existing model code, and we could even add additional "xxxSaver" classes if we want to store our data some other way. -- We'll eventually have to get there anyway!
 
-.. activecode:: json_python
+.. code-block:: javascript
 
-    import json
+"use strict"
+class LocalStorageSaver {
 
-    print(json.dumps({'foo': 1, 'bar':2}))
-    x = json.dumps([1,2,3,4])
-    print("x is a ", type(x))
-    print(x)
-
-    y = json.loads(x)
-    print("y is a ", type(y))
-    y.append(5)
-    print(y)
-
-.. warning::
-
-    Not everything can be serialized!  For example, functions and methods cannot be serialized.
-
-
-For custom objects, that is instances of classes that we create, the default behavior for JSON.stringify is to serialize the properties of the object but not the methods.
-
-For example, take the Item class from our shopping list application.  If we serialize this using ``JSON.stringify`` we will get an object literal that contains the properties name, quantity, priority, store, section, etc.  But none of the methods will be serialzed.
-
-.. activecode:: json_class
-    :language: javascript
-
-    class Item {
-        constructor(name, quantity, priority, store, section, price) {
-            this.name = name;
-            this.quantity = quantity;
-            this.priority = priority;
-            this.store = store;
-            this.section = section;
-            this.price = price;
-
-            this._purchased = false;
+    constructor(model,lsname) {
+        this.lsname = lsname;
+        let self = this
+        model.subscribe(function(slist, msg) {
+            self.saveAll(slist)
+        })
+        // now restore from localstorage
+        let restore_list = JSON.parse(localStorage.getItem(self.lsname))
+        for(let vals of restore_list) {
+            let it = new Item(vals.name, vals.quantity, vals.priority, vals.store, vals.section, vals.price)
+            model.addItem(it)
         }
-
-        plainMethod() {
-            alert("hello from a plain method");
-        }
-
-        get purchased() {
-            return this._purchased;
-        }
-
-        set purchased(nv) {
-            this._purchased = nv;
-            alert(`${this.name} was purchased`)
-        }
-
     }
 
-    x = new Item('bread', 1, 'High', 'Fareway', 'Bakery', 3.99);
-    writeln(x.constructor.name)
-
-    y = JSON.stringify(x)
-    writeln(y)
-
-    z = JSON.parse(y)
-    writeln(z)
-    writeln(z.constructor.name)
-    z.purchased = 10  // Note no alert!
-    z.plainMethod() // Error!!
-
-If we want our object to have some special behavior when we serialze it, we can write a method for our object called ``toJSON``  The method takes no parameters and returns a string. Note that this string should be deserializable by the ``JSON.parse`` method.
-
-.. fillintheblank:: json_types
-
-    In the above example the type of x is |blank| and the type of  z is |blank|.
-
-    - :Item: Is the correct answer
-      :Object: Well, it is an Object but be more specific.
-      :x: Try running the code and looking at the output.
-
-    - :Object: Is the correct answer
-      :Item: Is not correct.  JSON has no way to remember the  "user defined type" of an object.
-      :x: Try running the code and looking at the output.
-
-
-
-Using the localStorage Object
------------------------------
-
-Before HTML5 the only way to store data in the browser was in a cookie.  That had a lot of limits in terms of size, and cookies are sent to the server with each request, so they were sent out into the internet over a potentially unsecure connection.  In HTML5 localStorage was added to accomodate the needs to keep information persistent, and web storage objects were created.
-
-There are two main web storage objects:
-
-* localStorage can hold at least 5MB of data with no expiration date.
-* sessionStorage stores data for one session -- data is erased with the browser tab is closed.
-
-
-localStorage is subject to some security constraints.  Only pages from the same origin and protocol can access a local storage object.  This prevents javascript on a page loaded from site A and javascript on a page loaded from site B from sharing a localstorage object.  It also means that a page loaded over http from site A and a page loaded over https from site A will also be unable to share.  Practically speaking it also means that if you are testing your page using file:///page/to/page that your local storage will not be shareable when you load it over either http or https.
-
-Using localStorage is as easy as using a python dictionary or a key value lookup on a javascript object.  The difference is that the keys and the values you store in localStorage must be strings.   Good thing you just learned about JSON!
-
-The localStorage object has three important methods:
-
-* ``localStorage.setItem(key, value)``
-* ``localStorage.getItem(key)``
-* ``localStorage.removeItem(key)``
-
-You can also access a key in localStorage directly using ``localStorage.key``
-
-Run the following example a few times.
-
-.. activecode:: localstore_1
-    :language: javascript
-
-    counter = localStorage.counter
-    writeln("counter is " + counter);
-    if (! counter) {
-        counter = 1
-    } else {
-        counter += 1
+    saveAll(slist) {
+        let ls_list = JSON.stringify(slist.newItems)
+        localStorage.setItem(this.lsname, ls_list)
     }
-    localStorage.counter = counter
-    writeln("counter is now " + localStorage.counter)
+}
 
 
-Do you see anything wrong?  Now reload the page and run it again.  Notice that it keeps counting from where it left off.
+**Exercise**  Add this class definition to your project, and make sure you instantiate an instance somewhere.  confirm that the app now remembers your list even after a page refresh.
 
-**Exercise** Fix the counter so that it counts using the decimal number system.
 
-.. exercise -- add a toJSON method to Item that creates a call to the constructor??

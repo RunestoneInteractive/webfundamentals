@@ -16,6 +16,24 @@ Fundamentals of Web Programming
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
+Project List
+============
+
+.. list-table::
+    :header-rows: 1
+    :widths: 4,32,32,32
+    :stub-columns: 1
+
+    * -
+      - Project
+      - Skills Required
+      - Learning Goal
+    * - 1
+      - :ref:`A Quick Poll and Example of What you will be able to do <intro_day>`
+      - An Open Mind
+      - Inspiration
+
+
 
 .. toctree::
 

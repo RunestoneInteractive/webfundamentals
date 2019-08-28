@@ -1,3 +1,7 @@
+:orphan:
+
+.. _intro_day:
+
 Intro Day
 =========
 
