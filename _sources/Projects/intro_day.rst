@@ -7,6 +7,9 @@ Intro Day
 
 Getting to know you helps me to plan and organize the class better.  Please take a few moments to respond to the following questions.  Please answer honestly.  Don't worry, nobody is judging you and this will not affect your grade.
 
+Platforms and Programming languages
+-----------------------------------
+
 .. poll:: platform_pref
     :option_1:  MacOS
     :option_2:  Windows
@@ -44,18 +47,6 @@ Getting to know you helps me to plan and organize the class better.  Please take
 
     On a scale from 1 to 5 where 1 is a complete novice and 5 means you are an expert rank your knowledge of JavaScript
 
-.. poll:: git_knowledge
-    :scale: 5
-    :results: instructor
-
-    On a scale from 1 to 5 where 1 is a complete novice and 5 means you are an expert rank your knowledge of git
-
-.. poll:: github_account
-    :option_1:  I have a github account already
-    :option_2:  I do not have a github account
-    :results: instructor
-
-    Do you have an account on Github?
 
 .. poll:: python_knowledge
     :scale: 5
@@ -69,12 +60,31 @@ Getting to know you helps me to plan and organize the class better.  Please take
 
     On a scale from 1 to 5 where 1 is a complete novice and 5 means you are an expert rank your knowledge of the Structured Query Language (SQL)
 
+Open Source Software
+--------------------
+
+.. poll:: git_knowledge
+    :scale: 5
+    :results: instructor
+
+    On a scale from 1 to 5 where 1 is a complete novice and 5 means you are an expert rank your knowledge of git
+
+.. poll:: github_account
+    :option_1:  I have a github account already
+    :option_2:  I do not have a github account
+    :results: instructor
+
+    Do you have an account on Github?
+
 .. poll:: opensource_part
     :option_1:  Yes
     :option_2:  No
     :results: instructor
 
     Have you ever contributed code, bug reports, documentation, or other artifacts to an open source project?
+
+General
+-------
 
 .. poll:: effort_hw
     :option_1:  0 - 3 hours per week
