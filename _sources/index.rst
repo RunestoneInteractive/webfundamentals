@@ -33,11 +33,15 @@ Project List
       - An Open Mind
       - Inspiration
 
+.. raw:: html
 
+   <ul>
+   <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
+   </ul>
 
 .. toctree::
 
-    preface.rst
+    FrontBackMatter/preface.rst
 
 .. toctree::
     :maxdepth: 3
