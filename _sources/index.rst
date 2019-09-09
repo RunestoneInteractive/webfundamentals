@@ -33,6 +33,11 @@ Project List
       - An Open Mind
       - Inspiration
 
+    * - 2
+      - :ref:`Wayback Websites <wayback>`
+      - HTML Basics
+      - Practice writing HTML from scratch
+
 .. raw:: html
 
    <ul>
@@ -57,6 +62,7 @@ Project List
     web_apis/toctree.rst
     CGI/toctree.rst
     Frameworks/toctree.rst
+    Projects/toctree.rst
 
 .. raw:: html
 
