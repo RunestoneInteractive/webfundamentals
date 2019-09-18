@@ -31,6 +31,7 @@ CSS Exercises
    
    Given the table in the html code in the question style the table so that the odd rows have a light gray background  In addition and a header row to the table and style that row so it has white text and a black background color.  Change the font so that they are all 14 point sans serif of some kind.
    ~~~~
+
    <html>
       <body>
          <table>
@@ -74,6 +75,7 @@ CSS Exercises
 .. actex:: ex_css_6
    :language: html
    :nocodelens:
+
    Using the image of the playing card, use transformations and animations to make the playing card spin around endlessly.
    ~~~~
 
