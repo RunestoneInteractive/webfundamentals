@@ -12,5 +12,5 @@ Cascading Style Sheets
    positionquiz.rst
    csstricks.rst
    advancedmatching.rst
-   exercises.rst
+   Exercises.rst
 
