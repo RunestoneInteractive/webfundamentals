@@ -5,6 +5,7 @@ import paver.setuputils
 paver.setuputils.install_distutils_tasks()
 from os import environ
 from runestone import get_master_url
+import pkg_resources
 
 ######## CHANGE THIS ##########
 project_name = "webfundamentals"
@@ -53,6 +54,9 @@ options(
         }
     )
 )
+
+version = pkg_resources.require("runestone")[0].version
+options.build.template_args['runestone_version'] = version
 
 # Check to see if we are building on our Jenkins build server, if so use the environment variables
 # to update the DB information for this build
