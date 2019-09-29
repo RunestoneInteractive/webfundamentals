@@ -50,7 +50,8 @@ options(
             'basecourse': 'webfundamentals',
             'downloads_enabled': 'false',
             'enable_chatcodes': 'false',
-            'allow_pairs': 'false'
+            'allow_pairs': 'false',
+            'default_ac_lang': 'javascript',
         }
     )
 )
