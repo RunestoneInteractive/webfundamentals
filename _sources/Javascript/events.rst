@@ -69,7 +69,7 @@ However this is kind of unsatisfying, it would be nice if we could just type a n
       </body>
     </html>
 
-Typing return or clicking with the mouse is still not as godd as we could do.  There are a few other keyboard specific events we can attach to our text input box.  Try changing ``onchange`` attribute in the example above to ``onkeyup``  This event occurs after the user has typed a key and the key has returned to its up position.  In fact there are three events you can experiment with for keyboard keys:
+Typing return or clicking with the mouse is still not as good as we could do.  There are a few other keyboard specific events we can attach to our text input box.  Try changing ``onchange`` attribute in the example above to ``onkeyup``  This event occurs after the user has typed a key and the key has returned to its up position.  In fact there are three events you can experiment with for keyboard keys:
 
 * onkeydown  -- fires when the key is pressed
 * onkeypress  -- fires after onkeydown but not for control, shift, alt
@@ -189,7 +189,7 @@ When the page is fully loaded the ``window.onload`` event happens.  Since we wan
 
 .. activecode:: js_event_6
    :language: html
-   
+
    <html>
    <body>
    <button onclick="stop();">Stop</button>
@@ -209,7 +209,7 @@ When the page is fully loaded the ``window.onload`` event happens.  Since we wan
    </script>
    </body>
    </html>
-   
+
 
 Events Used in this Section
 ---------------------------
