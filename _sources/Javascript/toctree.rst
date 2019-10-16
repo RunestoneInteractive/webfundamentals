@@ -13,5 +13,6 @@ Javascript
    iteration.rst
    Selection.rst
    helpObjects.rst
+   asyncJavascript.rst
    exercises.rst
    finalquiz.rst

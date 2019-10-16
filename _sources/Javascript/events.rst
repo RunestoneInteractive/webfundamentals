@@ -1,3 +1,5 @@
+.. _jsevents:
+
 Javascript Events
 =================
 
@@ -36,7 +38,7 @@ Consider the following page:
     </html>
 
 
-Now this first example is similar in many ways to our previous examples, we are using the ``querySelector`` method to obtain a reference to the text input element and reading its value.  The ``onclick`` method on our button attaches the changeColor method to our button.
+Now this first example is similar in many ways to our previous examples, we are using the ``querySelector`` method to obtain a reference to the text input element and reading its value.  The ``onclick`` method on our button attaches the changeColor method to our button.  We call changeColor a callback function, because we set it up now so that it can be called back into service at a later name.  Namely when the button is clicked.
 
 However this is kind of unsatisfying, it would be nice if we could just type a new value into one of the text input boxes and have that cause the color to change.  Another event type that is commonly used with input is the ``onchange`` event.  Lets add an onchange event to the text input elements and attach that to our changeColor function.  Now when you make a change to a color and tap the return key on your keyboard the color will change.  The color will also change if you click outside the text input box.  Give it a try.
 
