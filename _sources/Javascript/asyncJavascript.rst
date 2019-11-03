@@ -162,15 +162,9 @@ Lets look at an example of ``Promise.all`` in action, by kicking off requests fo
         let opts = {
             method: 'GET',
         }
-        let p = new Promise(async function(resolve, reject) {
-            let resp = await fetch(`/runestone/stocks/predict/${stock}`, opts)
-            writeln('got response');
-            let prediction = await resp.json();
-            writeln(prediction.stock);
-            writeln(prediction.price);
-            resolve(prediction);
-            })
-        return p;
+        let resp = await fetch(`/runestone/stocks/predict/${stock}`, opts)
+        writeln(`got response for ${stock}`);
+        return resp.json();
     }
 
     let promiseList = [];
@@ -184,4 +178,36 @@ Lets look at an example of ``Promise.all`` in action, by kicking off requests fo
                 writeln(`${p.stock}, ${p.price}`)
             }
     });
+
+Promises in Depth
+-----------------
+
+In this section you will learn how to make your own promises (and hopefully not break them!)  The promise constructor takes a function as an argument.  That function in turn takes two two parameters, each of them functions one function for when the promise is resolved and another for when the promise is rejected.  Most often the function you pass is an anonymous function as it will be called immediately as the new Promise is being made.  Lets look at a fun example.  Write a function to generate the nth fibonnaci number.  If the number is odd we will resolve the promise and if the number is even we'll reject it.
+
+.. activecode:: promise_1
+    :language: javascript
+
+    async function fibb(n) {
+        let p = new Promise(function (resolve, reject) {
+            let a = 0;
+            let b = 1;
+            let c = 0;
+            for (let i = 0; i < n; i++) {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            if (c % 2 == 0) {
+                reject(c);
+            } else {
+                resolve(c);
+            }
+        }
+        return p;
+    }
+
+    fibb(1)
+    .then( (r) => writeln(r) )
+    .catch( (r) => writeln("rejected ", r) )
+
 
