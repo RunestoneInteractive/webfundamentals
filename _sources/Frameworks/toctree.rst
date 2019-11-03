@@ -1,9 +1,10 @@
-Modern Web Frameworks
+Framework Development
 :::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
 
+   frameworkdev.rst
    decorators.rst
    deploying.rst
    wsgi.rst

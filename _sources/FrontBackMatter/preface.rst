@@ -46,6 +46,7 @@ There is a second definition of the learning zone that is related to what we hav
 
 The big takeaway for you is that as a student in the classroom for this class, you are in the learning zone as Briceño defines it.  You are not being judged or graded for how quickly you arrive at an answer or not!  The classroom for this course is a time for you to practice old skills, try new skills, and to fail without repercussions.  That is how we learn!  You will spend a huge amount of the rest of your life in the performance zone, so take advantage of this opportunity and enjoy the chance to be in the learning zone.
 
+Web programming would not exist without the world of open source.  Neither would this book.  Especially parts of the Flask chapter which are taken directly from the `Flask documentation <http://flask.palletsprojects.com/en/1.1.x/>`_ and used under the terms of their license.
 
 Brad Miller
 September 2019
