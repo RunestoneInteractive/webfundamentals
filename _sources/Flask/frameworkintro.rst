@@ -45,16 +45,16 @@ To conclude this introductory section we will look at the Flask framework.  We w
 But First...
 
 .. admonition:: Installing a Virtual Environment and Flask
-   
-   For your own development purposes it is good to get in the habit of using a virtual environment.  Using Python 3.4 it is really easy.  
-   
+
+   For your own development purposes it is good to get in the habit of using a virtual environment.  Using Python 3.4 it is really easy.
+
    1.  Make a Folder in your home directory called Environments
    2.  run the command ``pyvenv-3.4 ~/Environments/flaskenv``
    3.  Now run the command ``. ~/Environments/flaskenv/bin/activate``  This activates the python virtual environment and sets up everything so that you will run a special Python contained in the virtual environment.  Best of all you now have permission to install any third party python packages into your own virtual environment without needing root permission.
    4.  run ``pip install flask``
-   
+
    After installing flask you can verify that everything is good by running ``pip list`` you should see the following::
-   
+
        Flask (0.10.1)
        itsdangerous (0.24)
        Jinja2 (2.7.3)
@@ -63,84 +63,5 @@ But First...
        setuptools (2.1)
        Werkzeug (0.9.6)
 
-.. code-block:: python
-
-   from flask import Flask
-   app = Flask(__name__)
-   app.debug = True
-
-   @app.route('/')
-   def hello_world():
-       return '<h1>Hello World!</h1>'
-
-   @app.route('/user/<name>')
-   def hello_user(name):
-      return '<h1>Hello {0}</h1>'.format(name)
-
-   if __name__ == '__main__':
-       app.run()
-
-
-Now, this is not anywhere close to our previous example (yet), but this short program gives us plenty to go on.  The first thing we want to do is to run this and give it a test.  It is really easy to do.  If you save the code above to a file ``helloflask.py``  all you need to do is run ``python3 helloflask.py``.  This command starts up a web server and will respond to requests on port 5000 by default.  In your browser try the following:  ``http://localhost:5000/`` You should see Hello World!  Now try ``http://localhost:5000/user/Me``, in this case you should see ``Hello Me``.  
-
-The two pages you just viewed are an example of URL Routing, and is a fundamental aspect of any web development framework.  The URL / maps to the function ``hello_world`` and the the URL /user/<your name here> maps to the hello_user function.  The key to this is the ``@app.route`` decorator.  By adding this decorator before a function you can set up any function to be called in response to a user submitting a URL.
-
-Wait, what's a decorator?  
-
-Thanks for asking! We will cover decorators in the next section, but the truth is you could live a happy productive life using Flask if you only understood that By placing ``@app.route('/path/to/something')`` on a line by itself before a function definition will cause that function to be called in response to a URL matching the pattern in parenthesis!
-
-Also you should notice that the functions do not use print, but rather return an **iterable**.  In this case a string.  This is because Flask is one of many frameworks built around Python's WSGI standard.  We'll cover WSGI in another section, but you should know that any function that returns an iterable can be used as a response to a GET request.
-
-Now lets look at a Flask-ified version of our hello program.
-
-.. code-block:: python
-
-   from flask import Flask, request
-   app = Flask(__name__)
-   app.debug = True   # need this for autoreload as and stack trace
-
-
-   @app.route('/')
-   def hello_world():
-       return 'Hello World!'
-
-   @app.route('/user/<name>')
-   def hello_user(name):
-       return '<h1>Hello {0}<h1>'.format(name)
-
-   @app.route('/hello')
-   def hello_form():
-       if 'firstname' in request.args:
-           return sendPage(request.args['firstname'])
-       else:
-           return sendForm()
-
-   def sendForm():
-       return '''
-       <html>
-         <body>
-             <form method='get'>
-                 <label for="myname">Enter Your Name</label>
-                 <input id="myname" type="text" name="firstname" value="Nada" />
-                 <input type="submit">
-             </form>
-         </body>
-       </html>
-       '''
-
-   def sendPage(name):
-       return '''
-       <html>
-         <body>
-           <h1>Hello {0}</h1>
-         </body>
-       </html>
-       '''.format(name)
-
-   if __name__ == '__main__':
-      app.run()
-      
-
-Here is where things start to get better.  We no longer have to worry about environment variables, instead Flask provides us with a ``request`` object.  The request object contains pre-processed attributes that contain all of the information we could possibly want from a form submission.  The ``args`` attribute is a dictionary containing keys for all of the names in a submitted form.
 
 

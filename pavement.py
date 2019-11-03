@@ -19,7 +19,7 @@ master_url = None
 if master_url is None:
     master_url = get_master_url()
 
-dynamic_pages = True
+dynamic_pages = False
 master_app = 'runestone'
 serving_dir = './build/webfundamentals'
 
