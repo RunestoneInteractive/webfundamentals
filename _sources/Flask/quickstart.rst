@@ -164,7 +164,7 @@ There are more parameters that are explained in the :ref:`server` docs.
 
 Screenshot of the debugger in action:
 
-.. image:: _static/debugger.png
+.. image:: ../../_static/debugger.png
    :align: center
    :class: screenshot
    :alt: screenshot of debugger in action
