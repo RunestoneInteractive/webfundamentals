@@ -113,7 +113,7 @@ by Jinja2 itself:
    .. sourcecode:: html+jinja
 
        <script type=text/javascript>
-           doSomethingWith({{ user.username|tojson }});
+           doSomethingWith({‎{ user.username|tojson }});
        </script>
 
    It is also safe to use the output of `|tojson` in a *single-quoted* HTML
@@ -121,7 +121,7 @@ by Jinja2 itself:
 
    .. sourcecode:: html+jinja
 
-       <button onclick='doSomethingWith({{ user.username|tojson }})'>
+       <button onclick='doSomethingWith({‎{ user.username|tojson }})'>
            Click me
        </button>
 
@@ -152,7 +152,7 @@ There are three ways to accomplish that:
     object before passing it to the template.  This is in general the
     recommended way.
 -   Inside the template, use the ``|safe`` filter to explicitly mark a
-    string as safe HTML (``{{ myvariable|safe }}``)
+    string as safe HTML (``{‎{ myvariable|safe }}``)
 -   Temporarily disable the autoescape system altogether.
 
 To disable the autoescape system in templates, you can use the ``{%
@@ -162,7 +162,7 @@ autoescape %}`` block:
 
     {% autoescape false %}
         <p>autoescaping is disabled here
-        <p>{{ will_not_be_escaped }}
+        <p>{‎{ will_not_be_escaped }}
     {% endautoescape %}
 
 Whenever you do this, please be very cautious about the variables you are
@@ -229,7 +229,7 @@ functions)::
 The context processor above makes the `format_price` function available to all
 templates::
 
-    {{ format_price(0.33) }}
+    {‎{ format_price(0.33) }}
 
 You could also build `format_price` as a template filter (see
 :ref:`registering-filters`), but this demonstrates how to pass functions in a
