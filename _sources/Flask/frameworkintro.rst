@@ -49,7 +49,7 @@ But First...
    For your own development purposes it is good to get in the habit of using a virtual environment.  Using Python 3.4 it is really easy.
 
    1.  Make a Folder in your home directory called Environments
-   2.  run the command ``pyvenv-3.4 ~/Environments/flaskenv``
+   2.  run the command ``python3 -m venv ~/Environments/flaskenv``
    3.  Now run the command ``. ~/Environments/flaskenv/bin/activate``  This activates the python virtual environment and sets up everything so that you will run a special Python contained in the virtual environment.  Best of all you now have permission to install any third party python packages into your own virtual environment without needing root permission.
    4.  run ``pip install flask``
 
