@@ -225,6 +225,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_join_ex1
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     Use ``JOIN`` to show the station IDs of active stations and what’s the average duration of bike trip originating and ending at the same station with member type Member.  For station 31000 what is the average duration from above?
