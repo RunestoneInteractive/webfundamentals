@@ -85,6 +85,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_filter_ex1
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     Figure out how to get all the trips on the bike with id of ``W01274``
@@ -99,6 +100,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_filter_ex2
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     Get the ending station and the duration of all of the bike trips originating at station ``31111`` that lasted 8 hours or more.
@@ -115,6 +117,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_filter_ex3
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     How many trips longer than 8 hours started and ended and station 31111 by casual riders?

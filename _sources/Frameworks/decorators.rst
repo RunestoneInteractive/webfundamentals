@@ -9,7 +9,7 @@ Lets write a simple decorator that we can use so that a function can automatical
 
 The ``call_counter`` function in the code below is a decorator, it takes a function as an argument, and returns a replacement function. The replacement function, called ``wrap``, is defined inside the ``call_counter`` function.
 
-First we define the wrap function which does two things.  First, it increments a counter attribute of itself, and then returns the result of calling ``func``, passing along any and all arguments.  *args allows you to define a function that accepts a variable number of parameters, and **kwargs allows you to have any number of named parameters.  This topic could be another whole chapter, but for now you can read a nice `concise description here. <http://markmiyashita.com/blog/python-args-and-kwargs/>`_
+First we define the wrap function which does two things.  First, it increments a counter attribute of itself, and then returns the result of calling ``func``, passing along any and all arguments.  ``*args`` allows you to define a function that accepts a variable number of parameters, and ``**kwargs`` allows you to have any number of named parameters.  This topic could be another whole chapter, but for now you can read a nice `concise description here. <http://markmiyashita.com/blog/python-args-and-kwargs/>`_
 
 You may be confused by the line ``wrap.counter += 1``.  But remember that in Python functions are objects like any other object.  We can always add attributes to objects by just using the dot notation and assigning.  Alternatively we could be really explicit about adding an attribute using ``setattr(wrap,'counter',0)``.  So all the wrap function does is add the ability to increment a private counter each time wrap is called, and then call the original function.
 
@@ -51,7 +51,7 @@ Think about the wrap function in the previous example more generally:
          # change the environment
          return res
       return wrap
-      
+
 OK, hopefully you are still with me.  Lets look at another way of implementing the same functionality as the ``call_counter`` decorator but we will do it in a slightly different way.  In the definition of a decorator I used the term *callable*.  In Python callable means any object that understands the use of the () as call operators.  Huh?  Take a look at this example:
 
 .. activecode:: dec_callable
@@ -69,7 +69,7 @@ OK, hopefully you are still with me.  Lets look at another way of implementing t
    foo = MyClass('brad')
 
    foo(2,9)
-   
+
 In the example above foo is clearly an instance of ``MyClass``.  But because we implement the "dunder method" ``__call__`` we can treat this instance of the class just like a function.
 
 Lets write a new version of our call counter as a class:
@@ -80,7 +80,7 @@ Lets write a new version of our call counter as a class:
        def __init__(self,func):
            self.counter = 0
            self.func = func
-        
+
        def __call__(self, *args, **kwargs):
            self.counter += 1
            return self.func(*args,**kwargs)
@@ -98,13 +98,13 @@ Lets write a new version of our call counter as a class:
            return 1
        else:
            return n * fact(n-1)
-        
+
    fib(20)
    fact(100)
    print(fib.counter)
    print(fact.counter)
 
-The use of a class in this way is nice because we don't have to clutter our function object with extraneous attributes.  We also don't have to define functions within functions because the ``__init__`` method for the BetterDecor class serves as the outer layer of the decorator, it accepts the function as its parameter and stores away the function in an instance variable!  
+The use of a class in this way is nice because we don't have to clutter our function object with extraneous attributes.  We also don't have to define functions within functions because the ``__init__`` method for the BetterDecor class serves as the outer layer of the decorator, it accepts the function as its parameter and stores away the function in an instance variable!
 
 I recommend you take a short break at this point, especially if your head is spinning from the last few examples.  The next part is even more head spinning.
 
@@ -140,7 +140,7 @@ Its a little bit off the wall, but lets say we want to implement our call counte
        def __init__(self,start_val, current_time):
            self.counter = start_val
            self.define_time = current_time
-        
+
        def __call__(self, func):
            def wrap(*args, **kwargs):
                self.counter += 1
@@ -169,23 +169,23 @@ Finally, lets consider what our ``app.route`` decorator does.  The app object is
 
        def __init__(self):
            self.funcdict = {}
-        
+
        def route(self,pattern):
            def wrap(func):
                self.funcdict[pattern] = func
                return func
            return wrap
-        
+
        def namecall(self,name, *args, **kwargs):
            if name in self.funcdict:
                self.funcdict[name](*args,**kwargs)
-        
+
    app = funcmapper()
 
    @app.route('/')
    def hello():
        print("hello world")
-    
+
    app.namecall('/')
    print(hello)
 

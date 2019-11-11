@@ -213,6 +213,6 @@ To use Jinja templates in flask is easy.
 
 1.  You need to make a templates subdirectory in your main project directory.
 2.  Add ``from flask import render_template`` to your Python.
-3.  Then from one of your controller functions, rather than returning a big string, you simple invoke the ``render_template`` function:  ``return render_template('todo.html',todolist=todolist))
+3.  Then from one of your controller functions, rather than returning a big string, you simple invoke the ``render_template`` function:  ``return render_template('todo.html',todolist=todolist))``
 
 Remember that in flask our controller functions return an iterable.  The render_template function returns such an interable.  Its just a string, so you can call the render_template function and print the results if you like.

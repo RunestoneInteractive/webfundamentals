@@ -236,6 +236,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_join_ex2
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     What is the name of the station where the most rides start?
@@ -247,6 +248,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_join_ex3
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     What is the name of the station where the most rides end?
@@ -258,6 +260,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_join_ex4
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     What is the name of the station where most rides both start and end?
@@ -270,6 +273,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_join_ex5
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     What is the name of the most popular ending station for rides that begin at Massachusetts Ave & Dupont Circle NW?

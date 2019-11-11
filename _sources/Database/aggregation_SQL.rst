@@ -166,6 +166,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_agg_ex1
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     Compute the average duration of bike trips for each starting station id and list the results in order of highest average to lowest average for the 10 stations with the highest average.  What is the highest average duration?
@@ -176,6 +177,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_agg_ex2
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     What is the bike_number and count of the bike with the most rides?
@@ -188,6 +190,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_agg_ex3
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     How many total rides by Members and Casual users?
@@ -202,6 +205,7 @@ Practice Exercises
 
 .. activecode:: sql_bikeshare_agg_ex4
     :language: sql
+    :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
     What is the station that has the most rides that start and end at the same station? How many rides started there?
