@@ -277,7 +277,7 @@ Practice Exercises
     :autograde: unittest
     :dburl: /runestone/books/published/httlads/_static/bikeshare.db
 
-    What is the name of the most popular ending station for rides that begin at Massachusetts Ave & Dupont Circle NW?
+    What is the name of the most popular ending station for rides that begin at Massachusetts Ave & Dupont Circle NW (Station: 31200)?
     ~~~~
 
     ====
