@@ -198,9 +198,9 @@ Practice Exercises
 
     ====
     assert 0,0 == Casual
-    assert 0,1 == 979814
+    assert 0,1 == 246949
     assert 1,0 == Member
-    assert 1,1 == 246949
+    assert 1,1 == 979814
 
 
 .. activecode:: sql_bikeshare_agg_ex4
