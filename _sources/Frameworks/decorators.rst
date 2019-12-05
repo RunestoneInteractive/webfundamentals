@@ -3,7 +3,7 @@ Python Decorators
 
 One of the cool things about learning Python Frameworks is that you get to dig into some advanced Python features.  In our hello world example we mapped Python functions to URL's using Python decorators, Now its time to see how decorators work, and a simplified implementation of how Flask uses the concept to call a particular function based on a URL.
 
-Before we go there, lets look at a simpler example of a decorator to get an idea of how they work.  First lets start with a definition.  A decorator is a *callable* that takes a function as an argument and returns a replacement function.
+Before we go there, lets look at a simpler example of a decorator to get an idea of how they work.  First lets start with a definition.  A decorator is a *callable* that takes a **function** as an argument and returns a **replacement function.**
 
 Lets write a simple decorator that we can use so that a function can automatically keep track of the number of times it has been called.  This can sometimes be very useful for performance testing or debugging.
 
@@ -15,7 +15,33 @@ You may be confused by the line ``wrap.counter += 1``.  But remember that in Pyt
 
 Here is the real key ``@call_counter`` notation before the  definition of fib, is the equivalent of adding the line``fib = call_counter(fib)`` after the function is defined.  You can comment out the ``@call_counter`` line and prove this to yourself.
 
-.. code-block:: python
+.. activecode:: deco_counter1
+
+    def call_counter(func):
+       def wrap(*args, **kwargs):
+           wrap.counter += 1
+           return func(*args,**kwargs)
+       wrap.counter = 0
+       return wrap
+
+    def fib(n):
+        if n <= 1:
+            return 1
+        else:
+            return fib(n-1) + fib(n-2)
+
+    fib = call_counter(fib)
+
+    for i in range(20):
+        print(fib(i), fib.counter)
+        fib.counter = 0
+
+The key to understanding the example above is the line: ``fib = call_counter(fib)``   So, ``call_counter`` takes a function as a parameter defines a wrap function and adds a counter attribute on the function (functions are objects like any other object after all)
+The wrap function's only job when it is called is to increment the counter and then call the orginial function internally remembered as ``func``.  The call_counter function then returns the newly created function which contains a reference to the original function and assigns the function internally known as ``wrap`` to the varible ``fib`` this effectively replaces the reference that fib had to the original fib function with the wrap function.
+
+All decorators do is add some sytactic sugar so that we can avoid the line ``fib = call_counter(fib)``.  You will see below how that works:
+
+.. activecode:: deco_counter2
 
     def call_counter(func):
        def wrap(*args, **kwargs):
@@ -51,7 +77,7 @@ Think about the wrap function in the previous example more generally:
          # change the environment
          return res
       return wrap
-      
+
 OK, hopefully you are still with me.  Lets look at another way of implementing the same functionality as the ``call_counter`` decorator but we will do it in a slightly different way.  In the definition of a decorator I used the term *callable*.  In Python callable means any object that understands the use of the () as call operators.  Huh?  Take a look at this example:
 
 .. activecode:: dec_callable
@@ -69,18 +95,18 @@ OK, hopefully you are still with me.  Lets look at another way of implementing t
    foo = MyClass('brad')
 
    foo(2,9)
-   
+
 In the example above foo is clearly an instance of ``MyClass``.  But because we implement the "dunder method" ``__call__`` we can treat this instance of the class just like a function.
 
 Lets write a new version of our call counter as a class:
 
-.. code-block:: python
+.. activecode:: betterdecor
 
    class BetterDecor:
        def __init__(self,func):
            self.counter = 0
            self.func = func
-        
+
        def __call__(self, *args, **kwargs):
            self.counter += 1
            return self.func(*args,**kwargs)
@@ -98,19 +124,19 @@ Lets write a new version of our call counter as a class:
            return 1
        else:
            return n * fact(n-1)
-        
+
    fib(20)
    fact(100)
    print(fib.counter)
    print(fact.counter)
 
-The use of a class in this way is nice because we don't have to clutter our function object with extraneous attributes.  We also don't have to define functions within functions because the ``__init__`` method for the BetterDecor class serves as the outer layer of the decorator, it accepts the function as its parameter and stores away the function in an instance variable!  
+The use of a class in this way is nice because we don't have to clutter our function object with extraneous attributes.  We also don't have to define functions within functions because the ``__init__`` method for the BetterDecor class serves as the outer layer of the decorator, it accepts the function as its parameter and stores away the function in an instance variable!
 
 I recommend you take a short break at this point, especially if your head is spinning from the last few examples.  The next part is even more head spinning.
 
 Consider the decorator used in our hello world flask example.  Oh yeah, this was supposed to be about flask and web programming right?  ``@app.route('/user/<name>')``   Do you see anything wrong with this picture?  If a decorator is a function that takes another function as an argument then what is the deal with the ``('/user/<name>')`` part of the equation.  It looks like we have used up our allotment of parameters with the string, where does the function go?
 
-In this case the decorator is a function that takes some other arguments and returns a function that accepts a function as a parameter and returns a replacement for the function.  Holy levels of abstraction batman.
+In this case the decorator is a callable that takes some other arguments and returns a callable that accepts a function as a parameter and returns a replacement for the function.  Holy levels of abstraction batman.
 
 Here is a simple example that may actually be easier to understand than the previous few sentences:
 
@@ -134,13 +160,13 @@ Using classes to implement decorators that take arguments is actually quite nice
 
 Its a little bit off the wall, but lets say we want to implement our call counter to take an initial value, and the time at which the function was defined.
 
-.. code-block:: python
+.. activecode:: classdeco2
 
    class ccc:
        def __init__(self,start_val, current_time):
            self.counter = start_val
            self.define_time = current_time
-        
+
        def __call__(self, func):
            def wrap(*args, **kwargs):
                self.counter += 1
@@ -163,30 +189,30 @@ Its a little bit off the wall, but lets say we want to implement our call counte
 
 Finally, lets consider what our ``app.route`` decorator does.  The app object is our Flask application object, and it will be used to dispatch the correct function based on the URL.  So this decorator is not even really going to wrap the function in question, but rather store away a reference to the original function in a dictionary
 
-.. code-block:: python
+.. activecode:: router1
 
    class funcmapper:
 
        def __init__(self):
            self.funcdict = {}
-        
+
        def route(self,pattern):
            def wrap(func):
                self.funcdict[pattern] = func
                return func
            return wrap
-        
-       def namecall(self,name, *args, **kwargs):
+
+       def call_by_route(self,name, *args, **kwargs):
            if name in self.funcdict:
                self.funcdict[name](*args,**kwargs)
-        
+
    app = funcmapper()
 
    @app.route('/')
    def hello():
        print("hello world")
-    
-   app.namecall('/')
+
+   app.call_by_route('/')
    print(hello)
 
 
