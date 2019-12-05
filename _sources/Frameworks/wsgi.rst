@@ -18,26 +18,26 @@ From our perspective as application builders, WSGI is very simple.  It has the f
 The Application Callable
 ------------------------
 
-The ``app`` object created by ``app = Flask(__name__)`` is a WSGI compliant object.  It is quite complex and does a lot of work for us behind the scenes.  To get a better appreciation for that, lets look at a simpler version of a WSGI app.
+The ``app`` object created by ``app = Flask(__name__)`` is a WSGI compliant object, meaning that it is a callable, that takes two parameters, an environment dictionary and a function.  It returns an iterable.  It is quite complex and does a lot of work for us behind the scenes.  To get a better appreciation for that, lets look at a simpler version of a WSGI compliant object, a function called ``hello_world``.
 
 .. code-block:: python
 
    from cgi import parse_qs
-   
+
    def hello_world(environ, start_response):
-       # parse_qs turns QUERY_STRING into a nice dictionary 
+       # parse_qs turns QUERY_STRING into a nice dictionary
        parameters = parse_qs(environ.get('QUERY_STRING', ''))
        if 'subject' in parameters:
            # all values are lists, to accommodate checkboxes
            subject = parameters['subject'][0]
-       else: 
-           subject = 'World' 
+       else:
+           subject = 'World'
        start_response('200 OK', [('Content-Type', 'text/html')])
        return ['''Hello {subject} Hello {subject} '''.format(subject=subject)]
 
-   if __name__ == '__main__': 
-       from wsgiref.simple_server import make_server 
-       srv = make_server('localhost', 8000, hello_world)
+   if __name__ == '__main__':
+       from wsgiref.simple_server import make_server
+       srv = make_server('', 8000, hello_world)
        srv.serve_forever()
 
 
@@ -52,7 +52,24 @@ First, an example of parse_qs:
     >>>
 
 
-Our app object in Flask is an instance of the Flask class.  Lets look at a really simple class based implementation of a WSGI app, and then look at another example that points us in the direction of how Flask extends the idea into a full framework.
+.. fillintheblank:: first_wsgi
+    Run the example above in a terminal window.  What does your browser display?
+
+    - :Hello World Hello World:  Correct!
+      :Hello World: Not quite, look closer
+      :x: Hint: Hello ????
+
+The ``wsgiref.simple_server`` is a simple web server instance that acts as a container for our WSGI object.  Every time a request comes in, the hello world function is called passing in the environ object and a function that it provides that we can call to provide our response status as well as any headers we want to set up.
+
+In our ``hello_world`` function we check to see if there is a name called ``subject`` in the QUERY_STRING.    We then call the ``start_response`` function to set up our response code and content-type header.  Finally we return an iterable -- in this case a string -- that will be returned to the browser to be rendered.
+
+Lest you think this is overly simple, we can even do some routing in this function by looking at the ``PATH_INFO`` environment variable.  Try this yourself. Modify the hello world function to return Hello, if the route is ``/hello`` and Goodbye if the route is ``/bye``
+
+Write a single function with a big long if statement is not a very scalable way to build a web development framework.  So lets make some improvments.  First instead of a function lets create a class where the instances of the class are **callable**.
+
+Our app object in Flask is an instance of the Flask class.  Lets look at a simpler class based implementation of a WSGI app, and then look at another example that points us in the direction of how Flask extends the idea into a full framework.
+
+We will do this by implementing a base class that implements most of the WSGI deails and leaves the actual application code up to us.  All we will need to do is write a class that inherits from our class and implements a ``get`` method.
 
 .. code-block:: python
 
@@ -111,7 +128,7 @@ In the decorators module we looked at how Flask uses decorators to associate a f
        (r'hello/?$', Hello),
        (r'goodbye/?)$', Goodbye)
    ]
-   
+
 
 This list of tuples maps three differnt patterns to 3 different callables that provide a simple response.  All of them are very similar to the Hello class shown above.
 
