@@ -62,6 +62,7 @@ Project List
     web_apis/toctree.rst
     CGI/toctree.rst
     Flask/toctree.rst
+    Database/toctree.rst
     Frameworks/toctree.rst
     Projects/toctree.rst
 
