@@ -14,7 +14,7 @@ minutes or more:
 
 .. activecode:: sql_bikeshare_filter_1
     :language: sql
-    :dburl: /runestone/books/published/httlads/_static/bikeshare.db
+    :dburl: /runestone/books/published/webfundamentals/_static/bikeshare.db
 
     SELECT
       member_type, start_date, duration
@@ -35,7 +35,7 @@ type of Member:
 
 .. activecode:: sql_bikeshare_filter_2
     :language: sql
-    :dburl: /runestone/books/published/httlads/_static/bikeshare.db
+    :dburl: /runestone/books/published/webfundamentals/_static/bikeshare.db
 
     SELECT
       member_type, start_date, duration
@@ -61,7 +61,7 @@ Practice Exercises
 
     .. activecode:: sql_bikeshare_filter_sol1
         :language: sql
-        :dburl: /runestone/books/published/httlads/_static/bikeshare.db
+        :dburl: /runestone/books/published/webfundamentals/_static/bikeshare.db
 
         select * from trip_data where bike_number = 'W01274' and duration < 900
 
@@ -86,7 +86,7 @@ Practice Exercises
 .. activecode:: sql_bikeshare_filter_ex1
     :language: sql
     :autograde: unittest
-    :dburl: /runestone/books/published/httlads/_static/bikeshare.db
+    :dburl: /runestone/books/published/webfundamentals/_static/bikeshare.db
 
     Figure out how to get all the trips on the bike with id of ``W01274``
     and only include rides which are shorter than 15 minutes.
@@ -101,7 +101,7 @@ Practice Exercises
 .. activecode:: sql_bikeshare_filter_ex2
     :language: sql
     :autograde: unittest
-    :dburl: /runestone/books/published/httlads/_static/bikeshare.db
+    :dburl: /runestone/books/published/webfundamentals/_static/bikeshare.db
 
     Get the ending station and the duration of all of the bike trips originating at station ``31111`` that lasted 8 hours or more.
     ~~~~
@@ -118,7 +118,7 @@ Practice Exercises
 .. activecode:: sql_bikeshare_filter_ex3
     :language: sql
     :autograde: unittest
-    :dburl: /runestone/books/published/httlads/_static/bikeshare.db
+    :dburl: /runestone/books/published/webfundamentals/_static/bikeshare.db
 
     How many trips longer than 8 hours started and ended and station 31111 by casual riders?
     ~~~~
