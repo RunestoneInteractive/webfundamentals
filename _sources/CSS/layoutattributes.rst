@@ -19,7 +19,7 @@ The different parts of the box model are defined as follows:
 * Border:  This can be an actual drawn border or it can be invisible
 * Margin: The space outside the border between this box and the boxes next to it in each direction.
 
-Lets try a simple example:
+Let's try a simple example:
 
 .. activecode:: css_boxmodel
    :language: html
@@ -104,7 +104,7 @@ Give them a try in the example above and see what happens.
 
 .. admonition:: Greeking
 
-   You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  Its Greek to me.  Obviously they skipped Paideia that day.
+   You may be wondering about the use of latin words in the example paragraph.  This is an old tradition in typesetting, to use a bunch of latin words, many of the sentences start with "Lorum Ipsum," so sometimes it is called Lorum Ipusum as well.  The idea is to fill the space with words that obviously have no relationship to the actual webpage.  This helps reviewers focus on the style rather than the content.  Why do they call it greeking when the words are latin?  It's Greek to me.  Obviously they skipped Paideia that day.
 
 
 Display
@@ -163,7 +163,7 @@ This technique is often used in the navigation bar to create a "menu" of links. 
 Floating
 --------
 
-The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Lets begin with a simple example.
+The CSS float property allows us to push HTML elements to the left or right, so that other elements will wrap around them.  This can be extremely useful for images, but will also be very useful when we begin to work on more complex layouts for our pages.  Let's begin with a simple example.
 
 .. activecode:: css_float1
    :language: html
@@ -181,7 +181,7 @@ The CSS float property allows us to push HTML elements to the left or right, so 
 
 Notice that the logo appears right in the middle of the text in its normal inline flow.   Now, add a CSS rule for an img tag that sets the float property to left.   Then change the rule to float the image to the right.
 
-Next lets add a second copy of the norse logo to the page by copying and pasting the image again.
+Next let's add a second copy of the norse logo to the page by copying and pasting the image again.
 
 Next, modify the html, and add a CSS rule so that one logo is floated to the left and the other is floated to the right.
 
@@ -212,7 +212,7 @@ An **absolute** element is positioned relative to the first parent element that 
 Fixed
 ^^^^^
 
-Lets look at an example of how to use fixed positioning to create an element that stays put on the screen.
+Let's look at an example of how to use fixed positioning to create an element that stays put on the screen.
 
 .. activecode:: css_pos1
    :language: html
@@ -260,7 +260,7 @@ Lets look at an example of how to use fixed positioning to create an element tha
    </body>
    </html>
 
-When you run the example above you will notice that its not quite right!  The text is overlapping and the page generally looks ugly.    The elements overlap because the fixed positioning takes the paragraph block element out of the flow.  Because its out of the flow the browser renders the ``ol`` as if it should be the first thing at the top of the page.
+When you run the example above you will notice that it's not quite right!  The text is overlapping and the page generally looks ugly.    The elements overlap because the fixed positioning takes the paragraph block element out of the flow.  Because it's out of the flow the browser renders the ``ol`` as if it should be the first thing at the top of the page.
 
 
 Your challenge is to fix the example so that the sentence stays nicely anchored to the top, but the ordered list begins below it.
@@ -272,11 +272,11 @@ Your challenge is to fix the example so that the sentence stays nicely anchored 
 Relative
 ^^^^^^^^
 
-Next lets look at the relative position and how we can use it to make overlapping elements.
+Next let's look at the relative position and how we can use it to make overlapping elements.
 
 .. take an image of a card and make a stacked deck of three cards.
 
-Lets make a stack of cards using the following image:
+Let's make a stack of cards using the following image:
 
 .. image:: Figures/ace-of-hearts.gif
 
@@ -303,7 +303,7 @@ If you run the example you will see the three cards lined up next to each other.
 1.  images are inline elements and so do not create a line break.
 2.  The browser lays out inline images top to bottom and left to right.
 
-Now lets use our positioning skills to create a stack.  Modify the example above to add the following css rule:
+Now let's use our positioning skills to create a stack.  Modify the example above to add the following css rule:
 
 .. code-block:: css
 

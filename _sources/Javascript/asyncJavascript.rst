@@ -62,7 +62,7 @@ Now that seems like a lot of code to accomplish a simple task, but I've made it 
     AAPL
     242.42
 
-There are several ways we can reduce the amount of code from the above example, that also illustrate more common JavaScript coding practices.  Lets take a look at a first group of refinements.
+There are several ways we can reduce the amount of code from the above example, that also illustrate more common JavaScript coding practices.  Let's take a look at a first group of refinements.
 
 .. activecode:: ac_async_2
     :language: javascript
@@ -124,7 +124,7 @@ The async keyword is used before a function definition and guarantees that the f
 
 The await keyword pauses the exectuion of the async function until the promise is resolved.  When this hapens the function resumes from the point it left off and the await expression evaluates to the result value of the promise.  More on this later!
 
-Lets see how this simplifies our example.
+Let's see how this simplifies our example.
 
 
 .. activecode:: ac_async_4
@@ -152,7 +152,7 @@ Wow, now that is nice!  It makes the code in the async function very clean and e
 
 The promises interface has two other methods worth exploring.  ``Promise.all`` and ``Promise.race``.   Promise.all allows you to have a number of different promises active and then wait for all of them to complete.  In fact this all interface is used in the activecode widget in this very book.  When a page loads and you press the load history button several asynchronous tasks are kicked off.  But if you press the Run button before all of them are done, then the history can get out of order.  So, the run button is disabled and when all the tasks are complete it is re-enabled.
 
-Lets look at an example of ``Promise.all`` in action, by kicking off requests for predictions for all of our stocks.
+Let's look at an example of ``Promise.all`` in action, by kicking off requests for predictions for all of our stocks.
 
 .. activecode:: ac_async_5
     :language: javascript
@@ -182,7 +182,7 @@ Lets look at an example of ``Promise.all`` in action, by kicking off requests fo
 Promises in Depth
 -----------------
 
-In this section you will learn how to make your own promises (and hopefully not break them!)  The promise constructor takes a function as an argument.  That function in turn takes two two parameters, each of them functions one function for when the promise is resolved and another for when the promise is rejected.  Most often the function you pass is an anonymous function as it will be called immediately as the new Promise is being made.  Lets look at a fun example.  Write a function to generate the nth fibonnaci number.  If the number is odd we will resolve the promise and if the number is even we'll reject it.
+In this section you will learn how to make your own promises (and hopefully not break them!)  The promise constructor takes a function as an argument.  That function in turn takes two parameters, each of them functions: one function for when the promise is resolved and another for when the promise is rejected.  Most often the function you pass is an anonymous function as it will be called immediately as the new Promise is being made.  Let's look at a fun example.  Write a function to generate the nth fibonacci number.  If the number is odd we will resolve the promise and if the number is even we'll reject it.
 
 .. activecode:: promise_1
     :language: javascript

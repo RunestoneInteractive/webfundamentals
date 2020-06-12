@@ -3,7 +3,7 @@ Creating Elements on the Fly
 
 The pattern in the previous example is a common one in web development.  You create a template using HTML and then you modify the template in response to events, gaining access to those elements using the ``querySelector`` method.
 
-Modifying a template only gets us so far.   In many other cases you want to add content to your page dynamically.  For example, Lets make a simple time application that records the date and time whenever you press the button.  
+Modifying a template only gets us so far.   In many other cases you want to add content to your page dynamically.  For example, let's make a simple time application that records the date and time whenever you press the button.  
 
 .. activecode:: create_1
    :language: html
@@ -27,7 +27,7 @@ Modifying a template only gets us so far.   In many other cases you want to add 
       </body>
    </html>
 
-Although its not a very useful application, it illustrates how we can create HTML elements in response to events.  Figure 1 shows the  DOM tree before the button is clicked.
+Although it's not a very useful application, it illustrates how we can create HTML elements in response to events.  Figure 1 shows the  DOM tree before the button is clicked.
 
 .. figure:: Figures/tree1.svg
 
@@ -80,7 +80,7 @@ name of a variable does not matter;  ``this`` is the exception to that rule!
 Modify the example above so that in each case you are calling ``hello(this)``.  Now in your javascript change
 the alert to ``alert("Hello I am " + me.innerHTML)``
 
-For comparison, lets create the same page as above but in Javascript.
+For comparison, let's create the same page as above but in Javascript.
 
 .. activecode:: button_context_2
    :language: html
@@ -111,7 +111,7 @@ is automatically set for us inside the function based on the object it is attach
 Attaching Events
 ----------------
 
-What if we want to attach an event to one of the objects we have created?  what if we want to use one function but attach it to many different elements, and have our function do something different depending on which element is clicked on?  This is the final topic for this section.  Its a tricky one, so pay close attention.  Lets start by attaching an onclick handler to each row of the table.
+What if we want to attach an event to one of the objects we have created?  what if we want to use one function but attach it to many different elements, and have our function do something different depending on which element is clicked on?  This is the final topic for this section.  It's a tricky one, so pay close attention.  Let's start by attaching an onclick handler to each row of the table.
 
 .. activecode:: create_2
    :language: html

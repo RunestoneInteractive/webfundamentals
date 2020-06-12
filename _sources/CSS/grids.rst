@@ -9,11 +9,11 @@ the CSS grid layout is a two-dimensional grid-based layout system designed speci
 Using grid layout begins with a container element that uses a ``display: grid`` property.  You can then describe what your grid looks like with two additional properties:
 
 * ``grid-template-columns`` how many columns in your grid, and how should these columns be apportioned their space.
-* ``grid-template-rows`` how many rows should your grid have and how should their space be appropriated.  (Note its ok to go over the number of rows, and layout will continue to add containers into columns, but the height will be determined automatically.
+* ``grid-template-rows`` how many rows should your grid have and how should their space be appropriated.  (Note: it's ok to go over the number of rows, and layout will continue to add containers into columns, but the height will be determined automatically.
 
 The layout of grid operates mostly left to right top to bottom, taking the child elements of the container and putting them into their columns first.  When you've used up the first row of columns layout continues on the second row, and so forth.
 
-Lets take a look at a simple example:
+Let's take a look at a simple example:
 
 .. activecode:: grid_layout_1
     :language: html
@@ -88,7 +88,7 @@ The style for the example above is here:
 
 The grid layout has the concept of tracks and grid lines.  In the example above we have defined 3 tracks, one for each column and four grid lines. two on the outside and the two lines separating track 1 from track 2 and another separating track 2 from track 3.  The same concept applies to the rows.
 
-We can use these values to take more control over how and where we want our grid containers to go.  Lets say we want ``#d1`` to span all three columns.  We can add ``grid-column-start: 1;`` and ``grid-column-end: 4;`` as descripters for our ``#d1`` element
+We can use these values to take more control over how and where we want our grid containers to go.  Let's say we want ``#d1`` to span all three columns.  We can add ``grid-column-start: 1;`` and ``grid-column-end: 4;`` as descripters for our ``#d1`` element
 
 
 

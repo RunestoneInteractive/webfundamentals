@@ -5,10 +5,10 @@ In the Javascript chapter we looked at a number of HTML tags for processing user
 
 When we submit a form, the browser packages up all of the data we have entered into the input elements and sends them back to the server, and your program for processing.
 
-Lets change the hello.py program we wrote earlier to have a form where you can enter your name.  After you click on the submit button the page will display ``Hello yourname`` rather than ``Hello World``.  Although it sounds simple, this program will provide us with several avenues to further explore the relationship between the browser, the server, and our cgi program.
+Let's change the hello.py program we wrote earlier to have a form where you can enter your name.  After you click on the submit button the page will display ``Hello yourname`` rather than ``Hello World``.  Although it sounds simple, this program will provide us with several avenues to further explore the relationship between the browser, the server, and our cgi program.
 
 
-Lets start with a basic page with a form.
+Let's start with a basic page with a form.
 
 .. code-block:: html
 
@@ -63,7 +63,7 @@ The following figure gives you a good sense for the flow of how our little appli
 Combining into One File
 -----------------------
 
-Lets now combine our application into a single file. Using the following flow:
+Let's now combine our application into a single file. Using the following flow:
 
 1.  If there is no QUERY_STRING simply return the HTML for the form.
 2.  If there is a QUERY_STRING then do not display the form, simply display the Hello greeting to the name stored in the QUERY STRING.

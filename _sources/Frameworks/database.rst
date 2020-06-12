@@ -14,7 +14,7 @@ Let me begin with the statement that data modeling could be the most important s
 
 A data model will help us uncover and describe the entities that are important to our application.  These entities will become the tables in our database.  The things we need to remember about the entities or the attributes of our entities will become the columns in our table.
 
-Lets use an example of keeping track of college courses to illustrate what we mean.  To start out very simply we think of the nouns or things that are important to registering for courses at college.
+Let's use an example of keeping track of college courses to illustrate what we mean.  To start out very simply we think of the nouns or things that are important to registering for courses at college.
 
 * student
 * course
@@ -31,15 +31,15 @@ When doing a data model we often create a diagram to represent the data model ca
 
 Looking at our list, the first thing we may want to investigate is the course.  What is it about a course that uniquely identifies it?  What other things do we want to remember about a course.  At most colleges courses have unique identifiers that consist of the department and a number such as CS101 or BIO423.  For a course we may also want to remember the title of the course, the course description, how many credits the course is worth.  
 
-Other attributes of the course may be the professor who teaches it, the room the course meets in, and the time.  However these are slightly problematic in that these things change from time to time.  Now if we don't care about that and only want to remember the most current room or professor its not a problem, but if we want to be able to look back and find out who taught a course where and when we'll have to defer these attributes for a while.
+Other attributes of the course may be the professor who teaches it, the room the course meets in, and the time.  However these are slightly problematic in that these things change from time to time.  Now if we don't care about that and only want to remember the most current room or professor it's not a problem, but if we want to be able to look back and find out who taught a course where and when we'll have to defer these attributes for a while.
 
-Lets begin our LDS diagram by drawing out the Course entity along with its attributes.
+Let's begin our LDS diagram by drawing out the Course entity along with its attributes.
 
 .. figure:: Figures/lds1.svg
 
    An LDS with one entity
    
-To continue thinkgin about the course another idea that may have occured to you is that we want to remember the students that took the course.  So, student is an attribute of course.  However, when you think about student you can probably think of many things ou wold want to remember about a student, so its no ordinary attribute.  In fact it is another entity.
+To continue thinkgin about the course another idea that may have occured to you is that we want to remember the students that took the course.  So, student is an attribute of course.  However, when you think about student you can probably think of many things ou wold want to remember about a student, so it's no ordinary attribute.  In fact it is another entity.
 
 A student is uniquely identified by their student id, and there are lots of things to remember:  first Name, last name, the year they enrolled, their major, their email address, and potentially much more.  However, how do we indicate that there is a relationship between a student and a course?  What kind of relationship?  There are three different relationships to consider:
 
