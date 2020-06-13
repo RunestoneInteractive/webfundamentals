@@ -21,7 +21,7 @@ The declaration itself consists of two parts: a property and a value.  There are
 
 Selectors can be as simple as a tag name, or a very complex pattern to match.  We will start with some very simple selectors and work our way up to the more complex.
 
-Without further fuss, lets look at a CSS rule for coloring h1 tags blue, and changing their font to 28 points.
+Without further fuss, let's look at a CSS rule for coloring h1 tags blue, and changing their font to 28 points.
 
 .. code-block:: css
 
@@ -40,7 +40,7 @@ There are three ways to include CSS in your html document.
 * You can embed your CSS in your file inside a ``style`` tag.  We'll use this method in this book for convenience.
 * You can put all of your CSS in a separate style file and include the style file into your HTML.  This is the preferred way of doing it because it achieves the greatest amount of separation between the content and how the content looks.
 
-Lets now look at a complete example:
+Let's now look at a complete example:
 
 .. activecode:: css_rule_1
    :language: html
@@ -63,7 +63,7 @@ Lets now look at a complete example:
    </html>
 
 
-There are several things to notice about the example above.  First the ``h1`` selector matches all of the h1 tags in the document.  But it does not match the ``h2`` or the ``p`` tags.  If you want to change the style of the paragraph you need to add another rule.  Lets try it:  Add a rule to the style tag that colors the paragraph text green.  Then make another rule that makes the h2 tag size 16pt and yellow.
+There are several things to notice about the example above.  First the ``h1`` selector matches all of the h1 tags in the document.  But it does not match the ``h2`` or the ``p`` tags.  If you want to change the style of the paragraph you need to add another rule.  Let's try it:  Add a rule to the style tag that colors the paragraph text green.  Then make another rule that makes the h2 tag size 16pt and yellow.
 
 One thing to be careful about is to remember the semi-colons after the values.  If you forget a semi-colon, then your rule will not work.
 

@@ -7,7 +7,7 @@ Although we have been calling HTML and CSS programming languages, they do not ha
 
 Javascript is a procedural language.  With HTML and especially CSS the order of things is not always important, but with Javascript, the order that you do things in is very important.  Javascript is also called an **object oriented** language.  That means that we will be working with objects in our imaginary world of the browser.  Objects can tell us things we want to know, and objects know how to do many things.  We only need to write a javascript program to ask or tell.
 
-But, lets not get caught up in a bunch of formal talk about computer science and programming language theory, lets start with a simple example of one of the things that Javascript is good at doing, namely making buttons do interesting things.  For our first program lets make a button that changes the background color of our window.
+But, let's not get caught up in a bunch of formal talk about computer science and programming language theory, let's start with a simple example of one of the things that Javascript is good at doing, namely making buttons do interesting things.  For our first program let's make a button that changes the background color of our window.
 
 .. activecode:: js_first
    :language: html
@@ -35,7 +35,7 @@ Here are some questions that we should answer about the example above:
 #. What in the world does all of that stuff inside the script tag mean?
 #. What happened to my button!?!
 
-Those are all very good questions, I'm glad you asked.  Lets take them one at a time right now, and then we'll expand upon the ideas in the next few sections.
+Those are all very good questions, I'm glad you asked.  Let's take them one at a time right now, and then we'll expand upon the ideas in the next few sections.
 
 The button tag is part of HTML that is going to allow us to make interactive websites.  In addition to buttons there are other things like check boxes, and text input, that we will talk about in the next section.  For now we will use the button as a simple example, of something we are all used to using every day.
 
@@ -56,7 +56,7 @@ This brings us to the next question, the ``script`` tag is one way that we can i
 
 The stuff inside the script tag is Javascript code. This code contains a **function definition** which is how we create our very own abstractions. Unlike your friend to naturally understands what it means to go to class, computers are very dumb, and very literal, they only do what you tell them.  In this case there are two steps to our abstraction.  One changes the background color of the body, and the second one changes our message.  These lines are also abstractions of a very complicated set of steps that we as programmers don't need to know the details of right now.  We just need to know which abstractions the browser understands.
 
-Lets defer the question of what happened to the button for just a bit.  In the meantime experiment with the Javascript code by trying the following things:
+Let's defer the question of what happened to the button for just a bit.  In the meantime experiment with the Javascript code by trying the following things:
 
 #. Make the background light green
 #. Experiment with different style elements we have learned about through CSS.  See if you can add a line that makes the text red.  
@@ -66,7 +66,7 @@ Lets defer the question of what happened to the button for just a bit.  In the m
 #. What happens if you add ``<button>Click Me</button>`` after the closing ``</h1>``?
 
 
-Lets look at a little different example that accomplishes the same thing, but illustrates how CSS, Javascript, and HTML all work together.
+Let's look at a little different example that accomplishes the same thing, but illustrates how CSS, Javascript, and HTML all work together.
 In this example rather than setting the color of the background directly, we will make the body have the class attribute "myclass" when the button is clicked.
 
 Now, 

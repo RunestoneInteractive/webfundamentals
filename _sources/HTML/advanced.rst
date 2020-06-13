@@ -121,7 +121,7 @@ Here is a complete example that illustrates the use of the following table speci
 There are many attributes you can use with the various table tags.
 
 * ``table``
-  * width - you can specify a width as a percentage or as a number of pixels.  This attribute is useful for right now, but its use is not encouraged, as you are better off to use CSS to control the look of your table.  We say that this attribute is **deprecated**
+  * width - you can specify a width as a percentage or as a number of pixels.  This attribute is useful for right now, but it's use is not encouraged, as you are better off to use CSS to control the look of your table.  We say that this attribute is **deprecated**
   * border - you can add borders to your tables as in the example above, but this tag is deprecated as well.
   * The spacing between the cells of the table.  Also deprecated.
 

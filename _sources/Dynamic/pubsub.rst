@@ -22,7 +22,7 @@ The following diagram gives you a better idea how this is implemented:
 
 In essence when an observer subscribes to a subject it gives the subject a function to call back when some event happens later.  The subject keeps track of these various functions without having to even worry about which function belongs to which observer, and then when an event does happen it just iterates over the array of functions calling them one after the other.
 
-Lets make a really simple example.
+Let's make a really simple example.
 
 .. activecode:: Pubsub1
     :language: javascript

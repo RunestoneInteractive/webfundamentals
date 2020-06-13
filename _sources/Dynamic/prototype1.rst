@@ -108,7 +108,7 @@ Here is the html for this page:
 
 A couple of things to note:  First notice that we've created an empty table with a ``tbody`` tag with an id of ``shoppinglist`` this gives us a place to start building our table.  Also notice that our add item button calls a function ``clickedon`` this function is defined in the shopping.js file and will handle creating a new row and appending it to the ``tbody`` each time we add an item.
 
-Lets look more carefully at the code in shopping.js
+Let's look more carefully at the code in shopping.js
 
 .. code-block:: javascript
 
@@ -155,7 +155,7 @@ Lets look more carefully at the code in shopping.js
         populateSelect('category', sections)
     })
 
-There is plenty to think about in this example.  But lets begin with creating the select boxes.  For this bit of functionality I wrote a helper method called populate select.  This function can populate any select box given its id and a Javascript array of values.
+There is plenty to think about in this example.  But let's begin with creating the select boxes.  For this bit of functionality I wrote a helper method called populate select.  This function can populate any select box given its id and a Javascript array of values.
 
 .. activecode:: select1
     :language: html
@@ -176,10 +176,10 @@ There is plenty to think about in this example.  But lets begin with creating th
 
 This is a simple illustration of three highly used functions getElementById, createElement and appendChild.  These methods allow us to have javascript dynamically create tags and add them into our live document object model.
 
-Next lets look at the ``clickedon`` function.  This function also relies on a helper to make a row and add the row to the table.  it does this by creating an array of values one array entry per table row cell.  then it calls its helper function which sets up the class for coloring the row, makes a checkbox, and appends a bunch of ``td`` elements to the new ``tr``.
+Next let's look at the ``clickedon`` function.  This function also relies on a helper to make a row and add the row to the table.  it does this by creating an array of values one array entry per table row cell.  then it calls its helper function which sets up the class for coloring the row, makes a checkbox, and appends a bunch of ``td`` elements to the new ``tr``.
 
 
 The last few lines of this example show the use of jQuery to call the ``populateSelect`` functions after the rest of the page has been loaded and is ready to go.  This is a really common way of ensureing that you don't call Javascript functions that manipulate the DOM until the page is loaded and initially rendered.   Another way that many people do this is by using the ``onload`` event for the ``body`` tag.  But since we had to load jQuery for bootstrap I wanted to show this as well.  All this says is that when the ready event on the document object fires, call the function that populates the two select boxes.
 
-Thats it for this prototype. And you may be thinking that we are nearly done, lets just hack out a few more lines to handle the checkbox and we are good to go.  But hang on, we're going to complicate matters in the next couple of sections by diving into some good design patterns that will make getting back to this point a good deal more complicated.
+That's it for this prototype. And you may be thinking that we are nearly done, let's just hack out a few more lines to handle the checkbox and we are good to go.  But hang on, we're going to complicate matters in the next couple of sections by diving into some good design patterns that will make getting back to this point a good deal more complicated.
 

@@ -18,7 +18,7 @@ From our perspective as application builders, WSGI is very simple.  It has the f
 The Application Callable
 ------------------------
 
-The ``app`` object created by ``app = Flask(__name__)`` is a WSGI compliant object.  It is quite complex and does a lot of work for us behind the scenes.  To get a better appreciation for that, lets look at a simpler version of a WSGI app.
+The ``app`` object created by ``app = Flask(__name__)`` is a WSGI compliant object.  It is quite complex and does a lot of work for us behind the scenes.  To get a better appreciation for that, let's look at a simpler version of a WSGI app.
 
 .. code-block:: python
 
@@ -52,7 +52,7 @@ First, an example of parse_qs:
     >>>
 
 
-Our app object in Flask is an instance of the Flask class.  Lets look at a really simple class based implementation of a WSGI app, and then look at another example that points us in the direction of how Flask extends the idea into a full framework.
+Our app object in Flask is an instance of the Flask class.  Let's look at a really simple class based implementation of a WSGI app, and then look at another example that points us in the direction of how Flask extends the idea into a full framework.
 
 .. code-block:: python
 
@@ -148,9 +148,9 @@ The router callable is passed in to the server as the main application object.  
 2.  Match that path against the regular expressions provided in the urls list.
 3.  Forward the request to the callable that should handle it using the following:  ``return callback()(environ,start_response)``
 
-That last line looks a bit crazy, so lets break it down.  Remember that WSGI compliant callables must accept an environment and a start_response function,  and they must return an iterable.  So the return statement must first evaluate its argument:  ``callback()(environ,start_response)``.  This is evaluated from left to right.  The reference ``callback`` is set in the for loop and will be set to the callable that matches the current regular expression.  In our class This will be a class.  So ``callback()`` creates an instance of the class that matches the regular expression.  As soon as the instnace is created its ``__call__`` method is invoked by the ``(environ,start_resonse)`` operator.  Which in turn will invoke the ``get`` method on the class which returns an iterable.  That iterable is returned by the return statement in the router function.
+That last line looks a bit crazy, so let's break it down.  Remember that WSGI compliant callables must accept an environment and a start_response function,  and they must return an iterable.  So the return statement must first evaluate its argument:  ``callback()(environ,start_response)``.  This is evaluated from left to right.  The reference ``callback`` is set in the for loop and will be set to the callable that matches the current regular expression.  In our class This will be a class.  So ``callback()`` creates an instance of the class that matches the regular expression.  As soon as the instance is created its ``__call__`` method is invoked by the ``(environ,start_resonse)`` operator.  Which in turn will invoke the ``get`` method on the class which returns an iterable.  That iterable is returned by the return statement in the router function.
 
-OK, so now that we can call the right function, lets look at how to handle errors the WSGI way.  Error handling is a nice example of how you can use middleware.  Or you can think of it in Shrek terms:  Applications are like Ogres, they have layers.  To implement a middleware layer we simply implement another WSGI compliant class, that takes an inner WSGI object as a parameter for its constructor.  Each outer layer has access to the results of the layer below it, and can modify the results of the layer below it before returning it to the layer above.
+OK, so now that we can call the right function, let's look at how to handle errors the WSGI way.  Error handling is a nice example of how you can use middleware.  Or you can think of it in Shrek terms:  Applications are like Ogres, they have layers.  To implement a middleware layer we simply implement another WSGI compliant class, that takes an inner WSGI object as a parameter for its constructor.  Each outer layer has access to the results of the layer below it, and can modify the results of the layer below it before returning it to the layer above.
 
 .. code-block:: python
 

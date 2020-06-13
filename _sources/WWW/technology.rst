@@ -4,12 +4,12 @@
 The Technology of the Web
 =========================
 
-We now return to the question of how a page gets from the server to your browser.   Lets use the idea of a URI as our starting point for this section.  In fact lets start by addressing a very common point of confusion  What is a URI and what is URL, you probably more commonly think of URL's.
+We now return to the question of how a page gets from the server to your browser.   Let's use the idea of a URI as our starting point for this section.  In fact let's start by addressing a very common point of confusion  What is a URI and what is URL, you probably more commonly think of URL's.
 
 * URL - Uniform Resource Locator
 * URI - Uniform Resource Identifier
 
-All locators are also identifiers, so all URLs are URI's. Think about it this way, Bradley Miller is an identifier, it identifies me, but does not tell you how to locate me or how to contact me. 321 Olin Hall, Luther College, Decorah IA, is a locator and an identifier for a specific place in the world.  On the web URL's have three main pieces, lets look at one and identify the parts:
+All locators are also identifiers, so all URLs are URI's. Think about it this way, Bradley Miller is an identifier, it identifies me, but does not tell you how to locate me or how to contact me. 321 Olin Hall, Luther College, Decorah IA, is a locator and an identifier for a specific place in the world.  On the web URL's have three main pieces, let's look at one and identify the parts:
 
 ::
 
@@ -27,7 +27,7 @@ This URL contains **a lot** of information.  When you type this into the address
 
 .. image:: Figures/SimpleRequest.png
 
-Lets suppose we continue with the URL above.  You, the user, type in the URL to your browser, The browser knows that the host name is the part that comes after the first two slashes, but before the next slash.  So it is able to extract that part of the URL.  Using patterns like this occurs frequently in Computer Science.  The name is then passed on to another server called the Domain Name Service (DNS) in the diagram above.  The DNS is actually very large and complex network of servers, but we'll just take it for granted that it works and gives us back the IP address correctly.  With the address in hand, the browser establishes a connection to the server through a mechansim known as a **socket**.  This socket allows the browser and the server to reliably communicate over the internet.
+Let's suppose we continue with the URL above.  You, the user, type in the URL to your browser, The browser knows that the host name is the part that comes after the first two slashes, but before the next slash.  So it is able to extract that part of the URL.  Using patterns like this occurs frequently in Computer Science.  The name is then passed on to another server called the Domain Name Service (DNS) in the diagram above.  The DNS is actually very large and complex network of servers, but we'll just take it for granted that it works and gives us back the IP address correctly.  With the address in hand, the browser establishes a connection to the server through a mechansim known as a **socket**.  This socket allows the browser and the server to reliably communicate over the internet.
 
 An HTTP Request
 ---------------

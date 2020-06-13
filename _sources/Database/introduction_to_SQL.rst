@@ -43,7 +43,7 @@ from it and a lot of these systems have agreed on a shared language for
 accessing data. For relational database, this language is called SQL
 (Structured Query Language, pronounced like “sequel”).
 
-Before you stress out about learning a new language, lets take a minute
+Before you stress out about learning a new language, let's take a minute
 and review the things you have already learned how to do with Pandas.
 
 -  You can change the shape of a DataFrame by **selecting** the columns
@@ -136,7 +136,7 @@ columns we could select:
 query over multiple lines just to make it easier to read.
 
 
-Its also really easy to forget the exact names of all of the columns in a table, especially when you are just getting started with a new database.  Here's a handy one-liner that will remind you of the names of your tables and all of their columns and types:
+It's also really easy to forget the exact names of all of the columns in a table, especially when you are just getting started with a new database.  Here's a handy one-liner that will remind you of the names of your tables and all of their columns and types:
 
 .. activecode:: sql_bikeshare_intro_3
     :language: sql

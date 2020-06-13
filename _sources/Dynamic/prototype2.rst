@@ -156,7 +156,7 @@ Controller Code
     })
 
 
-Lets trace through precisely what happens when an item is added to the shopping list.
+Let's trace through precisely what happens when an item is added to the shopping list.
 
 1. User fills out the form with information about the item to be added.
 2. User clicks on the Add Item button.  Clicking causes the ``clickedon`` function in the controller to be invoked.

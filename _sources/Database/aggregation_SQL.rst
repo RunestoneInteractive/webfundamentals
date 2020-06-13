@@ -63,7 +63,7 @@ Here you have grouped by ``member_type``, but without ``member_type`` in the sel
 clause you have no idea which rows correspond to which member type. That is why most
 databases will flag this as a error.  Furthermore the duration field may be the first
 duration in the group or maybe the last duration in the group or possibly in between,
-But its not defined.  The best practices for writing group by queries that work well
+But it's not defined.  The best practices for writing group by queries that work well
 across database systems are as follows:
 
 * Always include the GROUP BY column(s) in your SELECT clause.

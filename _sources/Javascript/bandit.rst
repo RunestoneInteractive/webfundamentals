@@ -19,9 +19,9 @@ Javascript Project Slot Machine
 .. image:: Figures/diamond.png
    :width: 100px
 
-Lets go to Vegas.   In this section we are going to create our own video slot machine.  Like all web projects we will start simple and work our way up to a more complicated project.  Ultimately what we build is going to look like the following:
+Let's go to Vegas.   In this section we are going to create our own video slot machine.  Like all web projects we will start simple and work our way up to a more complicated project.  Ultimately what we build is going to look like the following:
 
-Lets start by displaying one of two possible slot machine images, that we will randomly select.
+Let's start by displaying one of two possible slot machine images, that we will randomly select.
 
 .. activecode:: slot_1
    :language: javascript

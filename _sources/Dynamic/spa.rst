@@ -5,7 +5,7 @@ Many smaller modern apps reside mostly in the browser using Javascript to make t
 
 The approach we will take in the next several sections will be to build a shopping list application from the ground up.  We'll start really simple (really really) and work our way towards something much better.  If this is your first time using Javascript this will introduce you to many of the key Javascript functions used to dynamically create interactive pages.
 
-Lets start with a high level design and then we'll iterate through many different improvements.
+Let's start with a high level design and then we'll iterate through many different improvements.
 
 Here is a sketch of what the interface should look like.
 
@@ -19,6 +19,6 @@ We will have an upper panel for data input where we can type in the item name, s
 
 Otherwise just display the information in a table as shown in the diagram.
 
-In the upper panel its OK to hardcode the quantity as the number 1 through 10 and the priorities as high, medium and low.  But we will want to make the selections for stores and store section configurable so we will dynamically generate those elements.  In addition we'll use some bootstrap to add a bit of style to our page.
+In the upper panel it's OK to hardcode the quantity as the number 1 through 10 and the priorities as high, medium and low.  But we will want to make the selections for stores and store section configurable so we will dynamically generate those elements.  In addition we'll use some bootstrap to add a bit of style to our page.
 
 Finally, we are going to want to be able to save our shopping list.  We'll ignore this requirement for the first couple of iterations and then come back and add it.

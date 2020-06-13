@@ -26,7 +26,7 @@ These tags are all block level tags, but other than that they have no impact on 
 
    Figure used in accordance with the educational fair use policy of w3schools.com
 
-Lets look at an example that uses some of these tags:
+Let's look at an example that uses some of these tags:
 
 .. activecode:: sem_tags
    :language: html

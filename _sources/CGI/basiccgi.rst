@@ -5,7 +5,7 @@ Before Javascript, the only way to make your web application interactive and dyn
 
 In fact that will be our starting point.  All the other web development work since the mid 1990's has been to improve upon the idea that a web page can be generated from some print statements.
 
-Lets look at a hello world style example.
+Let's look at a hello world style example.
 
 .. activecode:: cgi1
    :language: python

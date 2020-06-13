@@ -25,7 +25,7 @@ To solve this problem all web frameworks include a **template** engine.  Temmpla
 Databases
 ---------
 
-Another big problem that all web frameworks solve is the persistence problem.  Its fine to write applications that have variables, but variables only exist for the life of the program.  Web servers are reliable, but they go down and need to be restarted fairly frequently.  So, there needs to be a way to store and retrieve information from long term storage.  I'm talking about databases here.  The authors of web frameworks realized very early on that web programmers did not want to become database experts in addition to everything else they have they have to know, so web frameworks provide an Object Relational Mapper, that makes it easy to go back and forth between the database and your Python application.
+Another big problem that all web frameworks solve is the persistence problem.  It's fine to write applications that have variables, but variables only exist for the life of the program.  Web servers are reliable, but they go down and need to be restarted fairly frequently.  So, there needs to be a way to store and retrieve information from long term storage.  I'm talking about databases here.  The authors of web frameworks realized very early on that web programmers did not want to become database experts in addition to everything else they have they have to know, so web frameworks provide an Object Relational Mapper, that makes it easy to go back and forth between the database and your Python application.
 
 There are also an increasing number of non-relational databases that go under the heading of NOSQL databases that are used in web applications.
 

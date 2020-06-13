@@ -6,7 +6,7 @@ In this section we will take on a full project to make some nice navigational dr
 Step One
 --------
 
-Before we add any CSS rules at all lets get the menu structure and some page contents in place.   This is not going to look pretty but it will give us a starting place.  This  is almost always a good practice in web development.  Get the basic structure in place first, then incrementally make some improvements.  The reason to do it this way is simple, if you add small things one at a time its easy to tell when you do something wrong, and you automatically know that it was the last thing you did that caused the problem.
+Before we add any CSS rules at all let's get the menu structure and some page contents in place.   This is not going to look pretty but it will give us a starting place.  This  is almost always a good practice in web development.  Get the basic structure in place first, then incrementally make some improvements.  The reason to do it this way is simple, if you add small things one at a time, it's easy to tell when you do something wrong, and you automatically know that it was the last thing you did that caused the problem.
 
 We have two main semantic areas in our page, the navigation menu main contents.  We will separate these two by placing the navigation menu inside a nav tag, and the main contents inside a main tag.
 
@@ -158,7 +158,7 @@ We give the nav its own background color for now, just to make it easy to differ
 Step Three
 ----------
 
-Next lets change our indentation of the sublists using the following three rules:
+Next let's change our indentation of the sublists using the following three rules:
 
 .. code-block:: css
 
@@ -419,13 +419,13 @@ In this step we add single rule to deal with a small problem.  The problem is th
 Step Five
 ---------
 
-Before moving on to the final set of new rules, modify the code above and just change the display property in the ``nav ul ul`` rule to none;  When you redisplay our page you will see that this makes all the submenus invisible.  I've made this change to that rule in the next step, but its good to see how it works all by itself.
+Before moving on to the final set of new rules, modify the code above and just change the display property in the ``nav ul ul`` rule to none;  When you redisplay our page you will see that this makes all the submenus invisible.  I've made this change to that rule in the next step, but it's good to see how it works all by itself.
    
 Finally we will bring everything together, with a few small rules. 
 
-Lets change the background color when we hover over any list item.
+Let's change the background color when we hover over any list item.
 
-Lets also add a background image to indicate that something is a submenu.
+Let's also add a background image to indicate that something is a submenu.
 
 The last rule makes a submenu visible!  ``display: block;``  But we want to distinguish between the various levels by adding classes to them.  So we need to also modify our html to add classes to the ul's and the li's.
 

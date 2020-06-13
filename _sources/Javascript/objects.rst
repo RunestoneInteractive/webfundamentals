@@ -42,9 +42,9 @@ The key difference between the two interpretations in the preceeding paragraph i
 
 Now, you may also be wondering about the ``.`` between the various attributes in the statement.  You should read the dots between the attributes as:  document object (dot) return your body object (dot) return your style object (dot) return your backgroundColor object.
 
-The innerHTML attribute allows us to change the html of any element in our document.  Of course as you noticed before changing the HTML value of the body wipes out all of the old tags and replaces it with whatever is in quotes.  Lets look at another example that illustrates another very important javascript function and will allow us to change only a small portion of the webpage.
+The innerHTML attribute allows us to change the html of any element in our document.  Of course as you noticed before changing the HTML value of the body wipes out all of the old tags and replaces it with whatever is in quotes.  Let's look at another example that illustrates another very important javascript function and will allow us to change only a small portion of the webpage.
 
-Our goal is to change the ``h1`` without changing the rest of the page.  Lets try an approach that might seem clear to you now, that **will not work.**
+Our goal is to change the ``h1`` without changing the rest of the page.  Let's try an approach that might seem clear to you now, that **will not work.**
 
 .. activecode:: js_hello3
    :language: html
@@ -64,7 +64,7 @@ Our goal is to change the ``h1`` without changing the rest of the page.  Lets tr
 
 The reason this will not work is that the body may contain many ``h1`` tags.  So we need a way to identify, and "get a handle on" the exact h1 that we want to change.
 
-Lets look at the right way to do this.  IN the following example we have a semantic tag called ``main`` we want to change the contents of main without modifying the rest of the document.
+Let's look at the right way to do this.  IN the following example we have a semantic tag called ``main`` we want to change the contents of main without modifying the rest of the document.
 
 .. activecode:: js_selector
    :language: html
@@ -103,7 +103,7 @@ Now, the right hand side of the assignment statement contains a **method**. This
 
 In fact ``document.head`` and ``document.body`` are the only tags that we can access directly.  All other tags must be accessed using ``querySelector``
 
-Lets take a breather here and try a few things:
+Let's take a breather here and try a few things:
 
 1.  Go back and modify the first example so that You can change the color of the h1.
 1.  Change the HTML so that main has an id of ``"a"``.  Also add a second ``main`` tag that contains an h1.  The initial view of your page should not change.  What happens when you click the button?
