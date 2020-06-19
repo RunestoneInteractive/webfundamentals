@@ -12,7 +12,7 @@ We have two main semantic areas in our page, the navigation menu main contents. 
 
 .. activecode:: menu_1
    :language: html
-   
+
    <html>
    <head>
    <title>SubMenus</title>
@@ -78,25 +78,25 @@ We give the nav its own background color for now, just to make it easy to differ
 
 .. activecode:: menu_2
    :language: html
-   
+
    <html>
    <head>
    <title>SubMenus</title>
    <style type='text/css'>
    body {
-       background: #EEE; 
+       background: #EEE;
        color: #000;
    }
 
    h1 {
-       color: #AAA; 
-       border-bottom: 1px solid; 
+       color: #AAA;
+       border-bottom: 1px solid;
        margin-bottom: 0;
    }
 
    main {
-       color: #CCC; 
-       margin-left: 7em; 
+       color: #CCC;
+       margin-left: 7em;
        padding: 1px 0 1px 5%;
        border-left: 1px solid;
    }
@@ -153,7 +153,7 @@ We give the nav its own background color for now, just to make it easy to differ
    </main>
    </body>
    </html>
-   
+
 
 Step Three
 ----------
@@ -163,16 +163,16 @@ Next let's change our indentation of the sublists using the following three rule
 .. code-block:: css
 
    nav ul {
-        margin: 0; 
-        padding: 0; 
-        width: 7em; 
+        margin: 0;
+        padding: 0;
+        width: 7em;
         background: white;
         border: 1px solid;
    }
 
    nav li {
         position: relative;
-        list-style: none; 
+        list-style: none;
         margin: 0;
         border-bottom: 1px solid #CCC;
    }
@@ -183,32 +183,32 @@ Next let's change our indentation of the sublists using the following three rule
        left: 7em;
        display: block;
    }
-   
-We set the margin of the uls inside the the nav element (nav ul) to have a margin of 0 because by default they have a non-zero margin, which will make our positioning more difficult later.  The same goes for the padding.  We also set the background to white, and give the bottom a little border.  Setting the list sytle to none removes the bullets. 
+
+We set the margin of the uls inside the the nav element (nav ul) to have a margin of 0 because by default they have a non-zero margin, which will make our positioning more difficult later.  The same goes for the padding.  We also set the background to white, and give the bottom a little border.  Setting the list sytle to none removes the bullets.
 
 Notice that we add two position properties.  The ``nav li`` items are positioned relatively, but we don't change the top or left property.  This is simply in preparation for the next rule  ``nav ul ul`` which positions the submenus using absolute measurements.  We can use absolute here because the ul's in question will all be children of li's that have been positioned relatively.  Remember the rule for using absolute position is that the absolute position is relative to the first container that is not statically positioned.  Or else the html tag if no non static tag is found.
 
 .. activecode:: menu_3
    :language: html
-   
+
    <html>
    <head>
    <title>SubMenus</title>
    <style type='text/css'>
    body {
-       background: #EEE; 
+       background: #EEE;
        color: #000;
    }
 
    h1 {
-       color: #AAA; 
-       border-bottom: 1px solid; 
+       color: #AAA;
+       border-bottom: 1px solid;
        margin-bottom: 0;
    }
 
    main {
-       color: #CCC; 
-       margin-left: 7em; 
+       color: #CCC;
+       margin-left: 7em;
        padding: 1px 0 1px 5%;
        border-left: 1px solid;
    }
@@ -220,16 +220,16 @@ Notice that we add two position properties.  The ``nav li`` items are positioned
    }
 
    nav ul {
-        margin: 0; 
-        padding: 0; 
-        width: 7em; 
+        margin: 0;
+        padding: 0;
+        width: 7em;
         background: white;
         border: 1px solid;
    }
 
    nav li {
         position: relative;
-        list-style: none; 
+        list-style: none;
         margin: 0;
         border-bottom: 1px solid #CCC;
    }
@@ -240,7 +240,7 @@ Notice that we add two position properties.  The ``nav li`` items are positioned
        left: 7em;
        display: block;
    }
-   
+
    </style>
    </head>
    <body>
@@ -290,7 +290,7 @@ Notice that we add two position properties.  The ``nav li`` items are positioned
 
    </body>
    </html>
-   
+
 
 Step Four
 ---------
@@ -300,33 +300,33 @@ In this step we add single rule to deal with a small problem.  The problem is th
 .. code-block:: css
 
    nav li a {
-       display: block; 
+       display: block;
        padding: 0.25em 0 0.25em 0.5em;
-       text-decoration: none; 
+       text-decoration: none;
    }
-   
+
 
 .. activecode:: menu_4
    :language: html
-   
+
    <html>
    <head>
    <title>SubMenus</title>
    <style type='text/css'>
    body {
-       background: #EEE; 
+       background: #EEE;
        color: #000;
    }
 
    h1 {
-       color: #AAA; 
-       border-bottom: 1px solid; 
+       color: #AAA;
+       border-bottom: 1px solid;
        margin-bottom: 0;
    }
 
    main {
-       color: #CCC; 
-       margin-left: 7em; 
+       color: #CCC;
+       margin-left: 7em;
        padding: 1px 0 1px 5%;
        border-left: 1px solid;
    }
@@ -338,33 +338,33 @@ In this step we add single rule to deal with a small problem.  The problem is th
    }
 
    nav ul {
-        margin: 0; 
-        padding: 0; 
-        width: 7em; 
+        margin: 0;
+        padding: 0;
+        width: 7em;
         background: white;
         border: 1px solid;
    }
 
    nav li {
-        position: relative; 
-        list-style: none; 
+        position: relative;
+        list-style: none;
         margin: 0;
         border-bottom: 1px solid #CCC;
    }
-   
+
    nav ul ul {
-       position: absolute; 
-       top: 0; 
+       position: absolute;
+       top: 0;
        left: 7em;
        display: block;
    }
-   
+
    nav li a {
-       display: block; 
+       display: block;
        padding: 0.25em 0 0.25em 0.5em;
-       text-decoration: none; 
+       text-decoration: none;
    }
-   
+
    </style>
    </head>
    <body>
@@ -374,7 +374,7 @@ In this step we add single rule to deal with a small problem.  The problem is th
    <nav>
    <ul class='level1'>
     <li><a href='/'>Home</a></li>
-    <li class='submenuu'><a href='#'>Syllabus</a>
+    <li class='submenu'><a href='#'>Syllabus</a>
      <ul class='level2'>
       <li><a href='#'>Text Book</a></li>
       <li><a href='#'>Office Hours</a></li>
@@ -383,10 +383,10 @@ In this step we add single rule to deal with a small problem.  The problem is th
      </ul>
     </li>
     <li><a href='#'>Resources</a></li>
-    <li class='submenuu'><a href='#'>Publications</a>
+    <li class='submenu'><a href='#'>Publications</a>
      <ul class='level2'>
       <li><a href='#'>Articles</a></li>
-      <li class='submenuu'><a href='#'>Tutorials</a>
+      <li class='submenu'><a href='#'>Tutorials</a>
        <ul class='level3'>
         <li><a href='#'>HTML</a></li>
         <li><a href='#'>CSS</a></li>
@@ -420,8 +420,8 @@ Step Five
 ---------
 
 Before moving on to the final set of new rules, modify the code above and just change the display property in the ``nav ul ul`` rule to none;  When you redisplay our page you will see that this makes all the submenus invisible.  I've made this change to that rule in the next step, but it's good to see how it works all by itself.
-   
-Finally we will bring everything together, with a few small rules. 
+
+Finally we will bring everything together, with a few small rules.
 
 Let's change the background color when we hover over any list item.
 
@@ -443,34 +443,34 @@ The last rule makes a submenu visible!  ``display: block;``  But we want to dist
        background-color: #EDD;
    }
 
-   nav ul.level1 li.submenu:hover ul.level2, 
+   nav ul.level1 li.submenu:hover ul.level2,
    nav ul.level2 li.submenu:hover ul.level3 {
        display:block;
    }
 
-The change we need to make is to 
+The change we need to make is to
 
 .. activecode:: menu_5
    :language: html
-   
+
    <html>
    <head>
    <title>SubMenus</title>
    <style type='text/css'>
    body {
-       background: #EEEEEE; 
+       background: #EEEEEE;
        color: #000000;
    }
 
    h1 {
-       color: #AAA; 
-       border-bottom: 1px solid; 
+       color: #AAA;
+       border-bottom: 1px solid;
        margin-bottom: 0;
    }
 
    main {
-       color: #CCC; 
-       margin-left: 7em; 
+       color: #CCC;
+       margin-left: 7em;
        padding: 1px 0 1px 5%;
        border-left: 1px solid;
    }
@@ -482,33 +482,33 @@ The change we need to make is to
    }
 
    nav ul {
-        margin: 0; 
-        padding: 0; 
-        width: 7em; 
+        margin: 0;
+        padding: 0;
+        width: 7em;
         background: white;
         border: 1px solid;
    }
 
    nav li {
-        position: relative; 
-        list-style: none; 
+        position: relative;
+        list-style: none;
         margin: 0;
         border-bottom: 1px solid #CCC;
    }
-   
+
    nav ul ul {
-       position: absolute; 
-       top: 0; 
+       position: absolute;
+       top: 0;
        left: 7em;
        display: none;
    }
-   
+
    nav li a {
-       display: block; 
+       display: block;
        padding: 0.25em 0 0.25em 0.5em;
-       text-decoration: none; 
+       text-decoration: none;
    }
-   
+
    nav li:hover {
        background: #6F99F2;
    }
@@ -523,7 +523,7 @@ The change we need to make is to
 
 
 
-   nav ul.level1 li.submenu:hover ul.level2, 
+   nav ul.level1 li.submenu:hover ul.level2,
    nav ul.level2 li.submenu:hover ul.level3 {
        display:block;
    }
@@ -536,7 +536,7 @@ The change we need to make is to
    <nav>
    <ul class='level1'>
     <li><a href='/'>Home</a></li>
-    <li class='submenuu'><a href='#'>Syllabus</a>
+    <li class='submenu'><a href='#'>Syllabus</a>
      <ul class='level2'>
       <li><a href='#'>Text Book</a></li>
       <li><a href='#'>Office Hours</a></li>
@@ -545,10 +545,10 @@ The change we need to make is to
      </ul>
     </li>
     <li><a href='#'>Resources</a></li>
-    <li class='submenuu'><a href='#'>Publications</a>
+    <li class='submenu'><a href='#'>Publications</a>
      <ul class='level2'>
       <li><a href='#'>Articles</a></li>
-      <li class='submenuu'><a href='#'>Tutorials</a>
+      <li class='submenu'><a href='#'>Tutorials</a>
        <ul class='level3'>
         <li><a href='#'>HTML</a></li>
         <li><a href='#'>CSS</a></li>
@@ -576,5 +576,4 @@ The change we need to make is to
 
    </body>
    </html>
-   
-  
+
