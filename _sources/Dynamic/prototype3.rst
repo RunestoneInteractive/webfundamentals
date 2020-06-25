@@ -1,7 +1,7 @@
 Prototype 3 Storing the List in the Browser
 ===========================================
 
-With this new information about localStorage and how to serialize javascript objects we are now ready to update our application.  The wonderful thing about this next step is that we are adding some major new functionality to our app, but its not going to require a reorganization of our existing code. Lets look at list of steps:
+With this new information about localStorage and how to serialize javascript objects we are now ready to update our application.  The wonderful thing about this next step is that we are adding some major new functionality to our app, but it's not going to require a reorganization of our existing code. Let's look at list of steps:
 
 1. Write a new class called LocalStorageSaver with the following capabilities.
 
@@ -18,7 +18,7 @@ With this new information about localStorage and how to serialize javascript obj
 
    - Make the LocalStorage object a property of our model.
 
-     - No, although we could make this work as well, its not the best solution for our architecture.
+     - No, although we could make this work as well, it's not the best solution for our architecture.
 
    - Have the LocalStorageSaver object subscribe to the model
 

@@ -38,7 +38,7 @@ This example shows how we can set up an environment that can be shared among man
        </body>
    </html>
 
-The values inside the double curlies are not limited to being string objects, although they must have an ``__str__`` method if they are going to be useful.  Consider an instance of a Student class that has instance variables for firstname, lastname, and gpa.  Lets change our template to look like the following:
+The values inside the double curlies are not limited to being string objects, although they must have an ``__str__`` method if they are going to be useful.  Consider an instance of a Student class that has instance variables for firstname, lastname, and gpa.  Let's change our template to look like the following:
 
 .. code-block:: html
 
@@ -56,7 +56,7 @@ Assuming we have a student object called joe we can render the template above wi
 Loops in Templates
 ------------------
 
-Lets suppose you want to make a table in a template.  The ideal would be to pass render a list of things, and have the template turn the list into a table.  (or an unordered list or whatever)  This is easy to do.
+Let's suppose you want to make a table in a template.  The ideal would be to pass render a list of things, and have the template turn the list into a table.  (or an unordered list or whatever)  This is easy to do.
 
 .. code-block:: html
 
@@ -106,7 +106,7 @@ The real power of templates comes when you use template inheritance.  The follow
 1.  index.html --  The landing page, that inherits from base.html and customizes some blocks for the main page.
 1.  other child pages, will also inherit from base.html annd make their own customizations.
 
-For example lets suppose you have a base.html file that looks like this:
+For example let's suppose you have a base.html file that looks like this:
 
 .. code-block:: html
 
@@ -148,7 +148,7 @@ Running this through the Jinja2 renderer gives us this:
    </body>
 
 
-Now lets create a child template that contains a title and some real content.
+Now let's create a child template that contains a title and some real content.
 
 .. code-block:: html
 
@@ -215,4 +215,4 @@ To use Jinja templates in flask is easy.
 2.  Add ``from flask import render_template`` to your Python.
 3.  Then from one of your controller functions, rather than returning a big string, you simple invoke the ``render_template`` function:  ``return render_template('todo.html',todolist=todolist))``
 
-Remember that in flask our controller functions return an iterable.  The render_template function returns such an interable.  Its just a string, so you can call the render_template function and print the results if you like.
+Remember that in flask our controller functions return an iterable.  The render_template function returns such an interable.  It's just a string, so you can call the render_template function and print the results if you like.

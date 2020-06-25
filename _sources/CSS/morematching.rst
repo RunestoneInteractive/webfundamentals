@@ -90,7 +90,7 @@ You have paragraphs or headings and you want some normal, some are "warnings", s
 
 To select any element that matches a particular class you use the ``.`` before the name of the class.  So ``.high`` will match any tags that have the attribute ``class=high``.
 
-Returning to our HTML table example we have some rows that are "odd" and some that are "even".  Lets make a short table and style the odd and even rows differently.
+Returning to our HTML table example we have some rows that are "odd" and some that are "even".  Let's make a short table and style the odd and even rows differently.
 
 .. activecode:: css_classes
    :language: html
@@ -118,7 +118,7 @@ Returning to our HTML table example we have some rows that are "odd" and some th
 
 
 
-Now for some additional practice lets make the table look really nice.  Add a header and have the background of the header be light gray.  Make the text of the header bold and slightly larger.  Overall change the table so its width is 50% of the page and get rid of the page. `This page <http://www.w3schools.com/css/css_table.asp>`_ gives you a complete rundown on how to style tables.
+Now for some additional practice let's make the table look really nice.  Add a header and have the background of the header be light gray.  Make the text of the header bold and slightly larger.  Overall change the table so its width is 50% of the page and get rid of the page. `This page <http://www.w3schools.com/css/css_table.asp>`_ gives you a complete rundown on how to style tables.
 
 
 Matching Children

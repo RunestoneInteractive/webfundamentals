@@ -1,13 +1,13 @@
 Model View Controller
 =====================
 
-Lets critique our first prototype a bit.
+Let's critique our first prototype a bit.
 
 * How are we doing with respect to keeping the visual look of the site separate from the programming logic?  Not bad at this point.  The only javascript is simply included through a script tag and the creation of the select boxes as well as the table rows is only connected through the ids of the blank elements.
 
 * When we want to add more functionality such as totaling our costs or sorting our shopping list, do we have a good way of accessing the data?  The answer to this one is an emphatic NO our data is now fully entwined with our html. The only way we have to retrieve our shopping list to do something with it is to iterate over the table rows and extract the values from the tags in each table row.  Ugh!!
 
-Lets fix this second problem right now. The way we are going to do this is to redesign our application to follow the Model View Controller paradigm.  The MVC paradigm is a tried and tested way of making applications that gives you a nice separation of concerns and will solve the problem we identified in our critique.  The following diagram gives you a good idea of what is going on.
+Let's fix this second problem right now. The way we are going to do this is to redesign our application to follow the Model View Controller paradigm.  The MVC paradigm is a tried and tested way of making applications that gives you a nice separation of concerns and will solve the problem we identified in our critique.  The following diagram gives you a good idea of what is going on.
 
 .. image:: MVC-Process.svg
 

@@ -16,7 +16,7 @@ realization to anyone.
 4. I always try to get people to dip their toe into the database waters with simple queries.  Maybe as complicated
 as a three table join.
 5.  Introduce some kind of web development framework based on WSGI.  I have tried several over the years, but my
-recent favorite is Flask because its simple and doesn't do magical things.
+recent favorite is Flask because it's simple and doesn't do magical things.
 
 Thats a lot to cram into a single semester and we often end up rushing through some kind of Flask based project
 at the end.

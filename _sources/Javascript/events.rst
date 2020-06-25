@@ -3,7 +3,7 @@
 Javascript Events
 =================
 
-Rather than simply list out a host of possible events, lets look at an example that illustrates the use of many events.
+Rather than simply list out a host of possible events, let's look at an example that illustrates the use of many events.
 
 Consider the following page:
 
@@ -40,7 +40,7 @@ Consider the following page:
 
 Now this first example is similar in many ways to our previous examples, we are using the ``querySelector`` method to obtain a reference to the text input element and reading its value.  The ``onclick`` method on our button attaches the changeColor method to our button.  We call changeColor a callback function, because we set it up now so that it can be called back into service at a later name.  Namely when the button is clicked.
 
-However this is kind of unsatisfying, it would be nice if we could just type a new value into one of the text input boxes and have that cause the color to change.  Another event type that is commonly used with input is the ``onchange`` event.  Lets add an onchange event to the text input elements and attach that to our changeColor function.  Now when you make a change to a color and tap the return key on your keyboard the color will change.  The color will also change if you click outside the text input box.  Give it a try.
+However this is kind of unsatisfying, it would be nice if we could just type a new value into one of the text input boxes and have that cause the color to change.  Another event type that is commonly used with input is the ``onchange`` event.  Let's add an onchange event to the text input elements and attach that to our changeColor function.  Now when you make a change to a color and tap the return key on your keyboard the color will change.  The color will also change if you click outside the text input box.  Give it a try.
 
 .. activecode:: js_event_2
    :language: html
@@ -79,7 +79,7 @@ Typing return or clicking with the mouse is still not as good as we could do.  T
 
 You may notice some slightly unreliable behavior here.  The problem is that there is a slight timing issue between when the key event happens and when the update to the text input boxes value happens.  It may be that the value is updated before you read it, or it may not be updated until after you read it.  There are ways to work around this, but that would add more difficulty to the example than we want to go into right now.
 
-Now, to explore a few additional events, lets use a nicer user interface element to adjust the color of our background.  Lets use a slider.  We can get a slider by changing the input type to ``range``.
+Now, to explore a few additional events, let's use a nicer user interface element to adjust the color of our background.  Let's use a slider.  We can get a slider by changing the input type to ``range``.
 
 .. activecode:: js_event_3
    :language: html
@@ -111,12 +111,12 @@ Now, to explore a few additional events, lets use a nicer user interface element
 Ok, that is really nice, Now we can move the slider, and whenever we let go, it just updates the color.  But we can go one step further and have the color change as the bar moves!  Change the event from ``onchange`` to ``onmousemove`` to see the results.
 
 
-Before we leave this section, lets add two more enhancement to this example:
+Before we leave this section, let's add two more enhancement to this example:
 
-1.  Lets display the values of red, green, and blue
-2.  Lets start with a different default value for our rgb colors and have the page automatically change its background color when the page is loaded.
+1.  Let's display the values of red, green, and blue
+2.  Let's start with a different default value for our rgb colors and have the page automatically change its background color when the page is loaded.
 
-We don't *need* the values to change continuously, so lets update the values when the user stops pressing the mouse key.  To do this we will add a second event attribute to each of our input elements.  The event we need is ``onmouseup``  When we get an onmouseup event we will call another function to display the current values of red, green, and blue.
+We don't *need* the values to change continuously, so let's update the values when the user stops pressing the mouse key.  To do this we will add a second event attribute to each of our input elements.  The event we need is ``onmouseup``  When we get an onmouseup event we will call another function to display the current values of red, green, and blue.
 
 .. activecode:: js_event_4
    :language: html
@@ -156,9 +156,9 @@ We don't *need* the values to change continuously, so lets update the values whe
     </html>
 
 
-This is a nice polished example now.  So lets take a look at a couple of the new items.  First, we have attached to different events to the input element.  In general you can attach as many events as make sense to an element.  In this case we have one for the mouse movement, and a second for the mouse up.
+This is a nice polished example now.  So let's take a look at a couple of the new items.  First, we have attached to different events to the input element.  In general you can attach as many events as make sense to an element.  In this case we have one for the mouse movement, and a second for the mouse up.
 
-Second, the showValues function contains an assignment statement that is very compact to write, but may be complicted to follow, so lets look at one of those statements, and then rewrite it in a way that will probably be easier to understand.
+Second, the showValues function contains an assignment statement that is very compact to write, but may be complicted to follow, so let's look at one of those statements, and then rewrite it in a way that will probably be easier to understand.
 
 .. code-block:: javascript
 

@@ -20,7 +20,7 @@ Consider the following list.
    </ul>
 
 
-The first thing in our list is Luther its position in the list is 0.  The second thing on the list is Coe, its position is 1, the last thing on the list (appropriately) is  Wartburg its position is 4.
+The first thing in our list is Luther: its position in the list is 0.  The second thing on the list is Coe: its position is 1. The last thing on the list (appropriately) is  Wartburg: its position is 4.
 
 We can get the elements from the list and put them in an array using the ``querySelectorAll`` funciton.
 

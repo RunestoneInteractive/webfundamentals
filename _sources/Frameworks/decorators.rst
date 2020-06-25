@@ -1,11 +1,11 @@
 Python Decorators
 =================
 
-One of the cool things about learning Python Frameworks is that you get to dig into some advanced Python features.  In our hello world example we mapped Python functions to URL's using Python decorators, Now its time to see how decorators work, and a simplified implementation of how Flask uses the concept to call a particular function based on a URL.
+One of the cool things about learning Python Frameworks is that you get to dig into some advanced Python features.  In our hello world example we mapped Python functions to URL's using Python decorators. Now it's time to see how decorators work, and a simplified implementation of how Flask uses the concept to call a particular function based on a URL.
 
 Before we go there, lets look at a simpler example of a decorator to get an idea of how they work.  First lets start with a definition.  A decorator is a *callable* that takes a **function** as an argument and returns a **replacement function.**
 
-Lets write a simple decorator that we can use so that a function can automatically keep track of the number of times it has been called.  This can sometimes be very useful for performance testing or debugging.
+Let's write a simple decorator that we can use so that a function can automatically keep track of the number of times it has been called.  This can sometimes be very useful for performance testing or debugging.
 
 The ``call_counter`` function in the code below is a decorator, it takes a function as an argument, and returns a replacement function. The replacement function, called ``wrap``, is defined inside the ``call_counter`` function.
 
@@ -78,7 +78,7 @@ Think about the wrap function in the previous example more generally:
          return res
       return wrap
 
-OK, hopefully you are still with me.  Lets look at another way of implementing the same functionality as the ``call_counter`` decorator but we will do it in a slightly different way.  In the definition of a decorator I used the term *callable*.  In Python callable means any object that understands the use of the () as call operators.  Huh?  Take a look at this example:
+OK, hopefully you are still with me.  Let's look at another way of implementing the same functionality as the ``call_counter`` decorator but we will do it in a slightly different way.  In the definition of a decorator I used the term *callable*.  In Python callable means any object that understands the use of the () as call operators.  Huh?  Take a look at this example:
 
 .. activecode:: dec_callable
 
@@ -98,7 +98,7 @@ OK, hopefully you are still with me.  Lets look at another way of implementing t
 
 In the example above foo is clearly an instance of ``MyClass``.  But because we implement the "dunder method" ``__call__`` we can treat this instance of the class just like a function.
 
-Lets write a new version of our call counter as a class:
+Let's write a new version of our call counter as a class:
 
 .. activecode:: betterdecor
 
@@ -158,7 +158,7 @@ Recall that for the non argument version of a decorator foo, for function bar we
 
 Using classes to implement decorators that take arguments is actually quite nice because we can use the constructor for our class as the outer layer and the ``__call__`` method to do the wrapping.
 
-Its a little bit off the wall, but lets say we want to implement our call counter to take an initial value, and the time at which the function was defined.
+It's a little bit off the wall, but let's say we want to implement our call counter to take an initial value, and the time at which the function was defined.
 
 .. activecode:: classdeco2
 
@@ -187,7 +187,7 @@ Its a little bit off the wall, but lets say we want to implement our call counte
    print(fib.wrapper.define_time)
 
 
-Finally, lets consider what our ``app.route`` decorator does.  The app object is our Flask application object, and it will be used to dispatch the correct function based on the URL.  So this decorator is not even really going to wrap the function in question, but rather store away a reference to the original function in a dictionary
+Finally, let's consider what our ``app.route`` decorator does.  The app object is our Flask application object, and it will be used to dispatch the correct function based on the URL.  So this decorator is not even really going to wrap the function in question, but rather store away a reference to the original function in a dictionary
 
 .. activecode:: router1
 
