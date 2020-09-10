@@ -5,3 +5,4 @@ Publishing in the Cloud
    :maxdepth: 2
 
    cloudintro.rst
+   Exercises.rst

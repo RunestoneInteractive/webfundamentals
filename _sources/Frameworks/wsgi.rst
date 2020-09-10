@@ -53,6 +53,7 @@ First, an example of parse_qs:
 
 
 .. fillintheblank:: first_wsgi
+                    
     Run the example above in a terminal window.  What does your browser display?
 
     - :Hello World Hello World:  Correct!

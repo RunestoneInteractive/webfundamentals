@@ -16,3 +16,4 @@ Introduction to SQL
    joining_SQL.rst
    records.rst
    sqlalchemy.rst
+   Exercises.rst

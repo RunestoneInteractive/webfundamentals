@@ -10,3 +10,5 @@ Framework Development
    wsgi.rst
    templates.rst
    database.rst
+   Exercises.rst
+   

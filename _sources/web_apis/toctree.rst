@@ -13,4 +13,5 @@ Coming in September 2019 --
     implementing_web_apis.rst
     restful_api.rst
     prototype4.rst
-
+    Exercises.rst
+    

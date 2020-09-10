@@ -13,5 +13,5 @@ The Flask Framework
     sessions.rst
     logging.rst
     templating.rst
-
+    Exercises.rst
 

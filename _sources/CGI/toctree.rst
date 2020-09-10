@@ -7,4 +7,4 @@ Common Gateway Interface
    basiccgi.rst
    forms.rst
    cookies.rst
-
+   Exercises.rst

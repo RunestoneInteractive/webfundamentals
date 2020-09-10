@@ -14,5 +14,5 @@ Javascript
    Selection.rst
    helpObjects.rst
    asyncJavascript.rst
-   exercises.rst
+   Exercises.rst
    finalquiz.rst

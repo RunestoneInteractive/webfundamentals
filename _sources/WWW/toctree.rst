@@ -7,4 +7,4 @@ The World Wide Web
    intro.rst
    history.rst
    technology.rst
-
+   Exercises.rst

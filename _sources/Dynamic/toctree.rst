@@ -12,4 +12,5 @@ Dynamic Web Applications
    prototype2.rst
    localstorage.rst
    prototype3.rst
-
+   Exercises.rst
+   

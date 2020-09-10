@@ -6,3 +6,5 @@ Advanced Javascript
 
    prototype.rst
    mashup.rst
+   Exercises.rst
+   

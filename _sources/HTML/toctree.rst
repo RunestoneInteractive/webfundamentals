@@ -8,5 +8,5 @@ HTML Basics
    basic.rst
    advanced.rst
    structural.rst
-   exercises.rst
+   Exercises.rst
    htmlquiz.rst
