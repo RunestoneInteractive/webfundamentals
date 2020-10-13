@@ -8,7 +8,7 @@ Introduction
 You are reading this introduction, probably in a browser of some kind. Maybe on your tablet, maybe on your smartphone, or maybe on a regular old desktop computer.  The key question we want to answer in this chapter is how does this page get to your screen?  It turns out there is an awful lot of computer science involved.  We won't go very deep, this is only the first chapter, in a book that is meant to be introductory in nature after all.
 
 
-For now we'll start out with a very high level overview and move down a little deeper later in the chapter.   The page you are seeing is the result of a **web browser** communicating with a **web server**.  A number of important things happen during the comversation.
+For now we'll start out with a very high level overview and move down a little deeper later in the chapter.   The page you are seeing is the result of a **web browser** communicating with a **web server**.  A number of important things happen during the conversation.
 
 * The browser and the server "talk" to each other using a relatively simple **protocol** called **HTTP**, which stands for the Hyper Text Transfer Protocol.
 * If we break down HTTP into its two components we get a little more detail:

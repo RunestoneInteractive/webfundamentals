@@ -5,7 +5,7 @@ Hello World!  This book is/was written in the Fall of 2014 as I was teaching two
 
 I've had this book in my head for many years now, but haven't written it as I have been too busy building the `Runestone Tools <http://runestoneinteractive.org>`_, teaching courses, and trying to have a life.
 
-Because I've written it as I've been teaching the course, it only covers what I am able to accomplish in a semester, I realize you may differ with me on what is important or even what is reasonable to accomplish in a semester!.  The book is open source,  Fork it on github.  Submit an issue if you have feedback or suggestions for improvements. Submit a chapter if you have an idea for something you think is important that I have left out.  Books get long over time because people differ on what is important, and authors like to make lots of people happy.
+Because I've written it as I've been teaching the course, it only covers what I am able to accomplish in a semester, I realize you may differ with me on what is important or even what is reasonable to accomplish in a semester! The book is open source, fork it on github.  Submit an issue if you have feedback or suggestions for improvements. Submit a chapter if you have an idea for something you think is important that I have left out.  Books get long over time because people differ on what is important, and authors like to make lots of people happy.
 
 The Content and Structure of this Book
 --------------------------------------
@@ -25,7 +25,7 @@ So, I am going to ask you to do things that are not explicitly covered in the bo
 
 What I mean by context and background includes answering questions like:
 
-* What is a markup language and what should you expect from a good one?  This will arm you to find the specific tag you need to do the job you want rather than asking you to memorize all of the tags in the html language.
+* What is a markup language and what should you expect from a good one?  This will arm you to find the specific tag you need to do the job you want rather than asking you to memorize all of the tags in the HTML language.
 * How does a typical web application work?  Including a little bit about how the internet itself operates so that you will see the logic behind how the browser and the web server work together and communicate with each other at different levels.
 
 If this book was a reference manual for HTML, Javascript, etc. it would be hundreds of thousands of pages long, and it would be horrible.  There are great dedicated resources for all of them.  This course is about how we integrate them.
@@ -34,13 +34,13 @@ If this book was a reference manual for HTML, Javascript, etc. it would be hundr
 Learning Zones
 --------------
 
-I'm a big believer in the Learning Zone concept, and in this class I want you to be in the learning zone. In class, when you are working on projects, or listening to a lecture you are not being judged.  This is the time to make crazy mistakes and ask questions that might seem stupid.  You **should** feel challenged as we work on solving problems and developing solutions tegether. you **should not** feel like the solution will just flow from the depths of your brain to your finger tips like so much water flowing down stream.  Programming is hard work and to the extent your instructor makes it look easy while standing in front of you, that is part of the performance of teaching and not the reality of the doing.
+I'm a big believer in the Learning Zone concept, and in this class I want you to be in the learning zone. In class, when you are working on projects, or listening to a lecture you are not being judged.  This is the time to make crazy mistakes and ask questions that might seem stupid.  You **should** feel challenged as we work on solving problems and developing solutions together. you **should not** feel like the solution will just flow from the depths of your brain to your finger tips like so much water flowing down stream.  Programming is hard work and to the extent your instructor makes it look easy while standing in front of you, that is part of the performance of teaching and not the reality of the doing.
 
 .. image:: Figures/LearningZones.png
 
 From time to time you will be asked to respond to a poll about what zone you were in on a particular day.
 
-There is a second definition of the learning zone that is related to what we have been talking aobut.  In this amazing `TED talk: How to get better at the things you care about <https://www.ted.com/talks/eduardo_briceno_how_to_get_better_at_the_things_you_care_about>`_ Eduardo Briceño talks about the "performance zone" versus the "learning zone."
+There is a second definition of the learning zone that is related to what we have been talking about.  In this amazing `TED talk: How to get better at the things you care about <https://www.ted.com/talks/eduardo_briceno_how_to_get_better_at_the_things_you_care_about>`_ Eduardo Briceño talks about the "performance zone" versus the "learning zone."
 
 .. youtube:: YKACzIrog24
 
