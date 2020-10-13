@@ -7,16 +7,10 @@ that I think should be covered.  So, I started writing this book.  The course ha
 over the years along the following lines:
 
 1. Basic HTML and CSS -- most college students have not built a web page from scratch
-2. Introduction to Javascript -- I've taught this to upper level students so learning Javascript isn't too hard
-and this section has always culminated with a midterm-mashup assignment that gets them using an
-API from two or more websites.
-3. After the midterm we cover how a web server works and old fashioned CGI programming.  The
-realization that a simple Python script can create a web page on the fly is a pretty empowering
-realization to anyone.
-4. I always try to get people to dip their toe into the database waters with simple queries.  Maybe as complicated
-as a three table join.
-5.  Introduce some kind of web development framework based on WSGI.  I have tried several over the years, but my
-recent favorite is Flask because it's simple and doesn't do magical things.
+2. Introduction to Javascript -- I've taught this to upper level students so learning Javascript isn't too hard and this section has always culminated with a midterm-mashup assignment that gets them using an API from two or more websites.
+3. After the midterm we cover how a web server works and old fashioned CGI programming.  The realization that a simple Python script can create a web page on the fly is a pretty empowering realization to anyone.
+4. I always try to get people to dip their toe into the database waters with simple queries.  Maybe as complicated as a three table join.
+5. Introduce some kind of web development framework based on WSGI.  I have tried several over the years, but my recent favorite is Flask because it's simple and doesn't do magical things.
 
 Thats a lot to cram into a single semester and we often end up rushing through some kind of Flask based project
 at the end.
