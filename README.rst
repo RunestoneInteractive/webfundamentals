@@ -12,10 +12,10 @@ over the years along the following lines:
 4. I always try to get people to dip their toe into the database waters with simple queries.  Maybe as complicated as a three table join.
 5. Introduce some kind of web development framework based on WSGI.  I have tried several over the years, but my recent favorite is Flask because it's simple and doesn't do magical things.
 
-Thats a lot to cram into a single semester and we often end up rushing through some kind of Flask based project
+That's a lot to cram into a single semester and we often end up rushing through some kind of Flask based project
 at the end.
 
-Last year we decided to take the first half of the course, HTML, CSS, and Javscript and break it out
+Last year we decided to take the first half of the course, HTML, CSS, and Javascript and break it out
 into a seven week course for majors and non-majors alike.  This corresponds to Part I of this book.
 
 **Part II, is still very rough,** and I hope to work on extending it and cleaning it up as I prepare to teach
@@ -30,10 +30,9 @@ We have tried to make it as easy as possible for you to build and use this book.
 
 1. You can see and read this book online at `interactivepython.org <http://interactivepython.org/runestone/static/thinkcspy/index.html>`_
 
-2.  You can build it and host it yourself in just a few simple steps:
+2. You can build it and host it yourself in just a few simple steps:
 
-    1.  ``pip install -r requirements.txt``  -- Should install everything you need
+    1.  ``pip install -r requirements.txt`` -- should install everything you need
     2.  ``runestone build`` -- will build the html and put it in ``./build/webfundamentals``
-    3.  ``runestone serve``   -- will start a webserver and serve the pages locally from ``./build/webfundamentals``
-
+    3.  ``runestone serve`` -- will start a web server and serve the pages locally from ``./build/webfundamentals``
 
