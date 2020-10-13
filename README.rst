@@ -32,7 +32,12 @@ We have tried to make it as easy as possible for you to build and use this book.
 
 2. You can build it and host it yourself in just a few simple steps:
 
-    1.  ``pip install -r requirements.txt`` -- should install everything you need
-    2.  ``runestone build`` -- will build the html and put it in ``./build/webfundamentals``
-    3.  ``runestone serve`` -- will start a web server and serve the pages locally from ``./build/webfundamentals``
+.. code:: bash
+
+    # To install everything you need
+    $ pip install -r requirements.txt
+    # Build the HTML and put it in ./build/webfundamentals
+    $ runestone build
+    # Start a web server and serve the pages locally from ./build/webfundamentals
+    $ runestone serve
 
