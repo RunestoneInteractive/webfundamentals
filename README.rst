@@ -28,7 +28,7 @@ Getting Started
 
 We have tried to make it as easy as possible for you to build and use this book.
 
-1. You can see and read this book online at `interactivepython.org <http://interactivepython.org/runestone/static/thinkcspy/index.html>`_
+1. You can see and read this book online at `runestone.academy <https://runestone.academy/runestone/books/published/thinkcspy/index.html>`_
 
 2. You can build it and host it yourself in just a few simple steps:
 
