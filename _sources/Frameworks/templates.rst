@@ -64,9 +64,9 @@ Let's suppose you want to make a table in a template.  The ideal would be to pas
        <body>
            <h1>The first {​{ plist|length }} prime numbers</h1>
            <table>
-               {% for i in plist: %}
+               {​% for i in plist: %​}
                    <tr><td>{​{ i }}</td></tr>
-               {% endfor %}
+               {​% endfor %​}
            </table>
        </body>
    </html>
@@ -74,7 +74,7 @@ Let's suppose you want to make a table in a template.  The ideal would be to pas
 
 This introduces several interesting new features of templates.
 
-1.  The ``{% ... %}`` notation is used to include a non-rendering bit of code in the template.  In this example we introduce a for loop.  Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.
+1.  The ``{​% ... %​}`` notation is used to include a non-rendering bit of code in the template.  In this example we introduce a for loop.  Notice that since html does not require you to indent things we need an endfor to delimit the end of the for loop.
 
 2.  Jinja2 includes a huge number of filters that you can use on a variable.  The filter ``plist|length`` will render as the number of elements in the plist list.
 
@@ -88,11 +88,11 @@ In addition to loops you can also have a conditional in a template for example:
 
    <html>
        <body>
-           {% if name %}
+           {​% if name %​}
            <h1>Hello {​{ name }} </h1>
-           {% else %}
+           {​% else %​}
            <h1>Hello World</h1>
-           {% endif %}
+           {​% endif %​}
        </body>
    </html>
 
@@ -112,17 +112,17 @@ For example let's suppose you have a base.html file that looks like this:
 
    <html>
    <head>
-       {% block head %}
+       {​% block head %​}
        <link rel="stylesheet" href="static/style.css" />
-       <title>{% block title %}{% endblock %} - My Webpage</title>
-       {% endblock %}
+       <title>{​% block title %​}{​% endblock %​} - My Webpage</title>
+       {​% endblock %​}
    </head>
    <body>
-       <main>{% block content %}{% endblock %}</main>
+       <main>{​% block content %​}{​% endblock %​}</main>
        <footer>
-           {% block footer %}
+           {​% block footer %​}
            Creative Commons 2014 by <a href="http://domain.invalid/">you</a>.
-           {% endblock %}
+           {​% endblock %​}
        </footer>
    </body>
 
@@ -154,14 +154,14 @@ Now let's create a child template that contains a title and some real content.
 
    .. code-block:: html
 
-      {% block content %}
+      {​% block content %​}
       <h1>Tempates are awesome for 10 reasons</h1>
       <ol>
-          {% for i in reasons: %}
+          {​% for i in reasons: %​}
           <li>Reason {​{ i }}</li>
-          {% endfor %}
+          {​% endfor %​}
       </ol>
-      {% endblock %}
+      {​% endblock %​}
 
 
 
