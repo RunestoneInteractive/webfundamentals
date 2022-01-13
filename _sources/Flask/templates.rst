@@ -45,11 +45,11 @@ Here is an example template:
 
     <!doctype html>
     <title>Hello from Flask</title>
-    {% if name %}
+    {‎% if name %}
       <h1>Hello {‎{ name }}!</h1>
-    {% else %}
+    {‎% else %}
       <h1>Hello, World!</h1>
-    {% endif %}
+    {‎% endif %}
 
 Inside templates you also have access to the :class:`~flask.request`,
 :class:`~flask.session` and :class:`~flask.g` [#]_ objects
