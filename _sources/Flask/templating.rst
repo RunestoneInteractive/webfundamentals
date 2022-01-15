@@ -25,7 +25,7 @@ Unless customized, Jinja2 is configured by Flask as follows:
 -   autoescaping is enabled for all strings when using
     :func:`~flask.templating.render_template_string`.
 -   a template has the ability to opt in/out autoescaping with the
-    ``{% autoescape %}`` tag.
+    ``{‎% autoescape %}`` tag.
 -   Flask inserts a couple of global functions and helpers into the
     Jinja2 context, additionally to the values that are present by
     default.
@@ -95,7 +95,7 @@ by default:
 
    .. sourcecode:: jinja
 
-      {% from '_helpers.html' import my_macro with context %}
+      {‎% from '_helpers.html' import my_macro with context %}
 
 Standard Filters
 ----------------
@@ -155,15 +155,15 @@ There are three ways to accomplish that:
     string as safe HTML (``{‎{ myvariable|safe }}``)
 -   Temporarily disable the autoescape system altogether.
 
-To disable the autoescape system in templates, you can use the ``{%
+To disable the autoescape system in templates, you can use the ``{‎%
 autoescape %}`` block:
 
 .. sourcecode:: html+jinja
 
-    {% autoescape false %}
+    {‎% autoescape false %}
         <p>autoescaping is disabled here
         <p>{‎{ will_not_be_escaped }}
-    {% endautoescape %}
+    {‎% endautoescape %}
 
 Whenever you do this, please be very cautious about the variables you are
 using in this block.
@@ -193,8 +193,8 @@ function name as name of the filter.  Once registered, you can use the filter
 in your templates in the same way as Jinja2's builtin filters, for example if
 you have a Python list in context called `mylist`::
 
-    {% for x in mylist | reverse %}
-    {% endfor %}
+    {‎% for x in mylist | reverse %}
+    {‎% endfor %}
 
 
 Context Processors
