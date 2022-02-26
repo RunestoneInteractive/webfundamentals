@@ -89,6 +89,7 @@ html_theme_path = [
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 html_title = "Fundamentals of Web Programming"
+shelf_section = 'Web programming'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = "Fundamentals of Web Programming"
