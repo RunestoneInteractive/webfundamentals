@@ -514,7 +514,7 @@ The change we need to make is to
    }
 
    nav li.submenu {
-       background: url(http://interactivepython.org/runestone/static/webfundamentals/_static/submenu.gif) 95% 50% no-repeat;
+       background: url(https://runestone.academy/ns/books/published/webfundamentals/_static/submenu.gif) 95% 50% no-repeat;
    }
 
    nav li.submenu:hover {

@@ -174,7 +174,7 @@ The CSS float property allows us to push HTML elements to the left or right, so 
          </style>
        </head>
    <body>
-   <p>the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/norse-logo.png" /> the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
+   <p>the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  the quick brown fox jumped over the lazy dog.  <img src="https://runestone.academy/ns/books/published/webfundamentals/_images/norse-logo.png" /> the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog. the quick brown fox jumped over the lazy dog.
    </body>
    </html>
 
@@ -292,9 +292,9 @@ Let's make a stack of cards using the following image:
          </style>
       </head>
    <body>
-      <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
-      <img id="b" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
-      <img id="c" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="a" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="b" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="c" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" />
    </body>
    </html>
 
@@ -372,8 +372,8 @@ Absolutely positioned elements are absolute, but relative to their container!  T
       </head>
    <body>
    <main>
-      <img id="a" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
-      <img id="b" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="a" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" />
+      <img id="b" class="card" src="https://runestone.academy/ns/books/published/webfundamentals/_images/ace-of-hearts.gif" />
       
    </main>
    </body>
@@ -453,7 +453,7 @@ Full Page Layout
             </section>
             <aside>
                 This is the main content area
-                <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/img_sem_elements.gif" />
+                <img src="https://runestone.academy/ns/books/published/webfundamentals/_images/img_sem_elements.gif" />
             </aside>
             <footer>
                 Copyright Area, Contact Us.

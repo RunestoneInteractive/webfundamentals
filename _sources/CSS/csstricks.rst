@@ -76,7 +76,7 @@ Hover
             </section>
             <aside>
                 This is the main content area
-                <img src="http://interactivepython.org/runestone/static/webfundamentals/_images/img_sem_elements.gif" />
+                <img src="https://runestone.academy/ns/books/published/webfundamentals/_images/img_sem_elements.gif" />
             </aside>
             <footer>
                 Copyright Area, Contact Us.
