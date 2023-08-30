@@ -13,7 +13,7 @@ All locators are also identifiers, so all URLs are URI's. Think about it this wa
 
 ::
 
-    http://interactivepython.org/runestone/static/webfundamentals/index.html
+    https://runestone.academy/ns/books/published/webfundamentals/index.html
 
 This is a common URL with three parts:
 
